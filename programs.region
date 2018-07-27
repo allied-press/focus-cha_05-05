@@ -271,12 +271,12 @@
     {squarespace-footers}
 
     <script>
-      $(document).ready(function {
+      $(document).ready(function() {
         $("#accordian-wrapper h3").addClass("accordian");
 
         $("#accordian-wrapper ul").addClass("panel");
 
-      });
+      })
     </script>
 
   </body>
