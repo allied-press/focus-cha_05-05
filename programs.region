@@ -244,8 +244,9 @@
       </main>
 
       <div id="accordian-wrapper">
+        <h3> Treatment Components </h3>
         <squarespace:block-field id="accordian" columns="12" label="Accordian" />
-      </div>      
+      </div>
 
       <div id="preFooter">
         <div class="pre-footer-inner">
