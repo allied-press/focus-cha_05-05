@@ -275,7 +275,7 @@
         $("#accordion-wrapper h3").addClass("accordion");
 
         $(".accordion").click(function(){
-          $(this).sibling("ul").toggleClass(.panel)
+          $(this).sibling("ul").toggleClass("panel")
         })
       });
     </script>
