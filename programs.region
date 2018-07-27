@@ -276,10 +276,11 @@
 
         $(".accordion").onClick(function(){
           $(this).sibling("ul").toggleClass(.panel)
-        });
+        })
 
       })
     </script>
+
 
 
   </body>
