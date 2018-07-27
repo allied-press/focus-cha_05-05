@@ -269,5 +269,14 @@
     <squarespace:script src="site-bundle.js" combo="false" />
     {squarespace-footers}
 
+    <script>
+      $(document).ready(function {
+        $(".accordian h3").addClass("accordian");
+
+        $(".accordian ul").addClass("panel");
+
+      });
+    </script>
+
   </body>
 </html>
