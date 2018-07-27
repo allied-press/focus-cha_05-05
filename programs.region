@@ -273,7 +273,12 @@
     <script>
       $(document).ready(function() {
         $("#accordion-wrapper h3").addClass("accordion");
+      });
+
+      $(".accordion").onClick(function(){
+        $(this).sibling("ul").toggleClass(.panel)
       })
+
     </script>
 
 
