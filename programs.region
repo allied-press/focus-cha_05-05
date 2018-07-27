@@ -239,18 +239,17 @@
            <squarespace:block-field id="accordion-title" columns="12" label="Accordion Title" />
            <squarespace:block-field id="accordion" columns="12" label="Accordion" />
          </div>
-        </div><!--
+        </div>
+        <div id="program-sidebar">
+           <squarespace:block-field id="program-sidebar" columns="12" label="Program Sidebar" />
+       </div>
+       <!--
         -->{.section collection}{.collectionTypeNameEquals? blog}<aside id="rightSidebar" role="complementary">
           <squarespace:block-field class="open-block-field" id="blogBlocks-{id}" columns="12" label="Blog Sidebar Content" />
         </aside>
         {.end}
         {.end}
       </main>
-
-      <div id="program-sidebar">
-         <squarespace:block-field id="program-sidebar" columns="12" label="Program Sidebar" />
-     </div>
-
 
 
       <div id="preFooter">
