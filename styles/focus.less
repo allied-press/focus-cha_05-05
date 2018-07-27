@@ -1,0 +1,29 @@
+//Color variables
+@brightGreen: #A0CE4E;
+@brightBlue: #53B6CB;
+@lightGray: #efefef;
+
+
+#accordion-wrapper {
+
+  .accordian {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 2%;
+  }
+
+  .accordian:after {
+    content: ">";
+    color: @brightGreen;
+    font-size: 2.5em;
+    font-weight: 800;
+    position: absolute;
+    right: 0;
+    transform: rotate(90deg);
+  }
+
+  .panel {
+    border-bottom: 2px solid @brightGreen;
+    padding-bottom: 2%;
+    background: @lightGray;
+  }
+}
