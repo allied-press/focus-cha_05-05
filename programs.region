@@ -235,6 +235,7 @@
         --><squarespace:folder-navigation template="folder-navigation" />{.end}{.end}<!--
         --><div id="content" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "gallery"}{.or}{.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}{.end}>
          {squarespace.main-content}
+         {squarespace.main-content}
          <div id="accordion-wrapper">
            <squarespace:block-field id="accordion-title-{id}" columns="12" label="Accordion Title" />
            <squarespace:block-field id="accordion-{id}" columns="12" label="Accordion" />
