@@ -57,30 +57,32 @@
 }
 
 // Accordion Styles
+.accordion-wrapper{
 
-.accordion {
-  border-bottom: 2px solid #eee;
-  padding-bottom: 2%;
-  color: black;
-}
+  .accordion {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 2%;
+    color: black;
+  }
 
-.accordion:after {
-  content: ">";
-  color: @brightGreen;
-  font-size: 2.5em;
-  font-weight: 800;
-  position: absolute;
-  right: 0;
-  transform: rotate(90deg);
-}
+  .accordion:after {
+    content: ">";
+    color: @brightGreen;
+    font-size: 2.5em;
+    font-weight: 800;
+    position: absolute;
+    right: 0;
+    transform: rotate(90deg);
+    }
 
-.accordion+ul{
-  display: none;
-}
+  ul{
+    display: none;
+  }
 
-.panel {
-  border-bottom: 2px solid @brightGreen;
-  padding-bottom: 2%;
-  background: @lightGray;
-  display: block;
+  .panel {
+    border-bottom: 2px solid @brightGreen;
+    padding-bottom: 2%;
+    background: @lightGray;
+    display: block;
+  }
 }

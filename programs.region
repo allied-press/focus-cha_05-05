@@ -246,6 +246,10 @@
         {.end}
       </main>
 
+      <div id="accordion-wrapper">
+        <squarespace:block-field id="accordion-1" columns="12" label="Accordion" />
+      </div>
+
 
       <div id="preFooter">
         <div class="pre-footer-inner">
@@ -270,7 +274,7 @@
 
     <script>
       $(document).ready(function() {
-        $(".programs-main-content .index-section:nth-child(2) h3").addClass("accordion");
+        $(".accordion-wrapper h3").addClass("accordion");
 
         $(".accordion").click(function(){
           $(this).next().toggleClass("panel")
