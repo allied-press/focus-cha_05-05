@@ -233,7 +233,7 @@
         </div>{.end}{.end}<!--
         -->{.collectionTypeNameEquals? page}<!--
         --><squarespace:folder-navigation template="folder-navigation" />{.end}{.end}<!--
-        --><div id="content" class="programs-main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "gallery"}{.or}{.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}{.end}>
+        --><div id="content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "gallery"}{.or}{.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}{.end}>
          {squarespace.main-content}
          <div id="program-sidebar-wrapper">
             <squarespace:block-field id="program-sidebar" columns="12" label="Program Sidebar" />
@@ -246,7 +246,7 @@
         {.end}
       </main>
 
-      <div id="accordion-wrapper">
+      <div class="accordion-wrapper">
         <squarespace:block-field id="accordion-1" columns="12" label="Accordion" />
       </div>
 
