@@ -7,26 +7,28 @@
 
 
 
-//Programs Page
-.programs-main-content {
-    display: flex !important;
+//Sidebar Pages
+.with-sidebar-content {
+  display: flex !important;
 
-    .sqs-grid-12 {
-      width: 95%;
-      margin: 0 2% 0 0;
-    }
+  .sqs-grid-12 {
+    width: 95%;
+    margin: 0 3% 0 0;
+  }
 
-    h3{
-      color: black;
-      text-transform: capitalize;
-    }
+  h3{
+    color: black;
+    text-transform: capitalize;
+  }
 }
 
-// Program Sidebar
+//Sidebar
+.sidebar-wrapper{
 
-#program-sidebar{
-  background: #c7e76c;
-  padding-bottom: 5%;
+  #program-sidebar{
+    background: #c7e76c;
+    padding-bottom: 5%;
+  }
 
   h2{
     color: black;
@@ -49,14 +51,14 @@
     border-radius: 5px;
   }
 
-  #block-yui_3_17_2_1_1532729608739_6633 .sqs-block-button-element:hover {
+  .sqs-block-button-element:first-child:hover {
     background: @brightGreen;
     border-color: @brightGreen;
     box-shadow: 0 4px 8px 1px rgba(40, 42, 43,.35);
     transition: all .5s;
   }
 
-  #block-yui_3_17_2_1_1532729608739_7189 .sqs-block-button-element:hover {
+  .sqs-block-button-element:last-child:hover {
     background: @brightBlue;
     border-color: @brightBlue;
     box-shadow: 0 4px 8px 1px rgba(40, 42, 43,.35);
