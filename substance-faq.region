@@ -234,7 +234,6 @@
         -->{.collectionTypeNameEquals? page}<!--
         --><squarespace:folder-navigation template="folder-navigation" />{.end}{.end}<!--
         --><div id="content" class="with-sidebar-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "gallery"}{.or}{.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}{.end}>
-         {squarespace.main-content}
          <div class="accordion-wrapper">
            <squarespace:block-field id="substance-faq" columns="12" label="Accordion" />
          </div>
