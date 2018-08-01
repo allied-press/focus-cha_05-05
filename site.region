@@ -266,6 +266,17 @@
     {squarespace-footers}
 
     <script>
+    $(window).resize(function() {
+      if ($(window).width() < 1020 && $(window).load()) {
+        $("body").addClass("force-mobile-nav");
+      }
+
+      if($(window).load()){
+        if ($(window).width() < 1020) {
+          $("body").addClass("force-mobile-nav");
+        }
+      }
+    });
 
     $(document).ready(function() {
 
@@ -280,17 +291,7 @@
       }
     });
 
-      $(window).resize(function() {
-        if ($(window).width() < 1020 && $(window).load()) {
-          $("body").addClass("force-mobile-nav");
-        }
 
-        if($(window).load()){
-          if ($(window).width() < 1020) {
-            $("body").addClass("force-mobile-nav");
-          }
-        }
-      });
 
 
 
