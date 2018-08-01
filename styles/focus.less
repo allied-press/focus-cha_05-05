@@ -56,6 +56,20 @@ a:hover{
   }
 }
 
+#mainNavigation{
+  .collection:hover{
+    background: @brightBlue;
+  }
+
+  .folder:hover {
+    background: @brightBlue;
+
+    .subnav a:hover {
+      background: @lightGray;
+    }
+  }
+}
+
 @media only screen and (min-width:1020px){
   .mobile-nav-toggle{
     display: none;
