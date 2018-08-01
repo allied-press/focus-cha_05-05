@@ -267,7 +267,7 @@
 
     <script>
 
-        $(window).on(load() {
+        $(window).resize(function() {
           if ($(window).width() < 1370){
             $("body").addClass("force-mobile-nav")
           }
