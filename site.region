@@ -268,7 +268,7 @@
     <script>
       $(document).ready(function() {
         if ($(window).width() <= 1370){
-          $("body").addClass("force-mobile-nav")
+          $("body").toggleClass("force-mobile-nav")
         }
       });
 
