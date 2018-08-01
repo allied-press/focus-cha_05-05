@@ -278,11 +278,6 @@
         $("body").addClass("force-mobile-nav");
       }
     });
-
-
-
-
-
     </script>
 
   </body>
