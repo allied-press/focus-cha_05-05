@@ -270,6 +270,7 @@
       if ($(window).width() < 1020) {
         $("body").addClass("force-mobile-nav");
       }
+    });
 
     $(document).ready(function() {
 
