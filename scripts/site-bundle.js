@@ -129,7 +129,7 @@
         if (t) {
           var n, o, r, i = e.one("body").get("winWidth"),
             a = e.one("#header");
-          r = e.one("#logoWrapper") ? parseInt(e.Squarespace.Template.getTweakValue("logoContainerWidth"), 10) : parseInt(e.Squarespace.Template.getTweakValue("siteTitleContainerWidth"), 10), i > this._atLeast ? (e.one("body").removeClass("force-mobile-nav"), n = a.get("offsetWidth") - parseInt(a.getStyle("paddingLeft"), 10) - parseInt(a.getStyle("paddingRight"), 10), o = t.get("offsetWidth"), o > n - r && (e.one("body").addClass(""), this._atLeast = i)) : e.one("body").addClass("force-mobile-nav")
+          r = e.one("#logoWrapper") ? parseInt(e.Squarespace.Template.getTweakValue("logoContainerWidth"), 10) : parseInt(e.Squarespace.Template.getTweakValue("siteTitleContainerWidth"), 10), i > this._atLeast ? (e.one("body").removeClass("force-mobile-nav"), n = a.get("offsetWidth") - parseInt(a.getStyle("paddingLeft"), 10) - parseInt(a.getStyle("paddingRight"), 10), o = t.get("offsetWidth"), o > n - r && (e.one("body").addClass(""), this._atLeast = i)) : e.one("body").addClass("")
         }
       },
       makeFeaturedGallery: function(t, n) {
