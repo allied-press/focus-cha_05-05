@@ -266,9 +266,9 @@
     {squarespace-footers}
 
     <script>
-      $(document).ready(function() {
-        if ($(window).width() >=1370px){
-          $("body").removeClass("force-mobile-nav")
+      $(window).resize(function() {
+        if ($(window).width() <=1370px){
+          $("body").addClass("force-mobile-nav")
         }
       });
 
