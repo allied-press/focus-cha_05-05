@@ -267,11 +267,12 @@
 
     <script>
 
-        $(window).width(function() {
-          if ($(window).width() < 1370){
-            $("body").addClass("force-mobile-nav")
-          }
-        });
+    if ($(window).width() < 960) {
+      $('body').addClass('force-mobile-nav');
+    }
+    else {
+      $('body').removeClass('force-mobile-nav');
+    }
 
 
     </script>
