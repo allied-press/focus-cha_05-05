@@ -267,10 +267,20 @@
 
     <script>
 
-    $(window).resize(function() {
-    if ($(window).width() < 960) {
-      $('body').addClass('force-mobile-nav');
-    }
+    // Adds and removes body class depending on screen width.
+function screenClass() {
+    if($(window).innerWidth() > 960) {
+        $('body').addClass('force-mobile-nav';
+    } 
+}
+
+// Fire.
+screenClass();
+
+// And recheck when window gets resized.
+$(window).bind('resize',function(){
+    screenClass();
+});
   })
 
 
