@@ -274,14 +274,8 @@
 
     $(document).ready(function() {
 
-      if ($(window).width() < 1020 && $(window).load()) {
+      if ($(window).width() < 1020) {
         $("body").addClass("force-mobile-nav");
-      }
-
-      if($(window).load()){
-        if ($(window).width() < 1020) {
-          $("body").addClass("force-mobile-nav");
-        }
       }
     });
 
