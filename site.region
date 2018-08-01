@@ -267,25 +267,32 @@
 
     <script>
 
-    // Adds and removes body class depending on screen width.
-$(document).ready(function(){
+    $(document).ready(function() {
 
-function screenClass() {
-    if($(window).width() < 960) {
-        $('body').addClass('force-mobile-nav';
+if ($(window).width() < 960 && $(window).load()) {
+    $("body").addClass("force-mobile-nav");
+}
+
+if($(window).load()){
+    if ($(window).width() < 960) {
+    $("body").addClass("force-mobile-nav");
     }
 }
 
-// Fire.
-screenClass();
+$(window).resize(function() {
+if ($(window).width() < 960 && $(window).load()) {
+    $("body").addClass("force-mobile-nav");
+}
 
-// And recheck when window gets resized.
-$(window).bind('resize',function(){
-    screenClass();
-});
-  })
+if($(window).load()){
+    if ($(window).width() < 960) {
+    $("body").addClass("force-mobile-nav");
+    }
+}
 
-})
+});});
+
+
     </script>
 
   </body>
