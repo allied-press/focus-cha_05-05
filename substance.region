@@ -233,8 +233,10 @@
         </div>{.end}{.end}<!--
         -->{.collectionTypeNameEquals? page}<!--
         --><squarespace:folder-navigation template="folder-navigation" />{.end}{.end}<!--
-        --><div id="content" class="with-sidebar-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "gallery"}{.or}{.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}{.end}>
-         {squarespace.main-content}
+        --><div id="content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "gallery"}{.or}{.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}{.end}>
+        <div class="with-sidebar-content">
+          {squarespace.main-content}
+        </div>
          <aside class="sidebar">
             <squarespace:block-field id="program-sidebar-1" columns="12" label="Program Sidebar" />
         </aside>
