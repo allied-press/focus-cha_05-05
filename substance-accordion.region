@@ -1,3 +1,4 @@
+<!doctype html>
 <html class="touch-styles"{.if authenticatedAccount} data-authenticated-account{.end}>
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -233,12 +234,14 @@
         </div>{.end}{.end}<!--
         -->{.collectionTypeNameEquals? page}<!--
         --><squarespace:folder-navigation template="folder-navigation" />{.end}{.end}<!--
-        --><div id="content" class="with-sidebar-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "gallery"}{.or}{.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}{.end}>
+        --><div id="content" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "gallery"}{.or}{.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}{.end}>
+          <div class="with-sidebar-content">
          {squarespace.main-content}
-         <div class="sidebar-wrapper">
+         </div>
+         <aside class="sidebar">
             <squarespace:block-field id="program-sidebar-1" columns="12" label="Program Sidebar" />
-        </div>
-       <!--
+        </aside>
+        </div><!--
         -->{.section collection}{.collectionTypeNameEquals? blog}<aside id="rightSidebar" role="complementary">
           <squarespace:block-field class="open-block-field" id="blogBlocks-{id}" columns="12" label="Blog Sidebar Content" />
         </aside>
@@ -249,7 +252,6 @@
       <div class="accordion-wrapper">
         <squarespace:block-field id="accordion-1" columns="12" label="Accordion" />
       </div>
-
 
       <div id="preFooter">
         <div class="pre-footer-inner">
@@ -269,16 +271,9 @@
     </div>
 
     <squarespace:script src="site-bundle.js" combo="false" />
-    <squarespace:script src="jquery-3.3.1.min.js" combo="true" />
+    <squarespace:script src="jquery-3.3.1.min.js" combo="false" />
     {squarespace-footers}
 
-    <script>
-      $(document).ready(function() {
-        $(".accordion-wrapper h3").click(function(){
-          $(this).next().toggleClass("panel")
-        })
-      });
-    </script>
     <script>
     $(window).resize(function() {
       if ($(window).width() < 1370) {
@@ -294,7 +289,13 @@
     });
     </script>
 
-
+    <script>
+      $(document).ready(function() {
+        $(".accordion-wrapper h3").click(function(){
+          $(this).next().toggleClass("panel")
+        })
+      });
+    </script>
 
   </body>
 </html>
