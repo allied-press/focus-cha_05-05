@@ -20,6 +20,7 @@
 
       <div class="sqs-cart-dropzone"></div>
 
+      <div id="preNav"><squarespace:block-field id="pre-nav" columns="12" label="PreNavigation" /></div>
       <header id="header" class="show-on-scroll" data-offset-el=".index-section" data-offset-behavior="bottom" role="banner">
         <div class="header-inner">
           {.section website}<div id="{.if logoImageUrl}logoWrapper{.or}siteTitleWrapper{.end}" class="wrapper" data-content-field="site-title">
@@ -30,8 +31,7 @@
             {.end}
           </div>{.end}<!--
           --><div class="mobile-nav-toggle"><div class="top-bar"></div><div class="middle-bar"></div><div class="bottom-bar"></div></div><div class="mobile-nav-toggle fixed-nav-toggle"><div class="top-bar"></div><div class="middle-bar"></div><div class="bottom-bar"></div></div><!--
-          <div id="preNav"><squarespace:block-field id="prenav" columns="12" label="PreNavigation" />
-          <div id="headerNav"><squarespace:navigation navigationId="mainNav" template="navigation" /></div>
+          --><div id="headerNav"><squarespace:navigation navigationId="mainNav" template="navigation" /></div>
         </div>
       </header>
 
