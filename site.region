@@ -30,7 +30,8 @@
             {.end}
           </div>{.end}<!--
           --><div class="mobile-nav-toggle"><div class="top-bar"></div><div class="middle-bar"></div><div class="bottom-bar"></div></div><div class="mobile-nav-toggle fixed-nav-toggle"><div class="top-bar"></div><div class="middle-bar"></div><div class="bottom-bar"></div></div><!--
-          --><div id="headerNav"><squarespace:navigation navigationId="mainNav" template="navigation" /></div>
+          <div id="preNav"><squarespace:block-field id-"prenav" columns="12" label="PreNavigation" />
+          <div id="headerNav"><squarespace:navigation navigationId="mainNav" template="navigation" /></div>
         </div>
       </header>
 
