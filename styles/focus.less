@@ -183,6 +183,7 @@ a.summary-title-link:hover {
   .summary-title{
     background: @brightGreen;
     margin-bottom: 0 !important;
+    padding: 5px;
 
     a.summary-title-link {
       color: white !important;
@@ -194,6 +195,7 @@ a.summary-title-link:hover {
 
   .summary-metadata-container{
     background: @brightGreen;
+    padding: 5px;
 
     time {
         color: white !important;
@@ -202,6 +204,30 @@ a.summary-title-link:hover {
         font-weight: 700;
       }
     }
+
+  .summary-excerpt{
+    padding: 5px;
+
+    p{
+      font-size: 1.1em !important;
+    }
+  }
+
+  a.summary-read-more-link {
+    font-size: 1.1em !important;
+    border: 2px solid @brightBlue;
+    padding: 5%;
+    text-align: center !important;
+    width: 50%;
+    border-radius: 5px;
+    margin-left: 5px !important;
+  }
+
+  a.summary-read-more-link:hover {
+    background: #12263c;
+    border: 2px solid ##12263c;
+    color: white !important;
+  }
 }
 
 //Sidebar Pages
