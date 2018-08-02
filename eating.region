@@ -234,10 +234,12 @@
         -->{.collectionTypeNameEquals? page}<!--
         --><squarespace:folder-navigation template="folder-navigation" />{.end}{.end}<!--
         --><div id="content" class="with-sidebar-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "gallery"}{.or}{.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}{.end}>
-         {squarespace.main-content}
-         <div class="sidebar-wrapper">
-            <squarespace:block-field id="program-sidebar-2" columns="12" label="Program Sidebar" />
+        <div class="with-sidebar-content">
+        {squarespace.main-content}
         </div>
+        <aside class="sidebar">
+           <squarespace:block-field id="program-sidebar-2" columns="12" label="Program Sidebar" />
+       </aside>
        <!--
         -->{.section collection}{.collectionTypeNameEquals? blog}<aside id="rightSidebar" role="complementary">
           <squarespace:block-field class="open-block-field" id="blogBlocks-{id}" columns="12" label="Blog Sidebar Content" />
