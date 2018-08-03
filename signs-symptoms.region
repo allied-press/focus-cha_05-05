@@ -234,10 +234,13 @@
         -->{.collectionTypeNameEquals? page}<!--
         --><squarespace:folder-navigation template="folder-navigation" />{.end}{.end}<!--
         --><div id="content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "gallery"}{.or}{.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}{.end}>
-        <div class="accordion-wrapper">
-          <squarespace:block-field id="accordion-3" columns="12" label="Accordion" />
-        </div>
          {squarespace.main-content}
+         <div class="accordion-wrapper">
+           <squarespace:block-field id="accordion-3" columns="12" label="Accordion" />
+         </div>
+         <div class="signs-block">
+          <squarespace:block-field id="love-block" columns="12" label="Content" />
+          </div>
        <!--
         -->{.section collection}{.collectionTypeNameEquals? blog}<aside id="rightSidebar" role="complementary">
           <squarespace:block-field class="open-block-field" id="blogBlocks-{id}" columns="12" label="Blog Sidebar Content" />
