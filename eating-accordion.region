@@ -238,13 +238,13 @@
           <div class="main-content-sidebar">
           <div class="with-sidebar-content">
          {squarespace.main-content}
+         <div class="accordion-wrapper">
+           <squarespace:block-field id="accordion-2" columns="12" label="Accordion" />
+         </div>
          </div>
          <aside class="sidebar">
             <squarespace:block-field id="program-sidebar-2" columns="12" label="Program Sidebar" />
         </aside>
-        </div>
-        <div class="accordion-wrapper">
-          <squarespace:block-field id="accordion-2" columns="12" label="Accordion" />
         </div>
         </div><!--
         -->{.section collection}{.collectionTypeNameEquals? blog}<aside id="rightSidebar" role="complementary">
