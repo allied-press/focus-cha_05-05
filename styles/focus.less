@@ -342,7 +342,7 @@ body#collection-5b60bdcc8a922d43bf030b96{
         flex-direction: column;
 
         .p-summary {
-          padding: 1em;
+          padding: 1em 1em 0 1em;
         }
 
         .excerpt-thumb {
@@ -353,8 +353,27 @@ body#collection-5b60bdcc8a922d43bf030b96{
             img {
               left: 0 !important;
             }
+        }
+
+        .entry-more-link{
+          padding-top: 0;
+
+          a {
+            width: 50%;
+            margin: 0 auto;
+            border: 2px solid @brightBlue;
+            text-align: center;
+            padding: .75em;
+            border-radius: 5px;
+          }
+
+          a:hover{
+            border: 2px solid #12263c;
+            background: #12263c;
+            color: white !important;
           }
         }
+      }
     }
   }
 }
