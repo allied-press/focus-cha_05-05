@@ -292,59 +292,9 @@ div#block-yui_3_17_2_1_1533130601191_4050 .summary-excerpt p {
     margin: 0 3% 0 0;
   }
 }
-
-// Sidebar
-.sidebar-wrapper{
-  min-width: 20px;
-  min-height: 20px;
-  width: 50%;
-
-  #program-sidebar-1,
-  #program-sidebar-2,
-  #employment-sidebar,
-  #joint-sidebar,
-  #chattanooga-sidebar,
-  #staff-sidebar{
-    background: #c7e76c;
-    padding-bottom: 5%;
-  }
-
-  h3{
-    color: black;
-  }
-
-  a {
-    color: black !important;
-  }
-
-  hr {
-    width: 75%;
-    margin: 0 auto;
-    height: 2px;
-  }
-
-  .sqs-block-button-element {
-    background: transparent;
-    border: 2px solid black;
-    color: black;
-    border-radius: 5px;
-  }
-
-  .sqs-block-button-element:first-child:hover {
-    background: @brightGreen;
-    border-color: @brightGreen;
-    box-shadow: 0 4px 8px 1px rgba(40, 42, 43,.35);
-    transition: all .5s;
-  }
-
-  .sqs-block-button-element:last-child:hover {
-    background: @brightBlue;
-    border-color: @brightBlue;
-    box-shadow: 0 4px 8px 1px rgba(40, 42, 43,.35);
-    transition: all .5s;
-  }
-}
 */
+
+
 
 // Accordion Styles
 .accordion-wrapper{
@@ -384,12 +334,53 @@ div#block-yui_3_17_2_1_1533130601191_4050 .summary-excerpt p {
   display: flex !important;
   flex-direction: row;
 
-  .sidebar{
-    width: calc(100% - 65%);
-  }
-
   .with-sidebar-content{
     width: calc(100% - 35%);
     padding-right: 5%;
+  }
+
+  .sidebar{
+    width: calc(100% - 65%);
+
+    .sqs-layout {
+      background: #c7e76c;
+      padding-bottom: 5%;
+
+
+    h3{
+      color: black;
+    }
+
+    a {
+      color: black !important;
+    }
+
+    hr {
+      width: 75%;
+      margin: 0 auto;
+      height: 2px;
+    }
+
+    .sqs-block-button-element {
+      background: transparent;
+      border: 2px solid black;
+      color: black;
+      border-radius: 5px;
+    }
+
+    .sqs-block-button-element:first-child:hover {
+      background: @brightGreen;
+      border-color: @brightGreen;
+      box-shadow: 0 4px 8px 1px rgba(40, 42, 43,.35);
+      transition: all .5s;
+    }
+
+    .sqs-block-button-element:last-child:hover {
+      background: @brightBlue;
+      border-color: @brightBlue;
+      box-shadow: 0 4px 8px 1px rgba(40, 42, 43,.35);
+      transition: all .5s;
+    }
+    }
   }
 }
