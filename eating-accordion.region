@@ -241,6 +241,9 @@
          <div class="accordion-wrapper">
            <squarespace:block-field id="accordion-2" columns="12" label="Accordion" />
          </div>
+         <div class="gallery">
+          <squarespace:block-field id="eating-gallery" columns="12" label="Residential Treatment Facilities" />
+         </div>
          </div>
          <aside class="sidebar">
             <squarespace:block-field id="program-sidebar-2" columns="12" label="Program Sidebar" />
