@@ -243,6 +243,9 @@
             <squarespace:block-field id="program-sidebar-1" columns="12" label="Program Sidebar" />
         </aside>
         </div>
+        <div class="accordion-wrapper">
+          <squarespace:block-field id="accordion-1" columns="12" label="Accordion" />
+        </div>
         </div><!--
         -->{.section collection}{.collectionTypeNameEquals? blog}<aside id="rightSidebar" role="complementary">
           <squarespace:block-field class="open-block-field" id="blogBlocks-{id}" columns="12" label="Blog Sidebar Content" />
@@ -250,10 +253,6 @@
         {.end}
         {.end}
       </main>
-
-      <div class="accordion-wrapper">
-        <squarespace:block-field id="accordion-1" columns="12" label="Accordion" />
-      </div>
 
       <div id="preFooter">
         <div class="pre-footer-inner">
