@@ -280,53 +280,22 @@ div#block-yui_3_17_2_1_1533130601191_4050 .summary-excerpt p {
   }
 }
 
-/*
-// Accordion Styles
+//Accordion Styles
 .accordion-wrapper{
-  margin:0 auto;
 
-  h3 {
-    border-bottom: 2px solid #eee;
-    padding-bottom: 2%;
-    color: black;
-  }
+   p {
+     margin-left:1.5em;
+   }
 
-  h3:after {
-    content: ">";
-    color: @brightGreen;
-    font-size: 2.5em;
-    font-weight: 800;
-    position: absolute;
-    right: 0;
-    transform: rotate(90deg);
-    }
+   .ui-closed:after {;
+     content:"+ ";
+   }
 
-  h3+ul{
-    display: none;
-  }
-
-  .panel {
-    border-bottom: 2px solid @brightGreen;
-    padding-bottom: 2%;
-    background: @lightGray;
-    display: block;
-  }
-}
-*/
-
-
-//New Accordion Test
-.accordion-wrapper p {
-margin-left:1.5em;
-}
-.accordion-wrapper .ui-closed:before {;
-content:"+ ";
-}
-
-.accordion-wrapper .ui-open:before {
-font-family:monospace;
-content:"- ";
-}
+   .ui-open:before {
+     font-family:monospace;
+     content:"- ";
+   }
+ }
 
 // Sidebar with Aside!
 .main-content-sidebar {
