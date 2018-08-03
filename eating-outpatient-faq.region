@@ -290,12 +290,17 @@
     });
     </script>
 
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script>
-      $(document).ready(function() {
-        $(".accordion-wrapper h3").click(function(){
-          $(this).next().toggleClass("panel")
-        })
+    $(document).ready(function() {
+      $('.accordion-wrapper .sqs-block-content h3').addClass('ui-closed').css('cursor','pointer');
+      $(".accordion-wrapper .sqs-block-content h3").nextUntil("h3").slideToggle();
+      $(".accordion-wrapper .sqs-block-content h3").click(function() {
+
+        $(this).nextUntil("h3").slideToggle();
+        $(this).toggleClass('ui-closed ui-open');
       });
+    });
     </script>
 
   </body>
