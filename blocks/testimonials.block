@@ -4,17 +4,14 @@
 
   <!-- Testimonials -->
   <div class="mySlides">
-    <h2> Testimonial </h2>
     <squarespace:block-field id="testimonial-1" label="Testimonial 1" columns="12" />
   </div>
 
   <div class="mySlides">
-    <h2> Testimonial </h2>
     <squarespace:block-field id="testimonial-2" label="Testimonial 2" columns="12" />
   </div>
 
   <div class="mySlides">
-    <h2> Testimonial </h2>
     <squarespace:block-field id="testimonial-3" label="Testimonial 3" columns="12" />
   </div>
 </div>
