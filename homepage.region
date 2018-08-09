@@ -251,6 +251,9 @@
         </div>
       </div>
 
+      <div class="nextcontent">
+        <squarespace:block-field id="nextcontent" columns="12" label="More Content" />
+      </div>
 
 
       <div id="preFooter">
