@@ -573,26 +573,23 @@ body#collection-5b60bdcc8a922d43bf030b96{
 }
 
 //Testimonials Slider
-#testimonials{
-  padding: 80px 0;
+#testimonials .sqs-layout {
+    min-height: 0 !important;
 }
 
 .slideshow-container {
   position: relative;
-  background: #f1f1f1f1;
 
   /* Slides */
   .mySlides {
     display: none;
-    padding: 0 80px;
     text-align: center;
 
 
     p:first-child {
       font-style: italic;
-      width: 50%;
+      width: 80%;
       margin: 0 auto;
-      padding: 1.5% 0;
     }
 
     p:last-child {
@@ -620,7 +617,7 @@ body#collection-5b60bdcc8a922d43bf030b96{
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: #a5dce5;
+    background-color: @lightGray;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
@@ -628,6 +625,6 @@ body#collection-5b60bdcc8a922d43bf030b96{
 
   /* Add a background color to the active dot/circle */
   .active, .dot-container .dot:hover {
-    background-color: #39bdd7;
+    background-color: @brightBlue;
   }
 }
