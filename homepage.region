@@ -248,7 +248,6 @@
       <div id="testimonials">
         <div class="testimonials-inner">
           {@|apply testimonials.block}
-          <squarespace:block-field id="featured" columns="12" label="Testimonials" />
         </div>
       </div>
 
@@ -291,7 +290,7 @@
       }
     });
     </script>
-    
+
     <script>
       var slideIndex = 1;
       showSlides(slideIndex);
