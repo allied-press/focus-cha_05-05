@@ -574,6 +574,11 @@ body#collection-5b60bdcc8a922d43bf030b96{
 
 //Homepage styles
 
+#collection-5b563d28f950b7329f1a51c6 .thumb-image.loaded {
+    position: relative;
+    top: -250px !important;
+}
+
 .nextcontent {
     max-width: 1020px;
     margin: 0 auto;
@@ -595,7 +600,13 @@ body#collection-5b60bdcc8a922d43bf030b96{
     opacity: .3;
 }
 
-.image-card{
+.image-card {
+
+  .image-title.sqs-dynamic-text p {
+    text-transform: capitalize !important;
+    font-size: .75em !important;
+  }
+
   p {
     font-family: "URW DIN" !important;
   }
@@ -631,15 +642,17 @@ body#collection-5b60bdcc8a922d43bf030b96{
 
 
     p:first-child {
-      font-style: italic;
       width: 80%;
       margin: 0 auto;
       padding-top: 2em;
+      font-size: 1.1em;
+      font-family: "Proxima Nova";
     }
 
     p:last-child {
       font-weight: bold;
       padding-bottom: 1em;
+      font-family: "Proxima Nova";
     }
   }
 }
