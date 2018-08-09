@@ -251,7 +251,7 @@
         </div>
       </div>
 
-      
+
 
       <div id="preFooter">
         <div class="pre-footer-inner">
@@ -273,7 +273,7 @@
     <squarespace:script src="site-bundle.js" combo="false" />
     <squarespace:script src="jquery-3.3.1.min.js" combo="false" />
     {squarespace-footers}
-
+/*
     <script>
     $(window).resize(function() {
       if ($(window).width() < 1370) {
@@ -317,6 +317,6 @@
       dots[slideIndex-1].className += " active";
       }
     </script>
-
+*/
   </body>
 </html>
