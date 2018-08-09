@@ -22,4 +22,3 @@
   <span class="dot" onclick="currentSlide(2)"></span>
   <span class="dot" onclick="currentSlide(3)"></span>
 </div>
-<squarespace:block-field id="testimonial-button" label="More Testimonials" columns="12" />
