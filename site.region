@@ -261,6 +261,11 @@
         </div>
       </footer>
 
+      <div id="copyright">
+        <p>© 2018 Focus Treatment Centers. All Rights Reserved.</p>
+        <p>Site by Maycreate</p>
+      </div>
+
     </div>
 
     <squarespace:script src="site-bundle.js" combo="false" />
