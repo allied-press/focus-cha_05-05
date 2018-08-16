@@ -22,6 +22,7 @@
       <div class="sqs-cart-dropzone"></div>
 
       <div id="preNav"><squarespace:block-field id="pre-nav" columns="12" label="PreNavigation" /></div>
+      <squarespace:search-block />
       <header id="header" class="show-on-scroll" data-offset-el=".index-section" data-offset-behavior="bottom" role="banner">
         <div class="header-inner">
           {.section website}<div id="{.if logoImageUrl}logoWrapper{.or}siteTitleWrapper{.end}" class="wrapper" data-content-field="site-title">
@@ -299,7 +300,7 @@
 
       alterClass();
 
-      $("#mainNavigation .external:last-child a").replaceWith($(".search-block"));
+
     });
     </script>
 
