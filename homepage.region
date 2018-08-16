@@ -283,7 +283,23 @@
     <squarespace:script src="jquery-3.3.1.min.js" combo="false" />
     {squarespace-footers}
 
-    
+    <script>
+    jQuery(document).ready(function($) {
+      var alterClass = function() {
+        var ww = document.body.clientWidth;
+        if (ww < 1160) {
+      $('body').addClass('force-mobile-nav');
+    } else if (ww >= 1161) {
+      $('body').removeClass('force-mobile-nav');
+    };
+  };
+  $(window).resize(function(){
+    alterClass();
+  });
+  //Fire it when the page first loads:
+  alterClass();
+});
+</script>
 
     <script>
       var slideIndex = 1;
