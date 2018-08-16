@@ -272,9 +272,9 @@
         </div>
       </footer>
 
-      <div id="copyright">
+      <div id="legal">
         <p>© 2018 Focus Treatment Centers. All Rights Reserved.</p>
-        <p><strong><a href='https://maycreate.com/'>Site by Maycreate</a></strong></p>
+        <p><strong><a target="_blank" href='https://maycreate.com/'>Site by Maycreate</a></strong></p>
       </div>
 
     </div>
@@ -288,18 +288,18 @@
       var alterClass = function() {
         var ww = document.body.clientWidth;
         if (ww < 1160) {
-      $('body').addClass('force-mobile-nav');
-    } else if (ww >= 1161) {
-      $('body').removeClass('force-mobile-nav');
-    };
-  };
-  $(window).resize(function(){
-    alterClass();
-  });
-  //Fire it when the page first loads:
-  alterClass();
-});
-</script>
+          $('body').addClass('force-mobile-nav');
+        } else if (ww >= 1161) {
+          $('body').removeClass('force-mobile-nav');
+        };
+      };
+      $(window).resize(function(){
+        alterClass();
+      });
+      
+      alterClass();
+    });
+  </script>
 
     <script>
       var slideIndex = 1;
