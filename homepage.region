@@ -299,7 +299,7 @@
 
       alterClass();
 
-      $("#mainNavigation .external:last-child a").replaceWith($(".sqs-search-page-input"));
+      $("#mainNavigation .external:last-child a").replaceWith($(".searchBlock"));
     });
     </script>
 
