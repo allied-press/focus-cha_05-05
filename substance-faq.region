@@ -298,6 +298,8 @@
       });
 
       alterClass();
+
+      $("#mainNavigation .external:last-child a").replaceWith("<a href='/search'><i class='fas fa-search'></i></a>");
     });
     </script>
 

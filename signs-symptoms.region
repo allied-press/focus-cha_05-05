@@ -293,9 +293,11 @@
       });
 
       alterClass();
+
+      $("#mainNavigation .external:last-child a").replaceWith("<a href='/search'><i class='fas fa-search'></i></a>");
     });
     </script>
-    
+
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script>
     $(document).ready(function() {
