@@ -296,10 +296,10 @@
       $(window).resize(function(){
         alterClass();
       });
-      
+
       alterClass();
     });
-  </script>
+    </script>
 
     <script>
       var slideIndex = 1;
