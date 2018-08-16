@@ -283,20 +283,7 @@
     <squarespace:script src="jquery-3.3.1.min.js" combo="false" />
     {squarespace-footers}
 
-    <script>
-    $(window).resize(function() {
-      if ($(window).width() < 1370) {
-        $("body").addClass("force-mobile-nav");
-      }
-    });
-
-    $(document).ready(function() {
-
-      if ($(window).width() < 1370) {
-        $("body").addClass("force-mobile-nav");
-      }
-    });
-    </script>
+    
 
     <script>
       var slideIndex = 1;
