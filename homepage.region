@@ -299,7 +299,7 @@
 
       alterClass();
 
-       $(".main-nav ul > li:nth-last-child(1) a").replaceWith($(".search-block"));
+      $("#mainNavigation .external:last-child a").replaceWith($(".search-block"));
     });
     </script>
 
