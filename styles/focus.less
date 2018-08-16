@@ -2,6 +2,8 @@
 @brightGreen: #A0CE4E;
 @brightBlue: #53B6CB;
 @lightGray: #efefef;
+@darkBlue: #12263c;
+@medGreen: #8dc63f;
 
 
 //Basic Styles
@@ -526,12 +528,13 @@ body#collection-5b60bdcc8a922d43bf030b96{
     width: calc(100% - 65%);
 
     .sqs-layout {
-      background: #c7e76c;
+      background: #12263c;
       padding-bottom: 5%;
+      color: white;
 
 
     h3{
-      color: black;
+      color: white;
       padding: 0 5%;
     }
 
@@ -540,26 +543,27 @@ body#collection-5b60bdcc8a922d43bf030b96{
     }
 
     a {
-      color: black !important;
+      color: white !important;
     }
 
     hr {
       width: 75%;
       margin: 0 auto;
       height: 2px;
+      background: @brightBlue
     }
 
     .sqs-block-button-element {
-      background: transparent;
-      border: 2px solid black;
-      color: black;
+      background: @medGreen;
+      border: 2px solid @medGreen;
+      color: @darkBlue;
       border-radius: 5px;
     }
 
     .sqs-block-button-element:hover {
       background: @brightBlue;
       border-color: @brightBlue;
-      box-shadow: 0 4px 8px 1px rgba(40, 42, 43,.35);
+      opacity: 1;
       transition: all .5s;
     }
     }
