@@ -242,6 +242,9 @@
           <div class="main-content-sidebar">
           <div class="with-sidebar-content">
          {squarespace.main-content}
+         <div class="accordion-wrapper">
+           <squarespace:block-field id="contact-accordion" columns="12" label="Accordion" />
+         </div>
          </div>
          <aside class="sidebar">
             <squarespace:block-field id="contact-sidebar" columns="12" label="Sidebar" />
@@ -299,6 +302,19 @@
 
       $("#mainNavigation > :last-child a").replaceWith("<a href='/search'><i class='fas fa-search'></i></a>");
       $("#mainNavigation .folder-toggle").append("<i class='fas fa-chevron-down'></i>");
+    });
+    </script>
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+      $('.accordion-wrapper .sqs-block-content h3').addClass('ui-closed').css('cursor','pointer');
+      $(".accordion-wrapper .sqs-block-content h3").nextUntil("h3").slideToggle().addClass('accordion-content');
+      $(".accordion-wrapper .sqs-block-content h3").click(function() {
+
+        $(this).nextUntil("h3").slideToggle();
+        $(this).toggleClass('ui-closed ui-open');
+      });
     });
     </script>
 
