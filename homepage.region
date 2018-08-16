@@ -299,7 +299,7 @@
 
       alterClass();
 
-      $("#mainNavigation .external:last-child a").text("f002");
+      $("#mainNavigation .external:last-child a").text("\f002");
     });
     </script>
 
