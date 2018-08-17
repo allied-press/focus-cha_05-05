@@ -243,12 +243,12 @@
          <div class="program-tabs">
           <div id="Program" class="tabcontent">
             <h2>Our Eating Disorder Programs</h2>
-            <squarespace:block-field id="eatingProgramContent" columns="12" label="content" />
+            <squarespace:block-field id="eatingProgramContent" columns="12" label="Content" />
           </div>
 
           <div id="Residential" class="tabcontent">
             <h2>Residential Treatment Program</h2>
-            <squarespace:block-field id="eatingResidentialContent" columns="12" label="content" />
+            <squarespace:block-field id="eatingResidentialContent" columns="12" label="Content" />
             <div class="accordion-wrapper">
               <squarespace:block-field id="accordion-2" columns="12" label="Accordion" />
             </div>
@@ -259,7 +259,7 @@
 
           <div id="Intensive" class="tabcontent">
             <h2>Intensive Outpatient Program</h2>
-            <squarespace:block-field id="eatingIntensiveContent" columns="12" label="content" />
+            <squarespace:block-field id="eatingIntensiveContent" columns="12" label="Content" />
           </div>
 
            <div id="ResidentialFAQ" class="tabcontent">

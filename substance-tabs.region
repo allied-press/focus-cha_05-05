@@ -243,12 +243,15 @@
          <div class="program-tabs">
           <div id="Program" class="tabcontent">
             <h2>Our Substance Use Treatment Programs</h2>
-            <squarespace:block-field id="substanceProgramContent" columns="12" label="content" />
+            <squarespace:block-field id="substanceProgramContent" columns="12" label="Content" />
+            <div class="accordion-wrapper">
+              <squarespace:block-field id="accordion-1" columns="12" label="Accordion" />
+            </div>
           </div>
 
           <div id="Residential" class="tabcontent">
             <h2>Residential Treatment Program</h2>
-            <squarespace:block-field id="substanceResidentialContent" columns="12" label="content" />
+            <squarespace:block-field id="substanceResidentialContent" columns="12" label="Content" />
             <div class="accordion-wrapper">
               <squarespace:block-field id="accordion-1" columns="12" label="Accordion" />
             </div>
@@ -256,17 +259,17 @@
 
           <div id="Partial" class="tabcontent">
             <h2>Partial Hospitilization Program</h2>
-            <squarespace:block-field id="partialProgramContent" columns="12" label="content" />
+            <squarespace:block-field id="partialProgramContent" columns="12" label="Content" />
           </div>
 
           <div id="Intensive" class="tabcontent">
             <h2>Intensive Outpatient Program</h2>
-            <squarespace:block-field id="substanceIntensiveContent" columns="12" label="content" />
+            <squarespace:block-field id="substanceIntensiveContent" columns="12" label="Content" />
           </div>
 
            <div id="Detoxification" class="tabcontent">
             <h2>Our Detoxification Process</h2>
-            <squarespace:block-field id="detoxificationContent" columns="12" label="content" />
+            <squarespace:block-field id="detoxificationContent" columns="12" label="Content" />
             <div class="accordion-wrapper">
               <squarespace:block-field id="accordion-1" columns="12" label="Accordion" />
             </div>
