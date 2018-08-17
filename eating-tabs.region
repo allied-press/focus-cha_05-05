@@ -243,28 +243,21 @@
          <div class="eating-tabs">
 
            <div class="tab">
+             <squarespace:block-field id="eating-sidebar" columns="12" label="Sidebar Content"/>
             <button class="tablinks" onclick="openProgram(event, 'Program')" id="defaultOpen">Our Eating Disorder Programs</button>
             <button class="tablinks" onclick="openProgram(event, 'Residential')">Residential Treatment Program</button>
             <button class="tablinks" onclick="openProgram(event, 'Intensive')">Intensive Outpatient Program</button>
             <button class="tablinks" onclick="openProgram(event, 'ResidentialFAQ')">Residential Treatment FAQ</button>
             <button class="tablinks" onclick="openProgram(event, 'IntensiveFAQ')">Intensive Outpatient FAQ</button>
+            <squarespace:block-field id="sidebar-info" columns="12" label="Sidebar Content"/>
           </div>
 
           <div id="Program" class="tabcontent">
-            <div class="main-content-sidebar">
-              <div class="with-sidebar-content">
                  <h2>Our Eating Disorder Programs</h2>
                  <squarespace:block-field id="eatingProgramContent" columns="12" label="content" />
-             </div>
-             <aside class="sidebar">
-              <squarespace:block-field id="program-sidebar-2" columns="12" label="Program Sidebar" />
-              </aside>
-            </div>
           </div>
 
           <div id="Residential" class="tabcontent">
-           <div class="main-content-sidebar">
-             <div class="with-sidebar-content">
                 <h2>Residential Treatment Program</h2>
                 <squarespace:block-field id="eatingResidentialContent" columns="12" label="content" />
                 <div class="accordion-wrapper">
@@ -273,52 +266,29 @@
                 <div class="gallery">
                   <squarespace:block-field id="eating-gallery" columns="12" label="Residential Treatment Facilities" />
                 </div>
-              </div>
-            <aside class="sidebar">
-              <squarespace:block-field id="program-sidebar-2" columns="12" label="Program Sidebar" />
-            </aside>
-           </div>
           </div>
 
           <div id="Intensive" class="tabcontent">
-           <div class="main-content-sidebar">
-            <div class="with-sidebar-content">
               <h2>Intensive Outpatient Program</h2>
               <squarespace:block-field id="eatingIntensiveContent" columns="12" label="content" />
-            </div>
-            <aside class="sidebar">
-             <squarespace:block-field id="program-sidebar-2" columns="12" label="Program Sidebar" />
-            </aside>
-           </div>
           </div>
 
            <div id="ResidentialFAQ" class="tabcontent">
-             <div class="main-content-sidebar">
-              <div class="with-sidebar-content">
                 <h2>Eating Disorder Residential FAQ</h2>
                 <div class="accordion-wrapper">
                   <squarespace:block-field id="residential-faq" columns="12" label="Accordion" />
                 </div>
-              </div>
-              <aside class="sidebar">
-               <squarespace:block-field id="program-sidebar-2" columns="12" label="Program Sidebar" />
-              </aside>
-             </div>
            </div>
 
            <div id="IntensiveFAQ" class="tabcontent">
-             <div class="main-content-sidebar">
-              <div class="with-sidebar-content">
                 <h2>Eating Disorder Intensive Outpatient FAQ</h2>
                 <div class="accordion-wrapper">
                   <squarespace:block-field id="outpatient-faq" columns="12" label="Accordion" />
                 </div>
-              </div>
-              <aside class="sidebar">
-               <squarespace:block-field id="program-sidebar-2" columns="12" label="Program Sidebar" />
-              </aside>
-             </div>
-           </div>
+          </div>
+
+
+
 
          </div>
 
