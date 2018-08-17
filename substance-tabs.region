@@ -283,7 +283,7 @@
           </div>
 
           <div class="tab">
-            <squarespace:block-field id="eating-sidebar" columns="12" label="Sidebar Content"/>
+            <squarespace:block-field id="substance-sidebar" columns="12" label="Sidebar Content"/>
            <button class="tablinks" onclick="openProgram(event, 'Program')" id="defaultOpen">Our Substance Use Programs</button>
            <button class="tablinks" onclick="openProgram(event, 'Residential')">Residential Treatment Program</button>
            <button class="tablinks" onclick="openProgram(event, 'Partial')">Partial Hospitilization Program</button>
