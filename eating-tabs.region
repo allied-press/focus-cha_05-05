@@ -255,7 +255,7 @@
 
           <div id="Program" class="tabcontent">
              <h2>Our Eating Disorder Programs</h2>
-             <squarespace:blockfield id="eatingProgramContent" columns="12" label="content" />
+             <squarespace:block-field id="eatingProgramContent" columns="12" label="content" />
           </div>
 
          </div>
