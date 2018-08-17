@@ -288,7 +288,7 @@
            <button class="tablinks" onclick="openProgram(event, 'Residential')">Residential Treatment Program</button>
            <button class="tablinks" onclick="openProgram(event, 'Partial')">Partial Hospitilization Program</button>
            <button class="tablinks" onclick="openProgram(event, 'Intensive')">Intensive Outpatient Program</button>
-           <button class="tablinks" onclick="openProgram(event, 'ResidentialFAQ')">Our Detoxification Process</button>
+           <button class="tablinks" onclick="openProgram(event, 'Detoxification')">Our Detoxification Process</button>
            <button class="tablinks" onclick="openProgram(event, 'IntensiveFAQ')">Substance Use Treatment FAQ</button>
            <squarespace:block-field id="sidebar-info" columns="12" label="Sidebar Content"/>
           </div>
