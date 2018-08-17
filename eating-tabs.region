@@ -258,6 +258,36 @@
              <squarespace:block-field id="eatingProgramContent" columns="12" label="content" />
           </div>
 
+          <div id="Residential" class="tabcontent">
+             <h2>Residential Treatment Program</h2>
+             <squarespace:block-field id="eatingResidentialContent" columns="12" label="content" />
+             <div class="accordion-wrapper">
+               <squarespace:block-field id="accordion-2" columns="12" label="Accordion" />
+             </div>
+             <div class="gallery">
+              <squarespace:block-field id="eating-gallery" columns="12" label="Residential Treatment Facilities" />
+             </div>
+           </div>
+
+           <div id="Intensive" class="tabcontent">
+             <h2>Intensive Outpatient Program</h2>
+             <squarespace:block-field id="eatingIntensiveContent" columns="12" label="content" />
+           </div>
+
+           <div id="ResidentialFAQ" class="tabcontent">
+             <h2>Eating Disorder Residential FAQ</h2>
+             <div class="accordion-wrapper">
+               <squarespace:block-field id="residential-faq" columns="12" label="Accordion" />
+             </div>
+           </div>
+
+           <div id="IntensiveFAQ" class="tabcontent">
+             <h2>Eating Disorder Intensive Outpatient FAQ</h2>
+             <div class="accordion-wrapper">
+               <squarespace:block-field id="intensive-faq" columns="12" label="Accordion" />
+             </div>
+           </div>
+
          </div>
 
 
