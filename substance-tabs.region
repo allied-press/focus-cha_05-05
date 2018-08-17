@@ -242,47 +242,51 @@
 
          <div class="program-tabs">
           <div id="Program" class="tabcontent">
-            <h2>Our Eating Disorder Programs</h2>
-            <squarespace:block-field id="eatingProgramContent" columns="12" label="content" />
+            <h2>Our Substance Use Treatment Programs</h2>
+            <squarespace:block-field id="substanceProgramContent" columns="12" label="content" />
           </div>
 
           <div id="Residential" class="tabcontent">
             <h2>Residential Treatment Program</h2>
-            <squarespace:block-field id="eatingResidentialContent" columns="12" label="content" />
+            <squarespace:block-field id="substanceResidentialContent" columns="12" label="content" />
             <div class="accordion-wrapper">
-              <squarespace:block-field id="accordion-2" columns="12" label="Accordion" />
+              <squarespace:block-field id="accordion-1" columns="12" label="Accordion" />
             </div>
-            <div class="gallery">
-              <squarespace:block-field id="eating-gallery" columns="12" label="Residential Treatment Facilities" />
-            </div>
+          </div>
+
+          <div id="Partial" class="tabcontent">
+            <h2>Partial Hospitilization Program</h2>
+            <squarespace:block-field id="partialProgramContent" columns="12" label="content" />
           </div>
 
           <div id="Intensive" class="tabcontent">
             <h2>Intensive Outpatient Program</h2>
-            <squarespace:block-field id="eatingIntensiveContent" columns="12" label="content" />
+            <squarespace:block-field id="substanceIntensiveContent" columns="12" label="content" />
           </div>
 
-           <div id="ResidentialFAQ" class="tabcontent">
-            <h2>Eating Disorder Residential FAQ</h2>
+           <div id="Detoxification" class="tabcontent">
+            <h2>Our Detoxification Process</h2>
+            <squarespace:block-field id="detoxificationContent" columns="12" label="content" />
             <div class="accordion-wrapper">
-              <squarespace:block-field id="residential-faq" columns="12" label="Accordion" />
+              <squarespace:block-field id="accordion-1" columns="12" label="Accordion" />
             </div>
           </div>
 
-          <div id="IntensiveFAQ" class="tabcontent">
-            <h2>Eating Disorder Intensive Outpatient FAQ</h2>
+          <div id="SubstanceFAQ" class="tabcontent">
+            <h2>Substance Use Treatment FAQ</h2>
             <div class="accordion-wrapper">
-              <squarespace:block-field id="outpatient-faq" columns="12" label="Accordion" />
+              <squarespace:block-field id="substance-faq" columns="12" label="Accordion" />
             </div>
           </div>
 
           <div class="tab">
             <squarespace:block-field id="eating-sidebar" columns="12" label="Sidebar Content"/>
-           <button class="tablinks" onclick="openProgram(event, 'Program')" id="defaultOpen">Our Eating Disorder Programs</button>
+           <button class="tablinks" onclick="openProgram(event, 'Program')" id="defaultOpen">Our Substance Use Programs</button>
            <button class="tablinks" onclick="openProgram(event, 'Residential')">Residential Treatment Program</button>
+           <button class="tablinks" onclick="openProgram(event, 'Partial')">Partial Hospitilization Program</button>
            <button class="tablinks" onclick="openProgram(event, 'Intensive')">Intensive Outpatient Program</button>
-           <button class="tablinks" onclick="openProgram(event, 'ResidentialFAQ')">Residential Treatment FAQ</button>
-           <button class="tablinks" onclick="openProgram(event, 'IntensiveFAQ')">Intensive Outpatient FAQ</button>
+           <button class="tablinks" onclick="openProgram(event, 'ResidentialFAQ')">Our Detoxification Process</button>
+           <button class="tablinks" onclick="openProgram(event, 'IntensiveFAQ')">Substance Use Treatment FAQ</button>
            <squarespace:block-field id="sidebar-info" columns="12" label="Sidebar Content"/>
           </div>
 
