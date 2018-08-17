@@ -604,11 +604,24 @@ body#collection-5b60bdcc8a922d43bf030b96{
   background: @darkBlue;
 
   #secondaryNavigation{
+    div {
+      width: 100%;
+    }
+
+    div:first-child>a {
+      padding-left: .75em !important;
+    }
+
     a {
       color: white;
     }
 
     .active>a {
+      background: @brightBlue;
+    }
+
+    a:hover {
+      color: white !important;
       background: @brightBlue;
     }
   }
