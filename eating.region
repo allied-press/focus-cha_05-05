@@ -244,6 +244,7 @@
          </div>
          <aside class="sidebar">
             <squarespace:block-field id="program-sidebar-2" columns="12" label="Program Sidebar" />
+            <nav data-content-field="navigation-eatingDisorder"></nav>
         </aside>
         </div>
         <div id="breadtrail">
