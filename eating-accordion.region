@@ -260,6 +260,8 @@
         {.end}
       </main>
 
+      Home / {collection.title}{.section item} > {title}{.end}
+
       <div id="preFooter">
         <div class="pre-footer-inner">
           <squarespace:block-field id="preFooterBlocks" columns="12" label="Pre-Footer Content" />
