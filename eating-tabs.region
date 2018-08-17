@@ -253,6 +253,11 @@
             <button class="tablinks" onclick="openProgram(event, 'IntensiveFAQ')">Intensive Outpatient FAQ</button>
           </div>
 
+          <div id="Program" class="tabcontent">
+             <h2>Our Eating Disorder Programs</h2>
+             <squarespace:blockfield id="eatingProgramContent" columns="12" label="content" />
+          </div>
+
          </div>
 
 
