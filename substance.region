@@ -247,6 +247,9 @@
             <squarespace:block-field id="program-sidebar-1" columns="12" label="Program Sidebar" />
         </aside>
         </div>
+        <div id="breadtrail">
+          {@|apply breadcrumbs.block}
+        </div>
         </div><!--
         -->{.section collection}{.collectionTypeNameEquals? blog}<aside id="rightSidebar" role="complementary">
           <squarespace:block-field class="open-block-field" id="blogBlocks-{id}" columns="12" label="Blog Sidebar Content" />
@@ -299,6 +302,8 @@
 
       $("#mainNavigation > :last-child a").replaceWith("<a href='/search'><i class='fas fa-search'></i></a>");
       $("#mainNavigation .folder-toggle").append("<i class='fas fa-chevron-down'></i>");
+
+      $( "#promotedGalleryWrapper" ).append( $( "#breadtrail" ) );
     });
     </script>
 
