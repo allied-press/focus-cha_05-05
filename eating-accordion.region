@@ -309,7 +309,7 @@
       $("#mainNavigation .folder-toggle").append("<i class='fas fa-chevron-down'></i>");
 
 
-      $( ".banner-thumbnail-wrapper" ).append( $( "#breadtrail" ) );
+      $( "#promotedGalleryWrapper" ).append( $( "#breadtrail" ) );
     });
     </script>
 
