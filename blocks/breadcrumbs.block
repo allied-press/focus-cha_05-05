@@ -1,1 +1,1 @@
-<div id="breadcrumbs" style="text-align:center;"><a href="/">Home</a> > {collection.title}</div>
+<div id="breadcrumbs"><a href="/">Home</a> > {collection.title}</div>
