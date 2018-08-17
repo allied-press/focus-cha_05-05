@@ -284,7 +284,7 @@
            <div id="IntensiveFAQ" class="tabcontent">
              <h2>Eating Disorder Intensive Outpatient FAQ</h2>
              <div class="accordion-wrapper">
-               <squarespace:block-field id="intensive-faq" columns="12" label="Accordion" />
+               <squarespace:block-field id="outpatient-faq" columns="12" label="Accordion" />
              </div>
            </div>
 
