@@ -245,6 +245,14 @@
          <div class="eating-tabs">
            <h2> Pick a tab! </h2>
 
+           <div class="tab">
+            <button class="tablinks" onclick="openProgram(event, 'Program')" id="defaultOpen">Our Eating Disorder Programs</button>
+            <button class="tablinks" onclick="openProgram(event, 'Residential')">Residential Treatment Program</button>
+            <button class="tablinks" onclick="openProgram(event, 'Intensive')">Intensive Outpatient Program</button>
+            <button class="tablinks" onclick="openProgram(event, 'ResidentialFAQ')">Residential Treatment FAQ</button>
+            <button class="tablinks" onclick="openProgram(event, 'IntensiveFAQ')">Intensive Outpatient FAQ</button>
+          </div>
+
          </div>
 
 
