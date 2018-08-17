@@ -309,7 +309,7 @@
       $("#mainNavigation .folder-toggle").append("<i class='fas fa-chevron-down'></i>");
 
 
-      $( "#breadtrail" ).prepend( $( ".main-content" ) );
+      $( ".main-content" ).prepend( $( "#breadtrail" ) );
     });
     </script>
 
