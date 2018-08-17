@@ -238,20 +238,23 @@
         -->{.collectionTypeNameEquals? page}<!--
         --><squarespace:folder-navigation template="folder-navigation" />{.end}{.end}<!--
         --><div id="content" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "gallery"}{.or}{.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}{.end}>
-        <div class="program-tabs">
-          <div class="tab-content">
-         {squarespace.main-content}
-         <div class="tab">
-           <squarespace:block-field id="eating-sidebar" columns="12" label="Sidebar Content"/>
-          <button class="tablinks">Our Eating Disorder Programs</button>
-          <button class="tablinks">Residential Treatment Program</button>
-          <button class="tablinks">Intensive Outpatient Program</button>
-          <button class="tablinks">Residential Treatment FAQ</button>
-          <button class="tablinks">Intensive Outpatient FAQ</button>
-          <squarespace:block-field id="sidebar-info" columns="12" label="Sidebar Content"/>
-         </div>
-       </div>
-     </div>
+
+         <div class="program-tabs">
+          <div id="Program" class="tabcontent">
+            {squarespace.main-content}
+          </div>
+
+          <div class="tab">
+            <squarespace:block-field id="eating-sidebar" columns="12" label="Sidebar Content"/>
+           <button class="tablinks" onclick="openProgram(event, 'Program')" id="defaultOpen">Our Eating Disorder Programs</button>
+           <button class="tablinks" onclick="openProgram(event, 'Residential')">Residential Treatment Program</button>
+           <button class="tablinks" onclick="openProgram(event, 'Intensive')">Intensive Outpatient Program</button>
+           <button class="tablinks" onclick="openProgram(event, 'ResidentialFAQ')">Residential Treatment FAQ</button>
+           <button class="tablinks" onclick="openProgram(event, 'IntensiveFAQ')">Intensive Outpatient FAQ</button>
+           <squarespace:block-field id="sidebar-info" columns="12" label="Sidebar Content"/>
+          </div>
+        </div>
+
         <div id="breadtrail">
           {@|apply breadcrumbs.block}
         </div>
