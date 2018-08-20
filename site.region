@@ -296,7 +296,7 @@
 
       $( "#promotedGalleryWrapper" ).append( $( "#breadtrail" ) );
       $( ".index-section:first-child .promoted-gallery-wrapper" ).append( $( "#breadtrail" ) );
-      $( "figure#thumbnail" ).append( $( "#breadtrail" ) );
+      $( ".banner-thumbnail-wrapper" ).append( $( "#breadtrail" ) );
     });
     </script>
 
