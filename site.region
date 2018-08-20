@@ -295,7 +295,7 @@
       $("#mainNavigation .folder-toggle").append("<i class='fas fa-chevron-down'></i>");
 
       $( "#promotedGalleryWrapper" ).append( $( "#breadtrail" ) );
-      $( ".promoted-gallery-wrapper" ).append( $( "#breadtrail" ) );
+      $( ".index-section:first-child .promoted-gallery-wrapper" ).append( $( "#breadtrail" ) );
     });
     </script>
 
