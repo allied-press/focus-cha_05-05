@@ -237,6 +237,8 @@
         -->{.collectionTypeNameEquals? page}<!--
         --><squarespace:folder-navigation template="folder-navigation" />{.end}{.end}<!--
         --><div id="content" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "gallery"}{.or}{.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}{.end}>
+        <div class="main-content-sidebar">
+        <div class="with-sidebar-content">
          {squarespace.main-content}
          <div class="accordion-wrapper">
            <squarespace:block-field id="accordion-3" columns="12" label="Accordion" />
@@ -244,6 +246,13 @@
          <div class="signs-block">
           <squarespace:block-field id="love-block" columns="12" label="Content" />
           </div>
+          </div>
+          <aside class="sidebar">
+             <squarespace:block-field id="resources-sidebar" columns="12" label="Program Sidebar" />
+             <squarespace:navigation navigationId="resources" template="secondary-navigation"/>
+             <squarespace:block-field id="program-sidebar" columns="12" label="Global Sidebar Content" />
+         </aside>
+         </div>
           <div id="breadtrail">
             {@|apply breadcrumbs.block}
           </div>

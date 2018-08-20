@@ -248,7 +248,7 @@
          <aside class="sidebar">
             <squarespace:block-field id="eating-sidebar" columns="12" label="Program Sidebar" />
             <squarespace:navigation navigationId="eatingDisorder" template="secondary-navigation"/>
-            <squarespace:block-field id="program-sidebar" columns="12" label="Program Sidebar" />
+            <squarespace:block-field id="program-sidebar" columns="12" label="General Sidebar" />
         </aside>
         </div>
         <div id="breadtrail">
@@ -256,7 +256,7 @@
         </div>
         </div><!--
         -->{.section collection}{.collectionTypeNameEquals? blog}<aside id="rightSidebar" role="complementary">
-          <squarespace:block-field class="open-block-field" id="blogBlocks-{id}" columns="12" label="Blog Sidebar Content" />
+          <squarespace:block-field class="open-block-field" id="blogBlocks-{id}" columns="12" label="Global Sidebar Content" />
         </aside>
         {.end}
         {.end}

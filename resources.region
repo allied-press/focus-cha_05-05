@@ -238,78 +238,16 @@
         -->{.collectionTypeNameEquals? page}<!--
         --><squarespace:folder-navigation template="folder-navigation" />{.end}{.end}<!--
         --><div id="content" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "gallery"}{.or}{.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}{.end}>
-         {squarespace.main-content}
-         <div class="main-content-sidebar">
+        <div class="main-content-sidebar">
           <div class="with-sidebar-content">
-
-         <div class="eating-tabs">
-
-           <div class="tab">
-            <button class="tablinks" onclick="openProgram(event, 'Program')" id="defaultOpen">Our Eating Disorder Programs</button>
-            <button class="tablinks" onclick="openProgram(event, 'Residential')">Residential Treatment Program</button>
-            <button class="tablinks" onclick="openProgram(event, 'Intensive')">Intensive Outpatient Program</button>
-            <button class="tablinks" onclick="openProgram(event, 'ResidentialFAQ')">Residential Treatment FAQ</button>
-            <button class="tablinks" onclick="openProgram(event, 'IntensiveFAQ')">Intensive Outpatient FAQ</button>
-          </div>
-
-          <div id="Program" class="tabcontent">
-
-                 <h2>Our Eating Disorder Programs</h2>
-                 <squarespace:block-field id="eatingProgramContent" columns="12" label="content" />
-
-
-          </div>
-
-          <div id="Residential" class="tabcontent">
-
-                <h2>Residential Treatment Program</h2>
-                <squarespace:block-field id="eatingResidentialContent" columns="12" label="content" />
-                <div class="accordion-wrapper">
-                  <squarespace:block-field id="accordion-2" columns="12" label="Accordion" />
-                </div>
-                <div class="gallery">
-                  <squarespace:block-field id="eating-gallery" columns="12" label="Residential Treatment Facilities" />
-                </div>
-
-
-          </div>
-
-          <div id="Intensive" class="tabcontent">
-
-              <h2>Intensive Outpatient Program</h2>
-              <squarespace:block-field id="eatingIntensiveContent" columns="12" label="content" />
-
-          </div>
-
-           <div id="ResidentialFAQ" class="tabcontent">
-
-                <h2>Eating Disorder Residential FAQ</h2>
-                <div class="accordion-wrapper">
-                  <squarespace:block-field id="residential-faq" columns="12" label="Accordion" />
-                </div>
-
-           </div>
-
-           <div id="IntensiveFAQ" class="tabcontent">
-
-                <h2>Eating Disorder Intensive Outpatient FAQ</h2>
-                <div class="accordion-wrapper">
-                  <squarespace:block-field id="outpatient-faq" columns="12" label="Accordion" />
-                </div>
-              <
-
-           </div>
-
+         {squarespace.main-content}
          </div>
-
-           <aside class="sidebar">
-            <squarespace:block-field id="program-sidebar-2" columns="12" label="Program Sidebar" />
-           </aside>
-          </div>
-
-         </div>
-
-
+         <aside class="sidebar">
+            <squarespace:block-field id="resources-sidebar" columns="12" label="Resources Sidebar" />
+            <squarespace:navigation navigationId="resources" template="secondary-navigation"/>
+            <squarespace:block-field id="program-sidebar" columns="12" label="Global Sidebar Content" />
+        </aside>
+        </div>
         <div id="breadtrail">
           {@|apply breadcrumbs.block}
         </div>
@@ -369,46 +307,6 @@
       $( "#promotedGalleryWrapper" ).append( $( "#breadtrail" ) );
     });
     </script>
-
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script>
-    $(document).ready(function() {
-      $('.accordion-wrapper .sqs-block-content h3').addClass('ui-closed').css('cursor','pointer');
-      $(".accordion-wrapper .sqs-block-content h3").nextUntil("h3").slideToggle().addClass('accordion-content');
-      $(".accordion-wrapper .sqs-block-content h3").click(function() {
-
-        $(this).nextUntil("h3").slideToggle();
-        $(this).toggleClass('ui-closed ui-open');
-      });
-    });
-    </script>
-
-    <script>
-    function openProgram(evt, programName) {
-
-    var i, tabcontent, tablinks;
-
-
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-
-
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-
-    document.getElementById(programName).style.display = "block";
-    evt.currentTarget.className += " active";
-    }
-
-    document.getElementById("defaultOpen").click();
-  </script>
-
-
 
   </body>
 </html>
