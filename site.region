@@ -297,7 +297,7 @@
       $( "#promotedGalleryWrapper" ).append( $( "#breadtrail" ) );
       $( ".index-section:first-child .promoted-gallery-wrapper" ).append( $( "#breadtrail" ) );
       $( ".banner-thumbnail-wrapper" ).append( $( "#breadtrail" ) );
-      $( ".excerpt-thumb" ).append( $( ".entry-header" ) );
+      $( ".excerpt-thumb" ).append( $( "this .entry-header" ) );
     });
     </script>
 
