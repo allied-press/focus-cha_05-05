@@ -269,6 +269,8 @@
         <p><strong><a target="_blank" href='https://maycreate.com/'>Site by Maycreate</a></strong></p>
       </div>
 
+      {@|apply social.block}
+
     </div>
 
     <squarespace:script src="site-bundle.js" combo="false" />
@@ -297,6 +299,7 @@
       $( "#promotedGalleryWrapper" ).append( $( "#breadtrail" ) );
       $( ".index-section:first-child .promoted-gallery-wrapper" ).append( $( "#breadtrail" ) );
       $( ".banner-thumbnail-wrapper" ).append( $( "#breadtrail" ) );
+      $("#mobileNavigation").append( $( "#mobileSocial" ) );
 
     });
     </script>
