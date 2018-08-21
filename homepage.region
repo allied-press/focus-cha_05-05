@@ -301,7 +301,7 @@
 
       $("#mainNavigation > :last-child a").replaceWith("<a href='/search'><i class='fas fa-search'></i></a>");
       $("#mainNavigation .folder-toggle").append("<i class='fas fa-chevron-down'></i>");
-      $("#mobileNavigation").append("<i class='fab fa-facebook-f'></i>");
+      $("#mobileNavigation").append("<a href='https://www.facebook.com/FocusTreatment/'><i class='fab fa-facebook-f'></i></a>");
     });
     </script>
 
