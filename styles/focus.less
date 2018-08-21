@@ -751,16 +751,28 @@ body#collection-5b60bdcc8a922d43bf030b96{
 }
 
 #testimonials {
-    background: #ddd;
+    background: @darkBlue;
     padding: 80px 0;
+    color: #fff;
 }
 
 .testimonials-inner {
   max-width: 1020px;
   margin: 0 auto;
+  height: 155px;
+
+  h2{
+    color: #fff;
+  }
 
   .sqs-row {
     margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 640px){
+  #testimonials .testimonials-inner{
+    height: 220px;
   }
 }
 
