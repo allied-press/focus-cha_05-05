@@ -301,7 +301,7 @@
       $( ".banner-thumbnail-wrapper" ).append( $( "#breadtrail" ) );
       $("#mobileNavigation").append( $( "#mobileSocial" ) );
 
-      $(".excerpt-thumb").append( $( ".entry-header" ) );
+      $(".p-summary").prepend( $( ".entry-header" ) );
 
     });
     </script>
