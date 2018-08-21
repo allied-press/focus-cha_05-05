@@ -301,7 +301,9 @@
       $( ".banner-thumbnail-wrapper" ).append( $( "#breadtrail" ) );
       $("#mobileNavigation").append( $( "#mobileSocial" ) );
 
-      $(".p-summary").prepend( $( ".entry-header" ) );
+      $("article").each(function(){
+        $(".p-summary").prepend( $( ".entry-header" ) );
+      });
 
     });
     </script>
