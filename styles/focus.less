@@ -744,12 +744,15 @@ body#collection-5b60bdcc8a922d43bf030b96{
 }
 
 .only-mobile {
-    background: #12263c;
-    color: white;
+    background: @darkBlue;
     text-align: center;
     margin: 0;
-    padding: 15px;
+    padding: 25px;
     display: none;
+
+    a{
+      color: #fff;
+    }
 }
 
 @media only screen and (max-width: 640px){
@@ -797,7 +800,7 @@ body#collection-5b60bdcc8a922d43bf030b96{
 
 @media only screen and (max-width: 640px){
   #secondaryNavigation div{
-    text-align: center;
+    text-align: center !important;
   }
 }
 
