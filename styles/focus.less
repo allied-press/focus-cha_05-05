@@ -356,21 +356,28 @@ div#mobileSocial {
   }
 }
 
-//Staff
-.index-section:nth-child(even) .promoted-gallery-wrapper {
-  display: none;
-}
-
-a.summary-title-link:hover {
-    color: @brightGreen !important;
-    transition: all .3s ease;
-}
-
 @media only screen and (max-width: 640px){
   #footer .gallery-block {
     width: 25%;
     margin: 0 auto;
   }
+}
+
+//Staff
+.index-section:nth-child(even) .promoted-gallery-wrapper {
+  display: none;
+}
+
+.sqs-block-summary-v2 .summary-block-setting-text-size-medium .summary-title a {
+  font-size: 15px;
+  color: @darkBlue !important;
+  margin-top: -10px!important;
+  padding-top: 0px!important;
+  line-height: 15px;
+}
+
+.sqs-block-summary-v2 .summary-metadata-item a {
+  color: @darkBlue !important;
 }
 
 
