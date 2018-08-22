@@ -243,7 +243,7 @@
          {squarespace.main-content}
          </div>
          <aside class="sidebar">
-            <squarespace:block-field id="about-sidebar" columns="12" label="About Us Sidebar" />
+            <squarespace:block-field id="about-sidebar" class="top-sidebar" columns="12" label="About Us Sidebar" />
             <squarespace:navigation navigationId="aboutUs" template="secondary-navigation"/>
             <squarespace:block-field id="program-sidebar" columns="12" label="About Us Sidebar" />
         </aside>

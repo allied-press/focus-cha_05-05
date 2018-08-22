@@ -247,7 +247,7 @@
          </div>
          </div>
          <aside class="sidebar">
-            <squarespace:block-field id="contact-sidebar" columns="12" label="Sidebar" />
+            <squarespace:block-field id="contact-sidebar" class="top-sidebar" columns="12" label="Sidebar" />
         </aside>
         </div>
         <div id="breadtrail">
