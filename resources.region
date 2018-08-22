@@ -244,6 +244,7 @@
          </div>
          <aside class="sidebar">
             <squarespace:block-field id="resources-sidebar" class="top-sidebar" columns="12" label="Resources Sidebar" />
+            <h2 class="only-mobile"><a href="/signs-symptoms"> Resources </a></h2>
             <squarespace:navigation navigationId="resources" template="secondary-navigation"/>
             <squarespace:block-field id="program-sidebar" columns="12" label="Global Sidebar Content" />
         </aside>
