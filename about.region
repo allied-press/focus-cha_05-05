@@ -244,6 +244,7 @@
          </div>
          <aside class="sidebar">
             <squarespace:block-field id="about-sidebar" class="top-sidebar" columns="12" label="About Us Sidebar" />
+            <h2 class="only-mobile"> About Us </h2>
             <squarespace:navigation navigationId="aboutUs" template="secondary-navigation"/>
             <squarespace:block-field id="program-sidebar" columns="12" label="About Us Sidebar" />
         </aside>
