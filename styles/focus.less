@@ -245,9 +245,11 @@ div#mobileSocial {
 
 //breadcrumbs
 #breadtrail {
-  background: @darkBlue;
   padding: 5px 0;
   font-size: 1em;
+  background-color: @brightGreen;
+  font-weight: 700;
+  line-height: 20px;
 
   #breadcrumbs {
     max-width: 1020px;
@@ -259,7 +261,7 @@ div#mobileSocial {
     }
 
     a:hover{
-      color: @brightBlue !important;
+      color: @darkBlue !important;
     }
   }
 }
@@ -290,6 +292,10 @@ div#mobileSocial {
 #footer{
   border-top: 3px solid @brightGreen;
 
+  p {
+    padding: 0px 10px;
+  }
+
   p:first-of-type{
     font-size: 16px;
     margin-bottom: 0px;
@@ -315,7 +321,7 @@ div#mobileSocial {
 .fab {
     color: #fff !important;
     font-size: 1.5em;
-    padding: 10px;
+    padding: 5px;
     width: 25px;
     text-align: center;
     transition: all .3s ease;
