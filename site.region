@@ -293,22 +293,14 @@
 
       alterClass();
 
-      if $('#promotedGalleryWrapper') {
-        $( "#promotedGalleryWrapper" ).append( $( "#breadtrail" ) );
-      } else if {
-        $( ".banner-thumbnail-wrapper" ).append( $( "#breadtrail" ) );
-      } else {
-        $( "#header" ).append( $( "#breadtrail" ) );
-      }; 
-
       $("#mainNavigation > :last-child a").replaceWith("<a href='/search'><i class='fas fa-search'></i></a>");
       $("#mainNavigation .folder-toggle").append("<i class='fas fa-chevron-down'></i>");
 
-
+      $( "#promotedGalleryWrapper" ).append( $( "#breadtrail" ) );
       $( ".index-section:first-child .promoted-gallery-wrapper" ).append( $( "#breadtrail" ) );
+      $( ".banner-thumbnail-wrapper" ).append( $( "#breadtrail" ) );
 
-
-
+      
       $("#mobileNavigation").append( $( "#mobileSocial" ) );
 
       $(".entry").each(function(){
