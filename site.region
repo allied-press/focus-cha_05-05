@@ -299,6 +299,8 @@
       $( "#promotedGalleryWrapper" ).append( $( "#breadtrail" ) );
       $( ".index-section:first-child .promoted-gallery-wrapper" ).append( $( "#breadtrail" ) );
       $( ".banner-thumbnail-wrapper" ).append( $( "#breadtrail" ) );
+      $( "#header" ).append( $( "#breadtrail" ) );
+
       $("#mobileNavigation").append( $( "#mobileSocial" ) );
 
       $(".entry").each(function(){
