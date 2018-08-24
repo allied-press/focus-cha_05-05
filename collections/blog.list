@@ -1,5 +1,5 @@
 <div id="content" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "gallery"}{.or}{.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}{.end}>
- {squarespace.main-content}
+ <squarespace:block-field id="blogBanner" columns="12" label="Blog Banner" />
  <div id="breadtrail">
    {@|apply breadcrumbs.block}
  </div>
