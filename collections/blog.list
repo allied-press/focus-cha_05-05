@@ -1,4 +1,9 @@
-{squarespace.main-content}
+<div id="content" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "gallery"}{.or}{.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}{.end}>
+ {squarespace.main-content}
+ <div id="breadtrail">
+   {@|apply breadcrumbs.block}
+ </div>
+</div>
 
 <div class="blog-list">
 
