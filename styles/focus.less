@@ -100,20 +100,32 @@ a:hover{
 
 a.sqs-block-button-element--medium.sqs-block-button-element,
 a.sqs-block-button-element--small.sqs-block-button-element,
-.sqs-block-image .image-block-outer-wrapper.design-layout-card .image-button a,
-.sqs-block-image .image-block-outer-wrapper.design-layout-poster .image-button a {
+.sqs-block-image .image-block-outer-wrapper.design-layout-card .image-button a {
   border-radius: 5px !important;
   transition: all .3s ease;
   background: @brightBlue;
 }
 
+.sqs-block-image .image-block-outer-wrapper.design-layout-poster .image-button a {
+  border-radius: 5px!important;
+  transition: all .3s ease;
+  background: @brightGreen
+  color: #fff!important;
+}
+
 a.sqs-block-button-element--medium.sqs-block-button-element:hover,
 a.sqs-block-button-element--small.sqs-block-button-element:hover,
-.sqs-block-image .image-block-outer-wrapper.design-layout-card .image-button a:hover,
-.sqs-block-image .image-block-outer-wrapper.design-layout-poster .image-button a:hover {
+.sqs-block-image .image-block-outer-wrapper.design-layout-card .image-button a:hover {
   background: @darkBlue !important;
   color: white !important;
   opacity: 1 !important;
+  transition: all .3s ease;
+}
+
+.sqs-block-image .image-block-outer-wrapper.design-layout-poster .image-button a:hover {
+  background: @brightBlue;
+  color: #fff!important;
+  opacity: 1!important;
   transition: all .3s ease;
 }
 
