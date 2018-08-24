@@ -259,7 +259,7 @@
         </div>
       </div>
       <div id="jointCommissionSection">
-      <div style="insetField">
+      <div class="insetField">
         <squarespace:block-field id="jointcommission" columns="12" label="Joint Commission"/>
       </div>
       </div>
