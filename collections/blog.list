@@ -1,4 +1,4 @@
-<squarespace:block-field id="blogBanner" columns="12" label="Blog Banner" />
+{squarespace.main-content}
 
 <div class="blog-list">
 
