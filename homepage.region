@@ -251,17 +251,20 @@
           {@|apply testimonials.block}
         </div>
       </div>
-
+      <div id="jointCommissionSection">
       <div style="nextcontent">
         <squarespace:block-field id="jointcommission" columns="12" label="Joint Commission"/>
       </div>
-
-      <div class="nextcontent" style="background-color: #eee;">
-        <squarespace:block-field id="nextcontent" columns="12" label="Insurance" />
       </div>
 
       <div class="nextcontent">
+        <squarespace:block-field id="nextcontent" columns="12" label="Insurance" />
+      </div>
+      
+      <div id="redcSection">
+      <div class="nextcontent">
       <squarespace:block-field id="redc" columns="12" label="REDC"/>
+      </div>
       </div>
 
 
