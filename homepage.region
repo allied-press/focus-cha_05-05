@@ -252,8 +252,20 @@
         </div>
       </div>
 
+      <div id="jointCommission">
+      <div class="inset">
+        {@|apply jointcommission.block}
+      </div>
+      </div>
+
       <div class="nextcontent">
-        <squarespace:block-field id="nextcontent" columns="12" label="More Content" />
+        <squarespace:block-field id="nextcontent" columns="12" label="Insurance" />
+      </div>
+
+      <div id="redc">
+      <div class="inset">
+      {@|apply redc.block}
+      </div>
       </div>
 
 
