@@ -1,3 +1,5 @@
+<squarespace:block-field id="blogBanner" columns="12" label="Blog Banner" />
+
 <div class="blog-list">
 
   {.repeated section items}
@@ -91,5 +93,3 @@
   {.end}
 
 </div>
-
-
