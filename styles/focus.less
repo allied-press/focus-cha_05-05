@@ -270,12 +270,19 @@ div.summary-item.summary-item-record-type-image.sqs-gallery-design-autogrid-slid
 }
 
 //Mobile navigation ============================================================
-#sidecarNav{
+#sidecarNav {
   background: @darkBlue;
 
-  nav#mobileNavigation a {
-    color: white !important;
-    padding: 15px 0 !important;
+  nav#mobileNavigation{
+
+    #logoImage img{
+      max-height: 100px;
+    }
+
+    a {
+      color: white !important;
+      padding: 15px 0 !important;
+    }
   }
 }
 
@@ -283,6 +290,7 @@ div#mobileSocial {
     display: flex;
     border-top: 2px solid @brightBlue;
     margin-top: 10%;
+    justify-content: space-between;
 }
 
 .mobile-nav-toggle {
