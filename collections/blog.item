@@ -1,5 +1,7 @@
 <div class="blog-item">
 
+  <squarespace:block-field id="blogBanner" columns="12" label="Blog Banner" />
+
   {.section item}
   <article class="entry h-entry {@|item-classes}{.main-image?} has-main-image{.end} clear" id="article-{id}" data-item-id="{id}">
 

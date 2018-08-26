@@ -1,11 +1,6 @@
-<div id="content" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "gallery"}{.or}{.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}{.end}>
- <squarespace:block-field id="blogBanner" columns="12" label="Blog Banner" />
- <div id="breadtrail">
-   {@|apply breadcrumbs.block}
- </div>
-</div>
-
 <div class="blog-list">
+
+  <squarespace:block-field id="blogBanner" columns="12" label="Blog Banner" />
 
   {.repeated section items}
   <article class="entry h-entry {@|item-classes}" id="article-{id}" data-item-id="{id}">
