@@ -309,7 +309,7 @@
 
       $(".next-label").text("Previous Post");
       $(".prev-label").prepend("<i class='fas fa-arrow-left'></i>");
-      $(".next-labe").append("<i class='fas fa-arrow-right'></i>");
+      $(".next-label").append("<i class='fas fa-arrow-right'></i>");
 
     });
     </script>
