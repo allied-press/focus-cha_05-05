@@ -311,6 +311,8 @@
       $(".prev-label").prepend("<i class='fas fa-arrow-left'></i>");
       $(".next-label").append("<i class='fas fa-arrow-right'></i>");
 
+      $('.banner-thumbnail-wrapper #thumbnail').html($('#blogBanner').html());
+
     });
     </script>
 
