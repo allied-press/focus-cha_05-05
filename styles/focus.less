@@ -102,12 +102,34 @@ a:hover{
   color: black !important;
 }
 
-a.sqs-block-button-element--medium.sqs-block-button-element,
+
 a.sqs-block-button-element--small.sqs-block-button-element,
+a.sqs-block-button-element--medium.sqs-block-button-element,
+a.sqs-block-button-element--large.sqs-block-button-element,
+.small-button-shape-rounded .sqs-block-button .sqs-block-button-element--small, 
+.medium-button-shape-rounded .sqs-block-button .sqs-block-button-element--medium, 
+.large-button-shape-rounded .sqs-block-button .sqs-block-button-element--large,
+.small-button-style-outline .sqs-block-button .sqs-block-button-element--small, 
+.medium-button-style-outline .sqs-block-button .sqs-block-button-element--medium, 
+.large-button-style-outline .sqs-block-button .sqs-block-button-element--large, 
+.small-button-style-outline .sqs-alternate-block-style-container .sqs-block-button .sqs-block-button-element--small, 
+.medium-button-style-outline .sqs-alternate-block-style-container .sqs-block-button .sqs-block-button-element--medium, 
+.large-button-style-outline .sqs-alternate-block-style-container .sqs-block-button .sqs-block-button-element--large,
+.small-button-style-raised .sqs-block-button .sqs-block-button-element--small, 
+.medium-button-style-raised .sqs-block-button .sqs-block-button-element--medium, 
+.large-button-style-raised .sqs-block-button .sqs-block-button-element--large,
+.small-button-style-solid .sqs-block-button .sqs-block-button-element--small, 
+.medium-button-style-solid .sqs-block-button .sqs-block-button-element--medium, 
+.large-button-style-solid .sqs-block-button .sqs-block-button-element--large,
+.small-button-style-solid .sqs-block-button .sqs-block-button-element--small, 
+.medium-button-style-solid .sqs-block-button .sqs-block-button-element--medium, 
+.large-button-style-solid .sqs-block-button .sqs-block-button-element--large,
 .sqs-block-image .image-block-outer-wrapper.design-layout-card .image-button a {
   border-radius: 5px !important;
   transition: all .3s ease;
   background: @brightBlue;
+  width: 150px;
+  padding: 15px 20px;
 }
 
 .sqs-block-image .image-block-outer-wrapper.design-layout-poster .image-button a {
@@ -117,8 +139,28 @@ a.sqs-block-button-element--small.sqs-block-button-element,
   color: #fff!important;
 }
 
-a.sqs-block-button-element--medium.sqs-block-button-element:hover,
+
 a.sqs-block-button-element--small.sqs-block-button-element:hover,
+a.sqs-block-button-element--medium.sqs-block-button-element:hover,
+a.sqs-block-button-element--large.sqs-block-button-element:hover,
+.small-button-shape-rounded .sqs-block-button .sqs-block-button-element--small:hover, 
+.medium-button-shape-rounded .sqs-block-button .sqs-block-button-element--medium:hover, 
+.large-button-shape-rounded .sqs-block-button .sqs-block-button-element--large:hover,
+.small-button-style-outline .sqs-block-button .sqs-block-button-element--small:hover, 
+.medium-button-style-outline .sqs-block-button .sqs-block-button-element--medium:hover, 
+.large-button-style-outline .sqs-block-button .sqs-block-button-element--large:hover, 
+.small-button-style-outline .sqs-alternate-block-style-container .sqs-block-button .sqs-block-button-element--small:hover, 
+.medium-button-style-outline .sqs-alternate-block-style-container .sqs-block-button .sqs-block-button-element--medium:hover, 
+.large-button-style-outline .sqs-alternate-block-style-container .sqs-block-button .sqs-block-button-element--large:hover,
+.small-button-style-raised .sqs-block-button .sqs-block-button-element--small:hover, 
+.medium-button-style-raised .sqs-block-button .sqs-block-button-element--medium:hover, 
+.large-button-style-raised .sqs-block-button .sqs-block-button-element--large:hover,
+.small-button-style-solid .sqs-block-button .sqs-block-button-element--small:hover, 
+.medium-button-style-solid .sqs-block-button .sqs-block-button-element--medium:hover, 
+.large-button-style-solid .sqs-block-button .sqs-block-button-element--large:hover,
+.small-button-style-solid .sqs-block-button .sqs-block-button-element--small:hover, 
+.medium-button-style-solid .sqs-block-button .sqs-block-button-element--medium:hover, 
+.large-button-style-solid .sqs-block-button .sqs-block-button-element--large:hover,
 .sqs-block-image .image-block-outer-wrapper.design-layout-card .image-button a:hover {
   background: @darkBlue !important;
   color: white !important;
@@ -907,7 +949,8 @@ body#collection-5b6c64f20ebbe8501cc0c481 .blog-list .entry {
         border: 2px solid @medGreen;
         color: @darkBlue !important;
         border-radius: 5px;
-        width: 35%;
+        width: 150px;
+        padding: 15px 20px;
       }
 
       .sqs-block-button-element:hover {
@@ -927,7 +970,7 @@ body#collection-5b6c64f20ebbe8501cc0c481 .blog-list .entry {
 
 @media only screen and (max-width: 480px){
   .sidebar .sqs-block-button-element{
-    font-size: .75em !important;
+    font-size: .75em !important;\
   }
 }
 
@@ -945,7 +988,7 @@ body#collection-5b6c64f20ebbe8501cc0c481 .blog-list .entry {
 
 @media only screen and (max-width: 640px){
 
-  .sidebar{
+  .sidebar {
     width: 100% !important;
   }
 
@@ -1257,6 +1300,8 @@ input.button {
   border-radius: 5px !important;
   transition: all .3s ease !important;
   border: none !important;
+  width: 150px;
+  padding: 15px 20px;
 }
 
 input.button:hover {
