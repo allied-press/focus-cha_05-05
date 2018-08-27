@@ -13,7 +13,7 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
     $(document).ready(function() {
-      $("h3:first-of-type").closest("div.sqs-block-content").attr("id", "accordion");
+      $("#faq-section > h3:first-of-type").closest("div.sqs-block-content").attr("id", "accordion");
       $('#accordion>h3').addClass('accordion-control');
       $( "p" ).wrap( "<div class='accordion-panel'></div>" );
       $("#accordion").accordion();
