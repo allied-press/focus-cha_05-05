@@ -15,6 +15,7 @@
     $(document).ready(function() {
       $( "p" ).wrap( "<div></div>" );
       $("#accordion").accordion();
+      $("h3:first-of-type").closest("div.sqs-block-content").attr("id", "accordion");
     });
     </script>
   </head>
