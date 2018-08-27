@@ -1,4 +1,39 @@
-<squarespace:block-field id="blogBanner" columns="12" label="Blog Banner" />
+<div id="promotedGalleryWrapper" class="sqs-layout promoted-gallery-wrapper">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
+{.background-source-video?}
+  <div class="banner-thumbnail-wrapper{.if description} has-description{.end}" data-content-field="main-image" data-collection-id="{collection.id}" data-edit-main-image="Banner" data-annotation-alignment="bottom left">
+    <div class="color-overlay"></div>
+    <figure id="thumbnail" class="loading content-fill">
+      {@|apply sqs-video-background.block}
+    </figure>
+    {.if description}<div class="desc-wrapper" data-collection-id="{id}">{description}</div>{.end}
+  </div>
+{.or}
+  {.main-image?}
+    <div class="banner-thumbnail-wrapper{.if description} has-description{.end}" data-content-field="main-image" data-collection-id="{collection.id}" data-edit-main-image="Banner" data-annotation-alignment="bottom left">
+      {.section mainImage}
+        <div class="color-overlay"></div>
+        <figure id="thumbnail" class="loading content-fill">
+          <img {@|image-meta} />
+        </figure>
+      {.end}
+      {.if description}<div class="desc-wrapper" data-collection-id="{id}">{description}</div>{.end}
+    </div>
+  {.end}
+{.end}
+
+<main id="page" role="main">
+<div id="content" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "gallery"}{.or}{.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}{.end}>
+         {squarespace.main-content}
+         <div id="breadtrail">
+          {@|apply breadcrumbs.block}
+         </div>
+</div>
+</main>
+
 <div class="blog-list">
 
   {.repeated section items}
