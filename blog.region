@@ -284,7 +284,8 @@
       $(".entry").each(function(){
         $(".p-summary", this).prepend( $( ".entry-header", this ) );
       });
-
+    
+      $(".prev-label").text(" Newer Posts")
       $(".next-label").text("Previous Posts ");
       $(".prev-label").prepend("<i class='fas fa-arrow-left'></i>");
       $(".next-label").append("<i class='fas fa-arrow-right'></i>");
