@@ -13,9 +13,18 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
     $(document).ready(function() {
-      $( "p" ).wrap( "<div></div>" );
-      $("#accordion").accordion();
       $("h3:first-of-type").closest("div.sqs-block-content").attr("id", "accordion");
+      $('#accordion h3').addClass('accordion-control');
+      $( "p" ).wrap( "<div class='accordion-panel'></div>" );
+      $("#accordion").accordion();
+      $("#accordion").on('click', '.accordion-control', function(e){
+        e.preventDefault();
+        $(this)
+        .next('.accordion-panel')
+        .not(':animated')
+        .slideToggle();
+      });
+      
     });
     </script>
   </head>
