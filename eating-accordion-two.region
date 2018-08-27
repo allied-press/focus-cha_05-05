@@ -322,6 +322,8 @@
 
       $( "#promotedGalleryWrapper" ).append( $( "#breadtrail" ) );
       $("#mobileNavigation").append( $( "#mobileSocial" ) );
+
+      $( ".inner" ).wrap( "<div class='faq-answer'></div>" );
     });
     </script>
 
