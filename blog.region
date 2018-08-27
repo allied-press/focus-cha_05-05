@@ -118,6 +118,8 @@
                     </div>
                   {.end}
                 {.end}
+                <main 
+                
                   <squarespace:query collection="{collection.urlId}" featured="true" limit="5">
                   {.section items}
                     <div class="sqs-featured-posts-gallery">
@@ -256,7 +258,9 @@
             </ul>
           </nav>
         </div>{.end}{.end}<!--
-        -->{.collectionTypeNameEquals? page}<!--
+        -->{.collectionTypeNameEquals? page}
+        {.or}
+            {.collectionTypeNameEquals? blog}<!--
         --><squarespace:folder-navigation template="folder-navigation" />{.end}{.end}<!--
         --><div id="content" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "gallery"}{.or}{.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}{.end}>
          {squarespace.main-content}
