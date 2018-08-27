@@ -13,9 +13,8 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
     $(document).ready(function() {
+      $( "p" ).wrap( "<div></div>" );
       $("#accordion").accordion();
-      $("h3").find("p").addClass('answer');
-      $( "p" ).wrap( "<div class='grey'></div>" );
     });
     </script>
   </head>
