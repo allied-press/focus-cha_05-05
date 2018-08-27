@@ -118,9 +118,6 @@
                     </div>
                   {.end}
                 {.end}
-                <main>
-                {squarespace.main-content}
-                </main>
                 
                   <squarespace:query collection="{collection.urlId}" featured="true" limit="5">
                   {.section items}
