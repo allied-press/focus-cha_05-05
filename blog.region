@@ -171,16 +171,15 @@
                     </div>
                   {.or}
                     {.section collection}
-                    <div id="{urlId}" class="section mainContent" data-url-id="{urlId}" data-collection-id="{id}" data-edit-main-image="Banner">
-                    <div class="promoted-gallery-wrapper"></div>
+
                       {.background-source-video?}
                         <div class="banner-thumbnail-wrapper{.if description} has-description{.end}" data-content-field="main-image">
                           <div class="color-overlay"></div>
-                            <figure id="thumbnail" class="loading content-fill">
-                              {@|apply sqs-video-background.block}
-                            </figure>
-                            {.if description}<div class="desc-wrapper" data-content-field="description">{description}</div>{.end}
-                          </div>
+                          <figure id="thumbnail" class="loading content-fill">
+                            {@|apply sqs-video-background.block}
+                          </figure>
+                          {.if description}<div class="desc-wrapper" data-content-field="description">{description}</div>{.end}
+                        </div>
                       {.or}
                         {.section mainImage}
                           <div class="banner-thumbnail-wrapper{.if description} has-description{.end}" data-content-field="main-image">
@@ -197,27 +196,27 @@
                   {.end}
                   </squarespace:query>
                 {.or}
-                  <div id="promotedGalleryWrapper" class="sqs-layout promoted-gallery-wrapper"><div class="row"><div class="col"></div></div></div>
-                {.background-source-video?}
-                    <div class="banner-thumbnail-wrapper{.if description} has-description{.end}" data-content-field="main-image" data-collection-id="{collection.id}" data-edit-main-image="Banner" data-annotation-alignment="bottom left">
+
+                  {.background-source-video?}
+                    <div class="banner-thumbnail-wrapper{.if description} has-description{.end}" data-content-field="main-image">
                       <div class="color-overlay"></div>
                       <figure id="thumbnail" class="loading content-fill">
                         {@|apply sqs-video-background.block}
                       </figure>
-                      {.if description}<div class="desc-wrapper" data-collection-id="{id}">{description}</div>{.end}
+                      {.if description}<div class="desc-wrapper" data-content-field="description">{description}</div>{.end}
                     </div>
-                {.or}
-                  {.main-image?}
-                    <div class="banner-thumbnail-wrapper{.if description} has-description{.end}" data-content-field="main-image" data-collection-id="{collection.id}" data-edit-main-image="Banner" data-annotation-alignment="bottom left">
-                      {.section mainImage}
-                      <div class="color-overlay"></div>
-                      <figure id="thumbnail" class="loading content-fill">
-                        <img {@|image-meta} />
-                      </figure>
-                      {.end}
-                      {.if description}<div class="desc-wrapper" data-collection-id="{id}">{description}</div>{.end}
-                    </div>
+                  {.or}
+                    {.section mainImage}
+                      <div class="banner-thumbnail-wrapper{.if description} has-description{.end}" data-content-field="main-image">
+                        <div class="color-overlay"></div>
+                        <figure id="thumbnail" class="loading content-fill">
+                          <img {@|image-meta} />
+                        </figure>
+                        {.if description}<div class="desc-wrapper" data-content-field="description">{description}</div>{.end}
+                      </div>
+                    {.end}
                   {.end}
+
                 {.end}
               {.end}
             {.end}
