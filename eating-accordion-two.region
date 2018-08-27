@@ -295,7 +295,7 @@
     {squarespace-footers}
 
     <script>
-    jQuery(document).ready(function($) {
+    $(document).ready(function($) {
       var alterClass = function() {
         var ww = document.body.clientWidth;
         if (ww < 1160) {
@@ -316,7 +316,7 @@
       $( "#promotedGalleryWrapper" ).append( $( "#breadtrail" ) );
       $("#mobileNavigation").append( $( "#mobileSocial" ) );
 
-      $( "#accordion" ).accordion({
+      $("#accordion").accordion({
         collapsible: true
       });
       $("h3").find("p").addClass('answer');
