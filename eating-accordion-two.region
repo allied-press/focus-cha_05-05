@@ -297,7 +297,6 @@
     </div>
 
     <squarespace:script src="site-bundle.js" combo="false" />
-    <squarespace:script src="jquery-3.3.1.min.js" combo="false" />
     {squarespace-footers}
 
     <script>
