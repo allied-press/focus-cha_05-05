@@ -1,5 +1,7 @@
 
 
+<main role="main" data-content-field="main-content">{squarespace.main-content}</main>
+
 <div class="blog-list">
 
   {.repeated section items}
