@@ -252,6 +252,8 @@
         <div class="main-content-sidebar">
           <div class="with-sidebar-content">
          {squarespace.main-content}
+         {@|apply ed-iop-faq.block}
+         
          </div>
          <aside class="sidebar">
             <squarespace:block-field id="eating-sidebar" class="top-sidebar" columns="12" label="Program Sidebar" />
