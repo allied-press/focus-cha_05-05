@@ -117,7 +117,7 @@
                       {.if description}<div class="desc-wrapper" data-collection-id="{id}">{description}</div>{.end}
                     </div>
                   {.end}
-                {.end}
+                
                 
                   <squarespace:query collection="{collection.urlId}" featured="true" limit="5">
                   {.section items}
@@ -217,7 +217,7 @@
                       </div>
                     {.end}
                   {.end}
-
+{.end}
                 {.end}
               {.end}
             {.end}
