@@ -11,28 +11,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
-    $(document).ready(function() {
-      $("#faq-section h3:first-of-type").closest("div.sqs-block-content").attr("id", "accordion");
-      $('#accordion>h3').addClass('accordion-control');
-      $( "p" ).wrap( "<div class='accordion-panel'></div>" );
-      $("#accordion").accordion();
-      $("#accordion").on('click', '.accordion-control', function(e){
-        e.preventDefault();
-        $(this)
-        .next('.accordion-panel')
-        .not(':animated')
-        .slideToggle();
-      });
-    });
-    </script>
-    <style>
-    .accordion-control {
-      background-color: navy!important;
-      color: #fff!important;
-      padding: 10px!important;
-    }
-    </style>
+
   </head>
 
   <body id="{squarespace.page-id}" class="{squarespace.page-classes}{.if item}{.section item}{.if productType}{.or}{.background-source-video?} has-banner-image item-main-image{.or}{.main-image?} has-banner-image item-main-image{.end}{.end}{.end}{.end}{.or}{.section collection}{.collectionTypeNameEquals? index}{.section collections}{.section 0}{.background-source-video?} has-banner-image index-page{.or}{.main-image?} has-banner-image index-page{.end}{.end}{.end}{.end}{.or}{.background-source-video?} has-banner-image general-page{.or}{.main-image?} has-banner-image general-page{.end}{.end}{.end}{.end}{.end}">
@@ -336,7 +315,13 @@
       $( "#promotedGalleryWrapper" ).append( $( "#breadtrail" ) );
       $("#mobileNavigation").append( $( "#mobileSocial" ) );
 
-      
+      $('#faq-section h3:first-of-type').closest('div.sqs-block-content').attr('class', 'accordion-wrapper');
+      $('.accordion-wrapper h3').addClass('ui-closed').css('cursor','pointer');
+      $('.accordion-wrapper h3').nextUntil('h3').slideToggle().addClass('accordion-content');
+      $('.accordion-wrapper h3').click(function() {
+        $(this).nextUntil('h3').slideToggle();
+        $(this).toggleClass('ui-closed ui-open');
+      });
     });
     </script>
 
