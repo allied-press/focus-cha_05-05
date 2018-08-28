@@ -331,8 +331,6 @@
         $(this).nextUntil('h3').slideToggle();
         $(this).toggleClass('ui-closed ui-open');
       });
-      var slideshowBanner = $('div.sqs-block.gallery-block.sqs-block-gallery').addClass('galleryBanner');
-      $('div#promotedGalleryWrapper div.row div.col').append(slideshowBanner);
       
     });
     </script>
