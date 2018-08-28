@@ -199,7 +199,8 @@ p+h2 {
     font-size: 2.5em !important;
   }
 
-  .collection-type-page.has-promoted-gallery #promotedGalleryWrapper .sqs-gallery-container{
+  .collection-type-page.has-promoted-gallery #promotedGalleryWrapper .sqs-gallery-container,
+  .collection-type-blog.has-promoted-gallery #promotedGalleryWrapper .sqs-gallery-container{
     height: 200px !important;
 
     .sqs-gallery {
@@ -509,6 +510,11 @@ div#mobileSocial {
         width: 100%;
         float: none;
         margin: 0;
+    }
+    .collection-type-blog.has-promoted-gallery#promotedGalleryWrapper .sqs-gallery-block-slideshow .sqs-gallery, .collection-type-blog.has-promoted-gallery .promoted-gallery-wrapper .sqs-gallery-block-slideshow .sqs-gallery {
+      width: 100%;
+      height: 600px!important;
+      max-width: 100%;
     }
 .banner-thumbnail-wrapper {
   height: 15vw;
