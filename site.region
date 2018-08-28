@@ -158,30 +158,7 @@
                       </div>
 
                     </div>
-                  {.or}
-                    {.section collection}
-
-                      {.background-source-video?}
-                        <div class="banner-thumbnail-wrapper{.if description} has-description{.end}" data-content-field="main-image">
-                          <div class="color-overlay"></div>
-                          <figure id="thumbnail" class="loading content-fill">
-                            {@|apply sqs-video-background.block}
-                          </figure>
-                          {.if description}<div class="desc-wrapper" data-content-field="description">{description}</div>{.end}
-                        </div>
-                      {.or}
-                        {.section mainImage}
-                          <div class="banner-thumbnail-wrapper{.if description} has-description{.end}" data-content-field="main-image">
-                            <div class="color-overlay"></div>
-                            <figure id="thumbnail" class="loading content-fill">
-                              <img {@|image-meta} />
-                            </figure>
-                            {.if description}<div class="desc-wrapper" data-content-field="description">{description}</div>{.end}
-                          </div>
-                        {.end}
-                      {.end}
-
-                    {.end}
+                  
                   {.end}
                   </squarespace:query>
                 
