@@ -274,12 +274,6 @@
         {.end}
       </main>
 
-      <div id="blogBanner">
-        <div class="blog-banner-gallery">
-          <squarespace:block-field id="blog-banner" columns="12" label="Blog Banner" />
-        </div>
-      </div>
-
       <div id="preFooter">
         <div class="pre-footer-inner">
           <squarespace:block-field id="preFooterBlocks" columns="12" label="Pre-Footer Content" />
