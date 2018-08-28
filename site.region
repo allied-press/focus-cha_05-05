@@ -218,7 +218,7 @@
         {.end}
       </main>
 
-      <div id="preFooter">
+<div id="preFooter">
         <div class="pre-footer-inner">
           <squarespace:block-field id="preFooterBlocks" columns="12" label="Pre-Footer Content" />
         </div>
@@ -233,27 +233,16 @@
         </div>
       </footer>
 
-  <section class="legal">
-    <div class="grid--container">
-      <div class="grid text--center">
-
-        <div class="grid__col-12">
-          <p>This facility is remotely supervised by Medical Doctors who are not always on site.</p>
-          <p><strong><a href="https://maycreate.com/" alt="Site by Maycreate" target="_blank">Site by Maycreate</a></strong>
-        </div>
-
-      </div>
-    </div>
-  </section>
-      {squarespace-footers}
-</footer>
-<div id="legal">
+      <div id="legal">
         <p>© 2018 Focus Treatment Centers. All Rights Reserved.</p>
         <p><strong><a target="_blank" href='https://maycreate.com/'>Site by Maycreate</a></strong></p>
       </div>
 
       {@|apply social.block}
-<squarespace:script src="site-bundle.js" combo="false" />
+
+    </div>
+
+    <squarespace:script src="site-bundle.js" combo="false" />
     <squarespace:script src="jquery-3.3.1.min.js" combo="false" />
     {squarespace-footers}
 
@@ -277,22 +266,21 @@
       $("#mainNavigation .folder-toggle").append("<i class='fas fa-chevron-down'></i>");
 
       $( "#promotedGalleryWrapper" ).append( $( "#breadtrail" ) );
-      $( ".index-section:first-child .promoted-gallery-wrapper" ).append( $( "#breadtrail" ) );
-      $( ".banner-thumbnail-wrapper" ).append( $( "#breadtrail" ) );
-
-
       $("#mobileNavigation").append( $( "#mobileSocial" ) );
-
-      $(".entry").each(function(){
-        $(".p-summary", this).prepend( $( ".entry-header", this ) );
-      });
-
-      $(".next-label").text("Previous Post");
-      $(".prev-label").prepend("<i class='fas fa-arrow-left'></i>");
-      $(".next-label").append("<i class='fas fa-arrow-right'></i>");
-
-      $('.banner-thumbnail-wrapper #thumbnail').html($('#blogBanner').html());
-
     });
+    </script>
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+      $('.accordion-wrapper .sqs-block-content h3').addClass('ui-closed').css('cursor','pointer');
+      $(".accordion-wrapper .sqs-block-content h3").nextUntil("h3").slideToggle().addClass('accordion-content');
+      $(".accordion-wrapper .sqs-block-content h3").click(function() {
+
+        $(this).nextUntil("h3").slideToggle();
+        $(this).toggleClass('ui-closed ui-open');
+      });
+    });
+    </script>
   </body>
 </html>
