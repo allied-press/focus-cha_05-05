@@ -309,6 +309,7 @@
 
       $( "#promotedGalleryWrapper" ).append( $( "#breadtrail" ) );
       $("#mobileNavigation").append( $( "#mobileSocial" ) );
+      $('a.summary-title-link').removeAttr('href');
     });
     </script>
 
