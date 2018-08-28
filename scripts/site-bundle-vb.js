@@ -11,237 +11,240 @@
     var n = {};
     return t.m = e, t.c = n, t.p = "", t(0)
 }([function(e, t, n) {
-    n(1), n(3), n(25), e.exports = n(27)
-}, function(e, t, n) {
-    var o = n(2);
-    Y.use("node", function(e) {
-        window.Singleton.create({
-            ready: function() {
-                if (e.one(".collection-type-index")) {
-                    if (window.innerWidth <= 640) return !1;
-                    this.initializer(), this.bindUI(), this.syncUI()
-                }
-            },
-            initializer: function() {
-                return this.el = e.one(".show-on-scroll"), this.el ? (this.elOffset = e.one(this.el.getData("offset-el")), this.offsetBehavior = this.el.getData("offset-behavior") || "top", this.elOffset ? (e.one("body").prepend(e.Node.create('<div class="show-on-scroll-wrapper" id="showOnScrollWrapper"></div>')), this.wrapper = e.one("#showOnScrollWrapper"), this.wrapper.setHTML(this.el._node.outerHTML), void 0) : void console.warn("No show on scroll offset element found.")) : void console.warn("No show on scroll element found.")
-            },
-            bindUI: function() {
-                this.scrollEvents(), e.one(window).on("resize", function() {
-                    this.syncUI()
-                }, this)
-            },
-            syncUI: function() {
-                this.getVariables()
-            },
-            getVariables: function() {
-                "bottom" === this.offsetBehavior ? this.navShowPosition = this.elOffset.getY() + this.elOffset.get("offsetHeight") : this.navShowPosition = this.elOffset.getY()
-            },
-            scrollEvents: function() {
-                this.scrolling = !1, e.one(window).on("scroll", function() {
-                    this.scrolling === !1 && (this.scrolling = !0, this.scrollLogic(), o(function() {
-                        this.scrolling = !1
-                    }, 300, this))
-                }, this)
-            },
-            scrollLogic: function() {
-                window.pageYOffset > this.navShowPosition ? this.wrapper.addClass("") : this.wrapper.removeClass("show"), e.later(100, this, function() {
-                    this.scrolling === !0 && window.requestAnimationFrame(e.bind(function() {
-                        this.scrollLogic()
-                    }, this))
-                })
-            }
-        })
-    })
-}, function(e, t) {
-    function n(e, t, n) {
-        t = t || 100, n = n || window, e && (o && o.cancel(), o = Y.later(t, n, e))
-    }
-    var o;
-    e.exports = n
-}, function(e, t, n) {
-    var o = n(4),
-        r = n(2),
-        i = n(5).VideoBackground,
-        a = n(5).getVideoProps;
-    Y.use(["node", "squarespace-gallery-ng"], function(e) {
-        window.Singleton.create({
-            ready: function() {
-                this.resetGalleryPosition(), e.one(".collection-type-index") && this.resetIndexGalleryPosition(), e.one(".collection-type-blog") && this.resetBlogGalleryPosition(), e.one("body").addClass("has-banner-image"), this.init(), this.bindUI(), this.syncUI()
-            },
-            init: function() {
-                if (this.setupUserAccountLinks(), this.forceMobileNav(), this.promotedGalleryShrink(), e.one(".has-promoted-gallery") ? (this.textShrink(".meta-description p > strong", "p"), this.textShrink(".meta-description p > em > strong", "p")) : (this.textShrink(".desc-wrapper p > strong", "p"), this.textShrink(".desc-wrapper p > em > strong", "p")), this.textShrink(".post-title a", ".post-title"), this.textShrink(".blog-item-wrapper .post-title", ".title-desc-wrapper"), this._touch = e.one(".touch-styles"), e.one(".collection-type-blog.view-list .sqs-featured-posts-gallery") && this.makeFeaturedGallery(".posts", ".post"), this.hideArrowsWhenOneSlide(), this.repositionCartButton(), !this._touch) {
-                    var t = e.one("#preFooter");
-                    t.inViewportRegion() === !1 && t.addClass("unscrolled"), e.one(window).on("scroll", function() {
-                        t.hasClass("unscrolled") && t.toggleClass("unscrolled", !t.inViewportRegion())
-                    })
-                }
-                var n = Array.prototype.slice.call(document.body.querySelectorAll("div.sqs-video-background"));
-                n.map(function(e) {
-                    var t = a(e);
-                    t.customFallbackImage = t.container.querySelector(".custom-fallback-image"), t.scaleFactor = 1.1, new i(t)
-                })
-            },
-            setupUserAccountLinks: function() {
-                e.all(".user-account-link").each(function(e) {
-                    var t = o.isUserAuthenticated() ? ".unauth" : ".auth",
-                        n = e.one(t);
-                    n.remove(), e.on("click", function(e) {
-                        e.preventDefault(), o.openAccountScreen()
-                    })
-                })
-            },
-            bindUI: function() {
-                e.one(window).on("resize", this.syncUI, this), e.all(".mobile-nav-toggle, .body-overlay").each(function(t) {
-                    t.on("click", function() {
-                        e.one("body").toggleClass("mobile-nav-open")
-                    })
-                });
-                var t = e.throttle(e.bind(function() {
-                    this.bindScroll("#preFooter", .6 * e.one("#preFooter").height())
-                }, this), 200);
-                this._touch || e.one(window).on("scroll", t), e.all(".subnav").each(function(t) {
-                    var n = t._node.getBoundingClientRect();
-                    n.right > e.config.win.innerWidth && t.addClass("right")
-                });
-                var n = '#sidecarNav a[href^="#"], #sidecarNav a[href^="/#"], #sidecarNav a[href^="/"][href*="#"]';
-                e.all(n).each(function(t) {
-                    t.on("click", function(t) {
-                        e.one("body").removeClass("mobile-nav-open")
-                    }, this)
-                }, this), this.showIndexNavOnScroll(), this.disableHoverOnScroll()
-            },
-            syncUI: function() {
-                this.forceMobileNav(), r(function() {
-                    this.addPaddingToFooter()
-                }, 100, this)
-            },
-            bindScroll: function(t, n) {
-                var o;
-                if (o || (o = e.one(t + ".unscrolled")), o) {
-                    var r = window.pageYOffset + e.one("body").get("winHeight"),
-                        i = o.getY() + (n || 0);
-                    r >= i && o.removeClass("unscrolled")
-                }
-            },
-            _atLeast: 0,
-            forceMobileNav: function() {
-                var t = e.one("#mainNavWrapper");
-                if (t) {
-                    var n, o, r, i = e.one("body").get("winWidth"),
-                        a = e.one("#header");
-                    r = e.one("#logoWrapper") ? parseInt(e.Squarespace.Template.getTweakValue("logoContainerWidth"), 10) : parseInt(e.Squarespace.Template.getTweakValue("siteTitleContainerWidth"), 10), i > this._atLeast ? (e.one("body").removeClass("force-mobile-nav"), n = a.get("offsetWidth") - parseInt(a.getStyle("paddingLeft"), 10) - parseInt(a.getStyle("paddingRight"), 10), o = t.get("offsetWidth"), o > n - r && (e.one("body").addClass(""), this._atLeast = i)) : e.one("body").addClass("")
-                }
-            },
-            makeFeaturedGallery: function(t, n) {
-                new e.Squarespace.Gallery2({
-                    autoHeight: !1,
-                    container: t,
-                    slides: n,
-                    elements: {
-                        next: ".next-slide, .simple .next, .sqs-gallery-controls .next",
-                        previous: ".previous-slide, .simple .previous, .sqs-gallery-controls .previous",
-                        controls: ".dots, .circles",
-                        currentIndex: ".current-index",
-                        totalSlides: ".total-slides"
-                    },
-                    loop: !0,
-                    loaderOptions: {
-                        load: !0
-                    },
-                    design: "stacked",
-                    designOptions: {
-                        transition: "fade",
-                        clickBehavior: "auto"
-                    },
-                    refreshOnResize: !0
-                })
-            },
-            promotedGalleryShrink: function() {
-                var t, n, o, r = ".has-promoted-gallery #promotedGalleryWrapper .meta";
-                e.one(r) && (t = e.one("#promotedGalleryWrapper").get("offsetHeight"), e.one(".transparent-header") && (t -= 90), e.all(r).each(function(e) {
-                    e.setStyle("display", "block"), n = e.get("offsetHeight"), n > t && (o = e.ancestor(".slide"), o.addClass("reduce-text-size"), n = e.get("offsetHeight"), n > t && (o.removeClass("reduce-text-size"), o.addClass("hide-body-text"), n = e.get("offsetHeight"), n > t && o.addClass("reduce-text-size"))), e.setAttribute("style", "")
-                }))
-            },
-            textShrink: function(t, n) {
-                e.one(t) && e.one(t).ancestor(n) && e.all(t).each(function(t) {
-                    t.plug(e.Squarespace.TextShrink, {
-                        parentEl: t.ancestor(n)
-                    })
-                })
-            },
-            resetIndexGalleryPosition: function() {
-                var t = ".collection-type-index .index-section .sqs-layout > .sqs-row:first-child > .sqs-col-12 > .gallery-block:first-child .sqs-gallery-block-slideshow",
-                    n = ".collection-type-index .index-section .promoted-gallery-wrapper ~ .index-section-wrapper .sqs-layout > .sqs-row:first-child > .sqs-col-12 > .gallery-block:first-child",
-                    o = e.one(".collection-type-index .index-section:first-child .sqs-layout > .sqs-row:first-child > .sqs-col-12 > .gallery-block:first-child .sqs-gallery-block-slideshow");
-                o && e.one("body").addClass("has-banner-image"), e.one(t) && (e.one("body").addClass("has-promoted-gallery"), e.all(n).each(function(e) {
-                    e.one(".sqs-gallery-block-slideshow") && e.ancestor(".index-section-wrapper").previous(".promoted-gallery-wrapper").addClass("promoted-full").append(e)
-                }))
-            },
-            resetBlogGalleryPosition: function() {
-                var t = e.one(".collection-type-blog .blog-banner-gallery .sqs-layout > .sqs-row:first-child > .sqs-col-12 > .gallery-block:first-child .sqs-gallery-block-slideshow"),
-                    n = e.one(".collection-type-blog .blog-banner-gallery .sqs-layout > .sqs-row:first-child > .sqs-col-12 > .gallery-block:first-child");
-                t && (e.one("#promotedGalleryWrapper .row .col").append(n), e.one("body").addClass("has-promoted-gallery").addClass("has-banner-image"))
-            },
-            resetGalleryPosition: function() {
-                var t = e.one(".collection-type-page .main-content .sqs-layout > .sqs-row:first-child > .sqs-col-12 > .gallery-block:first-child .sqs-gallery-block-slideshow"),
-                    n = e.one(".collection-type-page .main-content .sqs-layout > .sqs-row:first-child > .sqs-col-12 > .gallery-block:first-child");
-                t && (e.one("#promotedGalleryWrapper .row .col").append(n), e.one("body").addClass("has-promoted-gallery").addClass("has-banner-image"))
-            },
-            hideArrowsWhenOneSlide: function() {
-                e.one(".posts .post:only-child") && e.all(".circles").addClass("hidden")
-            },
-            repositionCartButton: function() {
-                var t = e.one("#header").get("offsetHeight"),
-                    n = e.one(".sqs-cart-dropzone");
-                n && (e.one(".transparent-header.has-banner-image") ? n.setStyle("top", t) : n.setStyle("top", t + 20))
-            },
-            showIndexNavOnScroll: function() {
-                var t, n = function() {
-                    if (e.one(".index-section")) {
-                        var n = e.one(".index-section").getDOMNode();
-                        t = n.getBoundingClientRect().bottom + window.pageYOffset
+        n(1), n(3), n(25), e.exports = n(27)
+    }, function(e, t, n) {
+        var o = n(2);
+        Y.use("node", function(e) {
+            window.Singleton.create({
+                ready: function() {
+                    if (e.one(".collection-type-index")) {
+                        if (window.innerWidth <= 640) return !1;
+                        this.initializer(), this.bindUI(), this.syncUI()
                     }
-                };
-                if (n(), e.one(".collection-type-index") && window.innerWidth <= 640) {
-                    var o = function() {
-                        t - window.pageYOffset <= 0 ? e.one("body").addClass("fix-header-nav") : e.one("body").removeClass("fix-header-nav")
-                    };
-                    e.one(window).on("resize", function() {
-                        n()
-                    }), o(), e.one(window).on("scroll", function() {
-                        o()
-                    }, this), e.one(".mobile-nav-toggle.fixed-nav-toggle").on("click", function() {
-                        e.one("body").hasClass("fix-header-nav") && e.one("body").removeClass("fix-header-nav")
-                    }), e.one(window).on(["touchstart", "MSPointerDown"], function() {
-                        this._timeout && this._timeout.cancel(), this.isHidden = !0, this.isHidden === !0 && (e.one(".mobile-nav-toggle.fixed-nav-toggle").setStyle("opacity", 1), this.isHidden = !1)
-                    }, this), e.one(window).on(["touchend", "MSPointerUp"], function() {
-                        this._timeout = e.later(1500, this, function() {
-                            this.isHidden = !0, e.one(".mobile-nav-toggle.fixed-nav-toggle").setStyle("opacity", 0)
-                        })
+                },
+                initializer: function() {
+                    return this.el = e.one(".show-on-scroll"), this.el ? (this.elOffset = e.one(this.el.getData("offset-el")), this.offsetBehavior = this.el.getData("offset-behavior") || "top", this.elOffset ? (e.one("body").prepend(e.Node.create('<div class="show-on-scroll-wrapper" id="showOnScrollWrapper"></div>')), this.wrapper = e.one("#showOnScrollWrapper"), this.wrapper.setHTML(this.el._node.outerHTML), void 0) : void console.warn("No show on scroll offset element found.")) : void console.warn("No show on scroll element found.")
+                },
+                bindUI: function() {
+                    this.scrollEvents(), e.one(window).on("resize", function() {
+                        this.syncUI()
                     }, this)
+                },
+                syncUI: function() {
+                    this.getVariables()
+                },
+                getVariables: function() {
+                    "bottom" === this.offsetBehavior ? this.navShowPosition = this.elOffset.getY() + this.elOffset.get("offsetHeight") : this.navShowPosition = this.elOffset.getY()
+                },
+                scrollEvents: function() {
+                    this.scrolling = !1, e.one(window).on("scroll", function() {
+                        this.scrolling === !1 && (this.scrolling = !0, this.scrollLogic(), o(function() {
+                            this.scrolling = !1
+                        }, 300, this))
+                    }, this)
+                },
+                scrollLogic: function() {
+                    window.pageYOffset > this.navShowPosition ? this.wrapper.addClass("") : this.wrapper.removeClass("show"), e.later(100, this, function() {
+                        this.scrolling === !0 && window.requestAnimationFrame(e.bind(function() {
+                            this.scrollLogic()
+                        }, this))
+                    })
                 }
-            },
-            addPaddingToFooter: function() {
-                var t = parseInt(e.one("#footer").getStyle("paddingBottom"), 10),
-                    n = e.one("#siteWrapper").get("offsetHeight"),
-                    o = e.one("body").get("winHeight");
-                n - t <= o && e.one("#footer").setStyle("paddingBottom", o - (n - t))
-            },
-            disableHoverOnScroll: function() {
-                if (e.UA.mobile) return !1;
-                var t, n = ".disable-hover:not(.sqs-layout-editing), .disable-hover:not(.sqs-layout-editing) * { pointer-events: none  ; }",
-                    o = document.head || document.getElementsByTagName("head")[0],
-                    r = document.createElement("style"),
-                    i = document.body;
-                r.type = "text/css", r.styleSheet ? r.styleSheet.cssText = n : r.appendChild(document.createTextNode(n)), o.appendChild(r), window.addEventListener("scroll", function() {
-                    clearTimeout(t), i.classList.contains("disable-hover") || i.classList.add("disable-hover"), t = setTimeout(function() {
-                        i.classList.remove("disable-hover")
-                    }, 300)
-                }, !1)
-            }
+            })
+        })
+    }, function(e, t) {
+        function n(e, t, n) {
+            t = t || 100, n = n || window, e && (o && o.cancel(), o = Y.later(t, n, e))
+        }
+        var o;
+        e.exports = n
+    }, function(e, t, n) {
+        var o = n(4),
+            r = n(2),
+            i = n(5).VideoBackground,
+            a = n(5).getVideoProps;
+        Y.use(["node", "squarespace-gallery-ng"], function(e) {
+            window.Singleton.create({
+                        ready: function() {
+                            this.resetGalleryPosition(), e.one(".collection-type-index") && this.resetIndexGalleryPosition(), e.one(".collection-type-blog") && this.resetBlogGalleryPosition(), e.one("body").addClass("has-banner-image"), this.init(), this.bindUI(), this.syncUI()
+                        },
+                        init: function() {
+                            if (this.setupUserAccountLinks(), this.forceMobileNav(), this.promotedGalleryShrink(), e.one(".has-promoted-gallery") ? (this.textShrink(".meta-description p > strong", "p"), this.textShrink(".meta-description p > em > strong", "p")) : (this.textShrink(".desc-wrapper p > strong", "p"), this.textShrink(".desc-wrapper p > em > strong", "p")), this.textShrink(".post-title a", ".post-title"), this.textShrink(".blog-item-wrapper .post-title", ".title-desc-wrapper"), this._touch = e.one(".touch-styles"), e.one(".collection-type-blog.view-list .sqs-featured-posts-gallery") && this.makeFeaturedGallery(".posts", ".post"), this.hideArrowsWhenOneSlide(), this.repositionCartButton(), !this._touch) {
+                                var t = e.one("#preFooter");
+                                t.inViewportRegion() === !1 && t.addClass("unscrolled"), e.one(window).on("scroll", function() {
+                                    t.hasClass("unscrolled") && t.toggleClass("unscrolled", !t.inViewportRegion())
+                                })
+                            }
+                            var n = Array.prototype.slice.call(document.body.querySelectorAll("div.sqs-video-background"));
+                            n.map(function(e) {
+                                var t = a(e);
+                                t.customFallbackImage = t.container.querySelector(".custom-fallback-image"), t.scaleFactor = 1.1, new i(t)
+                            })
+                        },
+                        setupUserAccountLinks: function() {
+                            e.all(".user-account-link").each(function(e) {
+                                var t = o.isUserAuthenticated() ? ".unauth" : ".auth",
+                                    n = e.one(t);
+                                n.remove(), e.on("click", function(e) {
+                                    e.preventDefault(), o.openAccountScreen()
+                                })
+                            })
+                        },
+                        bindUI: function() {
+                            e.one(window).on("resize", this.syncUI, this), e.all(".mobile-nav-toggle, .body-overlay").each(function(t) {
+                                t.on("click", function() {
+                                    e.one("body").toggleClass("mobile-nav-open")
+                                })
+                            });
+                            var t = e.throttle(e.bind(function() {
+                                this.bindScroll("#preFooter", .6 * e.one("#preFooter").height())
+                            }, this), 200);
+                            this._touch || e.one(window).on("scroll", t), e.all(".subnav").each(function(t) {
+                                var n = t._node.getBoundingClientRect();
+                                n.right > e.config.win.innerWidth && t.addClass("right")
+                            });
+                            var n = '#sidecarNav a[href^="#"], #sidecarNav a[href^="/#"], #sidecarNav a[href^="/"][href*="#"]';
+                            e.all(n).each(function(t) {
+                                t.on("click", function(t) {
+                                    e.one("body").removeClass("mobile-nav-open")
+                                }, this)
+                            }, this), this.showIndexNavOnScroll(), this.disableHoverOnScroll()
+                        },
+                        syncUI: function() {
+                            this.forceMobileNav(), r(function() {
+                                this.addPaddingToFooter()
+                            }, 100, this)
+                        },
+                        bindScroll: function(t, n) {
+                            var o;
+                            if (o || (o = e.one(t + ".unscrolled")), o) {
+                                var r = window.pageYOffset + e.one("body").get("winHeight"),
+                                    i = o.getY() + (n || 0);
+                                r >= i && o.removeClass("unscrolled")
+                            }
+                        },
+                        _atLeast: 0,
+                        forceMobileNav: function() {
+                            var t = e.one("#mainNavWrapper");
+                            if (t) {
+                                var n, o, r, i = e.one("body").get("winWidth"),
+                                    a = e.one("#header");
+                                r = e.one("#logoWrapper") ? parseInt(e.Squarespace.Template.getTweakValue("logoContainerWidth"), 10) : parseInt(e.Squarespace.Template.getTweakValue("siteTitleContainerWidth"), 10), i > this._atLeast ? (e.one("body").removeClass("force-mobile-nav"), n = a.get("offsetWidth") - parseInt(a.getStyle("paddingLeft"), 10) - parseInt(a.getStyle("paddingRight"), 10), o = t.get("offsetWidth"), o > n - r && (e.one("body").addClass(""), this._atLeast = i)) : e.one("body").addClass("")
+                            }
+                        },
+                        makeFeaturedGallery: function(t, n) {
+                            new e.Squarespace.Gallery2({
+                                autoHeight: !1,
+                                container: t,
+                                slides: n,
+                                elements: {
+                                    next: ".next-slide, .simple .next, .sqs-gallery-controls .next",
+                                    previous: ".previous-slide, .simple .previous, .sqs-gallery-controls .previous",
+                                    controls: ".dots, .circles",
+                                    currentIndex: ".current-index",
+                                    totalSlides: ".total-slides"
+                                },
+                                loop: !0,
+                                loaderOptions: {
+                                    load: !0
+                                },
+                                design: "stacked",
+                                designOptions: {
+                                    transition: "fade",
+                                    clickBehavior: "auto"
+                                },
+                                refreshOnResize: !0
+                            })
+                        },
+                        promotedGalleryShrink: function() {
+                            var t, n, o, r = ".has-promoted-gallery #promotedGalleryWrapper .meta";
+                            e.one(r) && (t = e.one("#promotedGalleryWrapper").get("offsetHeight"), e.one(".transparent-header") && (t -= 90), e.all(r).each(function(e) {
+                                e.setStyle("display", "block"), n = e.get("offsetHeight"), n > t && (o = e.ancestor(".slide"), o.addClass("reduce-text-size"), n = e.get("offsetHeight"), n > t && (o.removeClass("reduce-text-size"), o.addClass("hide-body-text"), n = e.get("offsetHeight"), n > t && o.addClass("reduce-text-size"))), e.setAttribute("style", "")
+                            }))
+                        },
+                        textShrink: function(t, n) {
+                            e.one(t) && e.one(t).ancestor(n) && e.all(t).each(function(t) {
+                                t.plug(e.Squarespace.TextShrink, {
+                                    parentEl: t.ancestor(n)
+                                })
+                            })
+                        },
+                        resetIndexGalleryPosition: function() {
+                            var t = ".collection-type-index .index-section .sqs-layout > .sqs-row:first-child > .sqs-col-12 > .gallery-block:first-child .sqs-gallery-block-slideshow",
+                                n = ".collection-type-index .index-section .promoted-gallery-wrapper ~ .index-section-wrapper .sqs-layout > .sqs-row:first-child > .sqs-col-12 > .gallery-block:first-child",
+                                o = e.one(".collection-type-index .index-section:first-child .sqs-layout > .sqs-row:first-child > .sqs-col-12 > .gallery-block:first-child .sqs-gallery-block-slideshow");
+                            o && e.one("body").addClass("has-banner-image"), e.one(t) && (e.one("body").addClass("has-promoted-gallery"), e.all(n).each(function(e) {
+                                e.one(".sqs-gallery-block-slideshow") && e.ancestor(".index-section-wrapper").previous(".promoted-gallery-wrapper").addClass("promoted-full").append(e)
+                            }))
+                        },
+                        resetBlogGalleryPosition: function() {
+                            var t = e.one(".collection-type-blog .pre-footer-inner .sqs-layout > .sqs-row:first-child > .sqs-col-12 > .gallery-block:first-child .sqs-gallery-block-slideshow"),
+                                n = e.one(".collection-type-blog .pre-footer-inner .sqs-layout > .sqs-row:first-child > .sqs-col-12 > .gallery-block:first-child");
+                            o = e.one(".collection-type-blog .pre-footer-inner .sqs-layout > .sqs-row:first-child > .sqs-col-12 > .gallery-block:first-child .sqs-gallery-block-slideshow");
+                            o && e.one("body").addClass("has-banner-image"), e.one(t) && (e.one("body").addClass("has-promoted-gallery").addClass("promoted-full").append(e)
+                            }))
+                },
+                resetGalleryPosition: function() {
+                    var t = e.one(".collection-type-page .main-content .sqs-layout > .sqs-row:first-child > .sqs-col-12 > .gallery-block:first-child .sqs-gallery-block-slideshow"),
+                        n = e.one(".collection-type-page .main-content .sqs-layout > .sqs-row:first-child > .sqs-col-12 > .gallery-block:first-child");
+                    t && (e.one("#promotedGalleryWrapper .row .col").append(n), e.one("body").addClass("has-promoted-gallery").addClass("has-banner-image"))
+                },
+                hideArrowsWhenOneSlide: function() {
+                    e.one(".posts .post:only-child") && e.all(".circles").addClass("hidden")
+                },
+                repositionCartButton: function() {
+                    var t = e.one("#header").get("offsetHeight"),
+                        n = e.one(".sqs-cart-dropzone");
+                    n && (e.one(".transparent-header.has-banner-image") ? n.setStyle("top", t) : n.setStyle("top", t + 20))
+                },
+                showIndexNavOnScroll: function() {
+                    var t, n = function() {
+                        if (e.one(".index-section")) {
+                            var n = e.one(".index-section").getDOMNode();
+                            t = n.getBoundingClientRect().bottom + window.pageYOffset
+                        }
+                    };
+                    if (n(), e.one(".collection-type-index") && window.innerWidth <= 640) {
+                        var o = function() {
+                            t - window.pageYOffset <= 0 ? e.one("body").addClass("fix-header-nav") : e.one("body").removeClass("fix-header-nav")
+                        };
+                        e.one(window).on("resize", function() {
+                            n()
+                        }), o(), e.one(window).on("scroll", function() {
+                            o()
+                        }, this), e.one(".mobile-nav-toggle.fixed-nav-toggle").on("click", function() {
+                            e.one("body").hasClass("fix-header-nav") && e.one("body").removeClass("fix-header-nav")
+                        }), e.one(window).on(["touchstart", "MSPointerDown"], function() {
+                            this._timeout && this._timeout.cancel(), this.isHidden = !0, this.isHidden === !0 && (e.one(".mobile-nav-toggle.fixed-nav-toggle").setStyle("opacity", 1), this.isHidden = !1)
+                        }, this), e.one(window).on(["touchend", "MSPointerUp"], function() {
+                            this._timeout = e.later(1500, this, function() {
+                                this.isHidden = !0, e.one(".mobile-nav-toggle.fixed-nav-toggle").setStyle("opacity", 0)
+                            })
+                        }, this)
+                    }
+                },
+                addPaddingToFooter: function() {
+                    var t = parseInt(e.one("#footer").getStyle("paddingBottom"), 10),
+                        n = e.one("#siteWrapper").get("offsetHeight"),
+                        o = e.one("body").get("winHeight");
+                    n - t <= o && e.one("#footer").setStyle("paddingBottom", o - (n - t))
+                },
+                disableHoverOnScroll: function() {
+                    if (e.UA.mobile) return !1;
+                    var t, n = ".disable-hover:not(.sqs-layout-editing), .disable-hover:not(.sqs-layout-editing) * { pointer-events: none  ; }",
+                        o = document.head || document.getElementsByTagName("head")[0],
+                        r = document.createElement("style"),
+                        i = document.body;
+                    r.type = "text/css", r.styleSheet ? r.styleSheet.cssText = n : r.appendChild(document.createTextNode(n)), o.appendChild(r), window.addEventListener("scroll", function() {
+                        clearTimeout(t), i.classList.contains("disable-hover") || i.classList.add("disable-hover"), t = setTimeout(function() {
+                            i.classList.remove("disable-hover")
+                        }, 300)
+                    }, !1)
+                }
         })
     })
-}, function(e, t) {
+},
+function(e, t) {
     "use strict";
     Object.defineProperty(t, "__esModule", {
         value: !0
@@ -273,21 +276,24 @@
         isUserAuthenticated: i,
         openAccountScreen: a
     }, e.exports = t.default
-}, function(e, t, n) {
+},
+function(e, t, n) {
     var o = n(6).VideoBackground,
         r = n(24);
     e.exports = {
         VideoBackground: o,
         getVideoProps: r
     }
-}, function(e, t, n) {
+},
+function(e, t, n) {
     "use strict";
     Object.defineProperty(t, "__esModule", {
         value: !0
     }), t.videoAutoplayTest = t.VideoFilterPropertyValues = t.VideoBackground = void 0, n(7);
     var o = n(8);
     t.VideoBackground = o.VideoBackground, t.VideoFilterPropertyValues = o.VideoFilterPropertyValues, t.videoAutoplayTest = o.videoAutoplayTest
-}, function(e, t) {
+},
+function(e, t) {
     ! function() {
         function e(e, t) {
             t = t || {
@@ -300,7 +306,8 @@
         }
         return "function" != typeof window.CustomEvent && (e.prototype = window.Event.prototype, void(window.CustomEvent = e))
     }()
-}, function(e, t, n) {
+},
+function(e, t, n) {
     "use strict";
 
     function o(e) {
@@ -317,7 +324,8 @@
         s = n(12),
         l = o(s);
     t.VideoBackground = i.default, t.VideoFilterPropertyValues = a.filterProperties, t.videoAutoplayTest = l.default
-}, function(e, t, n) {
+},
+function(e, t, n) {
     "use strict";
 
     function o(e) {
@@ -542,7 +550,8 @@
             }]), e
         }();
     t.default = y
-}, function(e, t, n) {
+},
+function(e, t, n) {
     (function(e, n) {
         function o(e, t) {
             return e.set(t[0], t[1]), e
@@ -1247,11 +1256,13 @@
     }).call(t, function() {
         return this
     }(), n(11)(e))
-}, function(e, t) {
+},
+function(e, t) {
     e.exports = function(e) {
         return e.webpackPolyfill || (e.deprecate = function() {}, e.paths = [], e.children = [], e.webpackPolyfill = 1), e
     }
-}, function(e, t, n) {
+},
+function(e, t, n) {
     "use strict";
     Object.defineProperty(t, "__esModule", {
         value: !0
@@ -1294,7 +1305,8 @@
             })
         };
     t.default = s
-}, function(e, t) {
+},
+function(e, t) {
     "use strict";
     Object.defineProperty(t, "__esModule", {
         value: !0
@@ -1302,7 +1314,8 @@
     var n = "data:video/ogg;base64,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",
         o = "data:video/mp4;base64,AAAAIGZ0eXBpc29tAAACAGlzb21pc28yYXZjMW1wNDEAAAAIZnJlZQAAAs1tZGF0AAACrgYF//+q3EXpvebZSLeWLNgg2SPu73gyNjQgLSBjb3JlIDE0OCByMjYwMSBhMGNkN2QzIC0gSC4yNjQvTVBFRy00IEFWQyBjb2RlYyAtIENvcHlsZWZ0IDIwMDMtMjAxNSAtIGh0dHA6Ly93d3cudmlkZW9sYW4ub3JnL3gyNjQuaHRtbCAtIG9wdGlvbnM6IGNhYmFjPTEgcmVmPTMgZGVibG9jaz0xOjA6MCBhbmFseXNlPTB4MzoweDExMyBtZT1oZXggc3VibWU9NyBwc3k9MSBwc3lfcmQ9MS4wMDowLjAwIG1peGVkX3JlZj0xIG1lX3JhbmdlPTE2IGNocm9tYV9tZT0xIHRyZWxsaXM9MSA4eDhkY3Q9MSBjcW09MCBkZWFkem9uZT0yMSwxMSBmYXN0X3Bza2lwPTEgY2hyb21hX3FwX29mZnNldD0tMiB0aHJlYWRzPTEgbG9va2FoZWFkX3RocmVhZHM9MSBzbGljZWRfdGhyZWFkcz0wIG5yPTAgZGVjaW1hdGU9MSBpbnRlcmxhY2VkPTAgYmx1cmF5X2NvbXBhdD0wIGNvbnN0cmFpbmVkX2ludHJhPTAgYmZyYW1lcz0zIGJfcHlyYW1pZD0yIGJfYWRhcHQ9MSBiX2JpYXM9MCBkaXJlY3Q9MSB3ZWlnaHRiPTEgb3Blbl9nb3A9MCB3ZWlnaHRwPTIga2V5aW50PTI1MCBrZXlpbnRfbWluPTEwIHNjZW5lY3V0PTQwIGludHJhX3JlZnJlc2g9MCByY19sb29rYWhlYWQ9NDAgcmM9Y3JmIG1idHJlZT0xIGNyZj0yMy4wIHFjb21wPTAuNjAgcXBtaW49MCBxcG1heD02OSBxcHN0ZXA9NCBpcF9yYXRpbz0xLjQwIGFxPTE6MS4wMACAAAAAD2WIhAA3//728P4FNjuZQQAAAu5tb292AAAAbG12aGQAAAAAAAAAAAAAAAAAAAPoAAAAZAABAAABAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAACGHRyYWsAAABcdGtoZAAAAAMAAAAAAAAAAAAAAAEAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAEAAAAAAAgAAAAIAAAAAACRlZHRzAAAAHGVsc3QAAAAAAAAAAQAAAGQAAAAAAAEAAAAAAZBtZGlhAAAAIG1kaGQAAAAAAAAAAAAAAAAAACgAAAAEAFXEAAAAAAAtaGRscgAAAAAAAAAAdmlkZQAAAAAAAAAAAAAAAFZpZGVvSGFuZGxlcgAAAAE7bWluZgAAABR2bWhkAAAAAQAAAAAAAAAAAAAAJGRpbmYAAAAcZHJlZgAAAAAAAAABAAAADHVybCAAAAABAAAA+3N0YmwAAACXc3RzZAAAAAAAAAABAAAAh2F2YzEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAgACAEgAAABIAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY//8AAAAxYXZjQwFkAAr/4QAYZ2QACqzZX4iIhAAAAwAEAAADAFA8SJZYAQAGaOvjyyLAAAAAGHN0dHMAAAAAAAAAAQAAAAEAAAQAAAAAHHN0c2MAAAAAAAAAAQAAAAEAAAABAAAAAQAAABRzdHN6AAAAAAAAAsUAAAABAAAAFHN0Y28AAAAAAAAAAQAAADAAAABidWR0YQAAAFptZXRhAAAAAAAAACFoZGxyAAAAAAAAAABtZGlyYXBwbAAAAAAAAAAAAAAAAC1pbHN0AAAAJal0b28AAAAdZGF0YQAAAAEAAAAATGF2ZjU2LjQwLjEwMQ==";
     t.OggVideo = n, t.Mp4Video = o
-}, function(e, t, n) {
+},
+function(e, t, n) {
     "use strict";
     Object.defineProperty(t, "__esModule", {
         value: !0
@@ -1392,7 +1405,8 @@
             })
         };
     t.initializeVimeoAPI = l, t.initializeVimeoPlayer = u
-}, function(e, t, n) {
+},
+function(e, t, n) {
     "use strict";
 
     function o(e) {
@@ -1494,7 +1508,8 @@
             return t || (t = e.ownerDocument.createElement("div"), t.id = "player", e.appendChild(t)), t.setAttribute("style", "position: absolute; top: 0; bottom: 0; left: 0; right: 0;"), t
         };
     t.findPlayerAspectRatio = v, t.getPlayerElement = m, t.getStartTime = h, t.getVideoID = y, t.getVideoSource = p, t.validatedImage = g
-}, function(e, t) {
+},
+function(e, t) {
     "use strict";
     Object.defineProperty(t, "__esModule", {
         value: !0
@@ -1522,7 +1537,8 @@
         i = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]{11}).*/,
         a = /^.*(vimeo\.com\/)([0-9]{7,}(#t\=.*s)?)/;
     t.DEBUG = n, t.DEFAULT_PROPERTY_VALUES = o, t.TIMEOUT = r, t.YOUTUBE_REGEX = i, t.VIMEO_REGEX = a
-}, function(e, t, n) {
+},
+function(e, t, n) {
     "use strict";
 
     function o(e) {
@@ -1570,7 +1586,8 @@
         var r = o + (n.slashes ? "//" : "");
         return n.username && (r += n.username, n.password && (r += ":" + n.password), r += "@"), r += n.hostname, n.port && (r += ":" + n.port), r += n.pathname, t = "object" == typeof n.query ? e(n.query) : n.query, t && (r += "?" !== t.charAt(0) ? "?" + t : t), n.hash && (r += n.hash), r
     }, r.qs = s, r.location = a, e.exports = r
-}, function(e, t) {
+},
+function(e, t) {
     "use strict";
     e.exports = function(e, t) {
         if (t = t.split(":")[0], e = +e, !e) return !1;
@@ -1590,7 +1607,8 @@
         }
         return 0 !== e
     }
-}, function(e, t, n) {
+},
+function(e, t, n) {
     (function(t) {
         "use strict";
         var o, r = /^[A-Za-z][A-Za-z0-9+-.]*:\/\//,
@@ -1615,7 +1633,8 @@
     }).call(t, function() {
         return this
     }())
-}, function(e, t) {
+},
+function(e, t) {
     "use strict";
 
     function n(e) {
@@ -1632,7 +1651,8 @@
     }
     var r = Object.prototype.hasOwnProperty;
     t.stringify = o, t.parse = n
-}, function(e, t) {
+},
+function(e, t) {
     (function(t) {
         function n(e, t) {
             return null == e ? void 0 : e[t]
@@ -1915,7 +1935,8 @@
     }).call(t, function() {
         return this
     }())
-}, function(e, t, n) {
+},
+function(e, t, n) {
     "use strict";
     Object.defineProperty(t, "__esModule", {
         value: !0
@@ -1991,7 +2012,8 @@
             })
         };
     t.initializeYouTubeAPI = r, t.initializeYouTubePlayer = s
-}, function(e, t) {
+},
+function(e, t) {
     "use strict";
     Object.defineProperty(t, "__esModule", {
         value: !0
@@ -2054,7 +2076,8 @@
             }
         };
     t.filterOptions = n, t.filterProperties = o
-}, function(e, t) {
+},
+function(e, t) {
     var n = function(e) {
         var t = {
             container: e
@@ -2062,7 +2085,8 @@
         return e.getAttribute("data-config-url") && (t.url = e.getAttribute("data-config-url")), e.getAttribute("data-config-playback-speed") && (t.playbackSpeed = e.getAttribute("data-config-playback-speed")), e.getAttribute("data-config-filter") && (t.filter = e.getAttribute("data-config-filter")), e.getAttribute("data-config-filter-strength") && (t.filterStrength = e.getAttribute("data-config-filter-strength")), t
     };
     e.exports = n
-}, function(e, t, n) {
+},
+function(e, t, n) {
     var o = n(2),
         r = n(26),
         i = n(17);
@@ -2172,14 +2196,16 @@
             }
         })
     })
-}, function(e, t) {
+},
+function(e, t) {
     function n(e) {
         e = e || "img[data-src]", Y.one(e) && Y.all(e).each(function(e) {
             ImageLoader.load(e)
         })
     }
     e.exports = n
-}, function(e, t, n) {
+},
+function(e, t, n) {
     var o = n(2),
         r = n(26),
         i = null !== document.documentElement.getAttribute("data-authenticated-account");
