@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {.end}
     {squarespace-headers}
-    <script>/* Must be below squarespace-headers */(function() {var e='ontouchstart'in window||navigator.msMaxTouchPoints;var t=document.documentElement;if(!e&&t){t.className=t.className.replace(/touch-styles/,'')}})()
+    <script>/* Must be below squarespace-headers */(function(){var e='ontouchstart'in window||navigator.msMaxTouchPoints;var t=document.documentElement;if(!e&&t){t.className=t.className.replace(/touch-styles/,'')}})()
     </script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
 
   <body id="{squarespace.page-id}" class="{squarespace.page-classes}{.if item}{.section item}{.if productType}{.or}{.background-source-video?} has-banner-image item-main-image{.or}{.main-image?} has-banner-image item-main-image{.end}{.end}{.end}{.end}{.or}{.section collection}{.collectionTypeNameEquals? index}{.section collections}{.section 0}{.background-source-video?} has-banner-image index-page{.or}{.main-image?} has-banner-image index-page{.end}{.end}{.end}{.end}{.or}{.background-source-video?} has-banner-image general-page{.or}{.main-image?} has-banner-image general-page{.end}{.end}{.end}{.end}{.end}">
@@ -21,7 +21,6 @@
 
       <div class="sqs-cart-dropzone"></div>
 
-      <div id="preNav"><squarespace:block-field id="pre-nav" columns="12" label="PreNavigation" /></div>
       <header id="header" class="show-on-scroll" data-offset-el=".index-section" data-offset-behavior="bottom" role="banner">
         <div class="header-inner">
           {.section website}<div id="{.if logoImageUrl}logoWrapper{.or}siteTitleWrapper{.end}" class="wrapper" data-content-field="site-title">
@@ -96,28 +95,6 @@
                 {.end}
               {.or}
                 {.collectionTypeNameEquals? blog}
-                  <div id="promotedGalleryWrapper" class="sqs-layout promoted-gallery-wrapper"><div class="row"><div class="col"></div></div></div>
-                {.background-source-video?}
-                    <div class="banner-thumbnail-wrapper{.if description} has-description{.end}" data-content-field="main-image" data-collection-id="{collection.id}" data-edit-main-image="Banner" data-annotation-alignment="bottom left">
-                      <div class="color-overlay"></div>
-                      <figure id="thumbnail" class="loading content-fill">
-                        {@|apply sqs-video-background.block}
-                      </figure>
-                      {.if description}<div class="desc-wrapper" data-collection-id="{id}">{description}</div>{.end}
-                    </div>
-                {.or}
-                  {.main-image?}
-                    <div class="banner-thumbnail-wrapper{.if description} has-description{.end}" data-content-field="main-image" data-collection-id="{collection.id}" data-edit-main-image="Banner" data-annotation-alignment="bottom left">
-                      {.section mainImage}
-                      <div class="color-overlay"></div>
-                      <figure id="thumbnail" class="loading content-fill">
-                        <img {@|image-meta} />
-                      </figure>
-                      {.end}
-                      {.if description}<div class="desc-wrapper" data-collection-id="{id}">{description}</div>{.end}
-                    </div>
-                  {.end}
-                {.end}
                   <squarespace:query collection="{collection.urlId}" featured="true" limit="5">
                   {.section items}
                     <div class="sqs-featured-posts-gallery">
@@ -255,16 +232,13 @@
               {.end}
             </ul>
           </nav>
-        </div>{.end}{.end}<!--
-        -->{.collectionTypeNameEquals? page}<!--
-        --><squarespace:folder-navigation template="folder-navigation" />{.end}{.end}<!--
-        --><div id="content" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "gallery"}{.or}{.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}{.end}>
+        </div>{.end}{.end}
+        {.collectionTypeNameEquals? page}
+        <squarespace:folder-navigation template="folder-navigation" />{.end}{.end}
+        <div id="content" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "gallery"}{.or}{.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}{.end}>
          {squarespace.main-content}
-         <div id="breadtrail">
-           {@|apply breadcrumbs.block}
-         </div>
-        </div><!--
-        -->{.section collection}{.collectionTypeNameEquals? blog}<aside id="rightSidebar" role="complementary">
+        </div>
+        {.section collection}{.collectionTypeNameEquals? blog}<aside id="rightSidebar" role="complementary">
           <squarespace:block-field class="open-block-field" id="blogBlocks-{id}" columns="12" label="Blog Sidebar Content" />
         </aside>
         {.end}
@@ -286,16 +260,27 @@
         </div>
       </footer>
 
-      <div id="legal">
+  <section class="legal">
+    <div class="grid--container">
+      <div class="grid text--center">
+
+        <div class="grid__col-12">
+          <p>This facility is remotely supervised by Medical Doctors who are not always on site.</p>
+          <p><strong><a href="https://maycreate.com/" alt="Site by Maycreate" target="_blank">Site by Maycreate</a></strong>
+        </div>
+
+      </div>
+    </div>
+  </section>
+      {squarespace-footers}
+</footer>
+<div id="legal">
         <p>© 2018 Focus Treatment Centers. All Rights Reserved.</p>
         <p><strong><a target="_blank" href='https://maycreate.com/'>Site by Maycreate</a></strong></p>
       </div>
 
       {@|apply social.block}
-
-    </div>
-
-    <squarespace:script src="site-bundle.js" combo="false" />
+<squarespace:script src="site-bundle.js" combo="false" />
     <squarespace:script src="jquery-3.3.1.min.js" combo="false" />
     {squarespace-footers}
 
@@ -336,7 +321,5 @@
       $('.banner-thumbnail-wrapper #thumbnail').html($('#blogBanner').html());
 
     });
-    </script>
-
   </body>
 </html>
