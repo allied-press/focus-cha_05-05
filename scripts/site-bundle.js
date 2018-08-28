@@ -179,12 +179,8 @@
             },
             resetGalleryPosition: function() {
                 var t = e.one(".collection-type-page .main-content .sqs-layout > .sqs-row:first-child > .sqs-col-12 > .gallery-block:first-child .sqs-gallery-block-slideshow"),
-                    vbBannerT = e.one(".collection-type-page #preFooter .sqs-layout > .sqs-row:first-child > .sqs-col-12 > .gallery-block:first-child .sqs-gallery-block-slideshow"),
                     n = e.one(".collection-type-page .main-content .sqs-layout > .sqs-row:first-child > .sqs-col-12 > .gallery-block:first-child");
-                vbBannerN = e.one(".collection-type-page #preFotoer .sqs-layout > .sqs-row:first-child > .sqs-col-12 > .gallery-block:first-child");
-
-                t && (e.one("#promotedGalleryWrapper .row .col").append(n), e.one("body").addClass("has-promoted-gallery").addClass("has-banner-image")),
-                    vbBannerT && (e.one("#promotedGalleryWrapper .row .col").append(n), e.one("body").addClass("has-promoted-gallery").addClass("has-banner-image"))
+                t && (e.one("#promotedGalleryWrapper .row .col").append(n), e.one("body").addClass("has-promoted-gallery").addClass("has-banner-image"))
             },
             hideArrowsWhenOneSlide: function() {
                 e.one(".posts .post:only-child") && e.all(".circles").addClass("hidden")
