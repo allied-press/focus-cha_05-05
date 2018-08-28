@@ -95,6 +95,18 @@
                 {.end}
               {.or}
                 {.collectionTypeNameEquals? blog}
+                <div id="promotedGalleryWrapper" class="sqs-layout promoted-gallery-wrapper"><div class="row"><div class="col"></div></div></div>
+                {.main-image?}
+                    <div class="banner-thumbnail-wrapper{.if description} has-description{.end}" data-content-field="main-image" data-collection-id="{collection.id}" data-edit-main-image="Banner" data-annotation-alignment="bottom left">
+                      {.section mainImage}
+                      <div class="color-overlay"></div>
+                      <figure id="thumbnail" class="loading content-fill">
+                        <img {@|image-meta} />
+                      </figure>
+                      {.end}
+                      {.if description}<div class="desc-wrapper" data-collection-id="{id}">{description}</div>{.end}
+                    </div>
+                  {.end}
                   <squarespace:query collection="{collection.urlId}" featured="true" limit="5">
                   {.section items}
                     <div class="sqs-featured-posts-gallery">
