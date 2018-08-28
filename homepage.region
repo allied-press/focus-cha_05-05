@@ -261,6 +261,11 @@
           {@|apply testimonials.block}
         </div>
       </div>
+      <div id="redcSection">
+      <div class="insetField">
+      <squarespace:block-field id="redc" columns="12" label="REDC"/>
+      </div>
+      </div>
       <div id="jointCommissionSection">
       <div class="insetField">
         <squarespace:block-field id="jointcommission" columns="12" label="Joint Commission"/>
