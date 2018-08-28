@@ -201,6 +201,8 @@
           </nav>
         </div>{.end}{.end}
         {.collectionTypeNameEquals? page}
+        {.or}
+        {.collectionTypeNameEquals? blog}
         <squarespace:folder-navigation template="folder-navigation" />{.end}{.end}
         <div id="content" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "gallery"}{.or}{.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}{.end}>
          {squarespace.main-content}
@@ -211,6 +213,7 @@
         {.section collection}{.collectionTypeNameEquals? blog}<aside id="rightSidebar" role="complementary">
           <squarespace:block-field class="open-block-field" id="blogBlocks-{id}" columns="12" label="Blog Sidebar Content" />
         </aside>
+        {.end}
         {.end}
         {.end}
       </main>
