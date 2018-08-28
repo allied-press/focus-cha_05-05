@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {.end}
     {squarespace-headers}
-    <script>/* Must be below squarespace-headers */(function(){var e='ontouchstart'in window||navigator.msMaxTouchPoints;var t=document.documentElement;if(!e&&t){t.className=t.className.replace(/touch-styles/,'')}})()
+    <script>/* Must be below squarespace-headers */(function() {var e='ontouchstart'in window||navigator.msMaxTouchPoints;var t=document.documentElement;if(!e&&t){t.className=t.className.replace(/touch-styles/,'')}})()
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   </head>
 
   <body id="{squarespace.page-id}" class="{squarespace.page-classes}{.if item}{.section item}{.if productType}{.or}{.background-source-video?} has-banner-image item-main-image{.or}{.main-image?} has-banner-image item-main-image{.end}{.end}{.end}{.end}{.or}{.section collection}{.collectionTypeNameEquals? index}{.section collections}{.section 0}{.background-source-video?} has-banner-image index-page{.or}{.main-image?} has-banner-image index-page{.end}{.end}{.end}{.end}{.or}{.background-source-video?} has-banner-image general-page{.or}{.main-image?} has-banner-image general-page{.end}{.end}{.end}{.end}{.end}">
@@ -21,6 +21,7 @@
 
       <div class="sqs-cart-dropzone"></div>
 
+      <div id="preNav"><squarespace:block-field id="pre-nav" columns="12" label="PreNavigation" /></div>
       <header id="header" class="show-on-scroll" data-offset-el=".index-section" data-offset-behavior="bottom" role="banner">
         <div class="header-inner">
           {.section website}<div id="{.if logoImageUrl}logoWrapper{.or}siteTitleWrapper{.end}" class="wrapper" data-content-field="site-title">
@@ -71,7 +72,6 @@
             {.collectionTypeNameEquals? index}
             {.or}
               {.collectionTypeNameEquals? page}
-               
                 <div id="promotedGalleryWrapper" class="sqs-layout promoted-gallery-wrapper"><div class="row"><div class="col"></div></div></div>
                 {.background-source-video?}
                     <div class="banner-thumbnail-wrapper{.if description} has-description{.end}" data-content-field="main-image" data-collection-id="{collection.id}" data-edit-main-image="Banner" data-annotation-alignment="bottom left">
@@ -96,28 +96,6 @@
                 {.end}
               {.or}
                 {.collectionTypeNameEquals? blog}
-                <div id="promotedGalleryWrapper" class="sqs-layout promoted-gallery-wrapper"><div class="row"><div class="col"></div></div></div>
-                {.background-source-video?}
-                    <div class="banner-thumbnail-wrapper{.if description} has-description{.end}" data-content-field="main-image" data-collection-id="{collection.id}" data-edit-main-image="Banner" data-annotation-alignment="bottom left">
-                      <div class="color-overlay"></div>
-                      <figure id="thumbnail" class="loading content-fill">
-                        {@|apply sqs-video-background.block}
-                      </figure>
-                      {.if description}<div class="desc-wrapper" data-collection-id="{id}">{description}</div>{.end}
-                    </div>
-                {.or}
-                  {.main-image?}
-                    <div class="banner-thumbnail-wrapper{.if description} has-description{.end}" data-content-field="main-image" data-collection-id="{collection.id}" data-edit-main-image="Banner" data-annotation-alignment="bottom left">
-                      {.section mainImage}
-                      <div class="color-overlay"></div>
-                      <figure id="thumbnail" class="loading content-fill">
-                        <img {@|image-meta} />
-                      </figure>
-                      {.end}
-                      {.if description}<div class="desc-wrapper" data-collection-id="{id}">{description}</div>{.end}
-                    </div>
-                  {.end}
-                {.end}
                   <squarespace:query collection="{collection.urlId}" featured="true" limit="5">
                   {.section items}
                     <div class="sqs-featured-posts-gallery">
@@ -255,26 +233,23 @@
               {.end}
             </ul>
           </nav>
-        </div>{.end}{.end}
-        {.collectionTypeNameEquals? page}
-        {.or}
-        {.collectionTypeNameEquals? blog}
-        <squarespace:folder-navigation template="folder-navigation" />{.end}{.end}
-        <div id="content" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "gallery"}{.or}{.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}{.end}>
+        </div>{.end}{.end}<!--
+        -->{.collectionTypeNameEquals? page}<!--
+        --><squarespace:folder-navigation template="folder-navigation" />{.end}{.end}<!--
+        --><div id="content" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "gallery"}{.or}{.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}{.end}>
          {squarespace.main-content}
          <div id="breadtrail">
            {@|apply breadcrumbs.block}
          </div>
-        </div>
-        {.section collection}{.collectionTypeNameEquals? blog}<aside id="rightSidebar" role="complementary">
+        </div><!--
+        -->{.section collection}{.collectionTypeNameEquals? blog}<aside id="rightSidebar" role="complementary">
           <squarespace:block-field class="open-block-field" id="blogBlocks-{id}" columns="12" label="Blog Sidebar Content" />
         </aside>
         {.end}
         {.end}
-        {.end}
       </main>
 
-<div id="preFooter">
+      <div id="preFooter">
         <div class="pre-footer-inner">
           <squarespace:block-field id="preFooterBlocks" columns="12" label="Pre-Footer Content" />
         </div>
@@ -298,12 +273,12 @@
 
     </div>
 
-    <squarespace:script src="site-bundle-vb.js" combo="false" />
+    <squarespace:script src="site-bundle.js" combo="false" />
     <squarespace:script src="jquery-3.3.1.min.js" combo="false" />
     {squarespace-footers}
 
     <script>
-    $(document).ready(function($) {
+    jQuery(document).ready(function($) {
       var alterClass = function() {
         var ww = document.body.clientWidth;
         if (ww < 1160) {
@@ -322,19 +297,18 @@
       $("#mainNavigation .folder-toggle").append("<i class='fas fa-chevron-down'></i>");
 
       $( "#promotedGalleryWrapper" ).append( $( "#breadtrail" ) );
+      $( ".index-section:first-child .promoted-gallery-wrapper" ).append( $( "#breadtrail" ) );
+      $( ".banner-thumbnail-wrapper" ).append( $( "#breadtrail" ) );
+
+      
       $("#mobileNavigation").append( $( "#mobileSocial" ) );
 
-      $('#faq-section h3:first-of-type').closest('div.sqs-block-content').attr('class', 'accordion-wrapper');
-      $('.accordion-wrapper h3').addClass('ui-closed').css('cursor','pointer');
-      $('.accordion-wrapper h3').nextUntil('h3').slideToggle().addClass('accordion-content');
-      $('.accordion-wrapper h3').click(function() {
-        $(this).nextUntil('h3').slideToggle();
-        $(this).toggleClass('ui-closed ui-open');
+      $(".entry").each(function(){
+        $(".p-summary", this).prepend( $( ".entry-header", this ) );
       });
-      var slideshowBanner = $('div.sqs-block.gallery-block.sqs-block-gallery').addClass('galleryBanner');
-      $('div#promotedGalleryWrapper div.row div.col').append(slideshowBanner);
-      
+
     });
     </script>
+
   </body>
 </html>
