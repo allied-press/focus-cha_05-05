@@ -303,7 +303,7 @@
     {squarespace-footers}
 
     <script>
-    jQuery(document).ready(function($) {
+    $(document).ready(function($) {
       var alterClass = function() {
         var ww = document.body.clientWidth;
         if (ww < 1160) {
@@ -323,17 +323,12 @@
 
       $( "#promotedGalleryWrapper" ).append( $( "#breadtrail" ) );
       $("#mobileNavigation").append( $( "#mobileSocial" ) );
-    });
-    </script>
 
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script>
-    $(document).ready(function() {
-      $('.accordion-wrapper .sqs-block-content h3').addClass('ui-closed').css('cursor','pointer');
-      $(".accordion-wrapper .sqs-block-content h3").nextUntil("h3").slideToggle().addClass('accordion-content');
-      $(".accordion-wrapper .sqs-block-content h3").click(function() {
-
-        $(this).nextUntil("h3").slideToggle();
+      $('#faq-section h3:first-of-type').closest('div.sqs-block-content').attr('class', 'accordion-wrapper');
+      $('.accordion-wrapper h3').addClass('ui-closed').css('cursor','pointer');
+      $('.accordion-wrapper h3').nextUntil('h3').slideToggle().addClass('accordion-content');
+      $('.accordion-wrapper h3').click(function() {
+        $(this).nextUntil('h3').slideToggle();
         $(this).toggleClass('ui-closed ui-open');
       });
     });
