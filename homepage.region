@@ -10,6 +10,9 @@
     </script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <style>
+    #page {
+      padding: 34px 0px 22px!important;
+    }
     .insetField {
       max-width: 1020px;
       margin: 0 auto;
@@ -18,6 +21,13 @@
     #jointCommissionSection {
       background-color: #eee;
     }
+    .sqs-block-image .design-layout-poster .image-title p {
+  text-transform: none!important;
+}
+.index-section,
+.index-section .page-content {
+  padding: 34px 0px!important;
+}
     </style>
   </head>
 
