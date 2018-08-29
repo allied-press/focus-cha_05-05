@@ -272,13 +272,6 @@
       </div>
       </div>
 
-
-      <div id="preFooter">
-        <div class="pre-footer-inner">
-          <squarespace:block-field id="preFooterBlocks" columns="12" label="Pre-Footer Content" />
-        </div>
-      </div>
-
       <footer id="footer" role="contentinfo">
         <div class="footer-inner">
           <div class="nav-wrapper back-to-top-nav"><nav><div class="back-to-top"><a href="#header">Back to Top</a></div></nav></div>
