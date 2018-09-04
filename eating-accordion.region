@@ -248,8 +248,8 @@
           <squarespace:block-field id="eating-gallery" columns="12" label="Residential Treatment Facilities" />
          </div>
          </div>
-         
-         {@|apply eatingSidbar.block}
+
+         {@|apply eatingSidebar.block}
 
         </div>
         <div id="breadtrail">
