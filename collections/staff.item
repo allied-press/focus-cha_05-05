@@ -1,7 +1,7 @@
-<div class="staff-item">
+<div class="blog-item">
 
   {.section item}
-  <article class="entry h-entry {@|item-classes}" id="staff-{id}" data-item-id="{id}">
+  <article class="entry h-entry {@|item-classes}" id="blog-{id}" data-item-id="{id}">
 
     <header class="entry-header">
       <div class="meta-above-title">
@@ -94,6 +94,6 @@
 
 <div id="preFooter">
         <div class="pre-footer-inner">
-          <squarespace:block-field id="staffBanner" columns="12" label="Staff Banner" />
+          <squarespace:block-field id="blogBanner" columns="12" label="Staff Banner" />
         </div>
       </div>
