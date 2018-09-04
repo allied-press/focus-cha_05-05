@@ -1,0 +1,8 @@
+<aside class="sidebar">
+   <squarespace:block-field id="substance-sidebar" class="top-sidebar" columns="12" label="Program Sidebar" />
+   <h2 class="only-mobile"><a href="/substance-use-treatment-programs"> Substance Abuse Programs </a></h2>
+   <squarespace:navigation navigationId="substanceAbuse" template="secondary-navigation"/>
+   <h2> Related Links </h2>
+   <squarespace:navigation navigationId="substanceAbuseRelated" template="secondary-navigation"/>
+   <squarespace:block-field id="program-sidebar" columns="12" label="Global Sidebar Content" />
+</aside>
