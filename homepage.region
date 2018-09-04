@@ -18,7 +18,7 @@
       margin: 0 auto;
       padding: 50px 0px;
     }
-    #jointCommissionSection {
+    #redcSection {
       background-color: #eee;
     }
     .sqs-block-image .design-layout-poster .image-title p {
@@ -271,16 +271,17 @@
           {@|apply testimonials.block}
         </div>
       </div>
-      <div id="redcSection">
-      <div class="insetField">
-      <squarespace:block-field id="redc" columns="12" label="REDC"/>
-      </div>
-      </div>
       <div id="jointCommissionSection">
       <div class="insetField">
         <squarespace:block-field id="jointcommission" columns="12" label="Joint Commission"/>
       </div>
       </div>
+      <div id="redcSection">
+      <div class="insetField">
+      <squarespace:block-field id="redc" columns="12" label="REDC"/>
+      </div>
+      </div>
+
 
       <footer id="footer" role="contentinfo">
         <div class="footer-inner">
