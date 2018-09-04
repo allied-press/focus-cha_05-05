@@ -1107,17 +1107,25 @@ body#collection-5b858a0e03ce64e132c3a845 {
 //Venn Diagram
 
 #home.index-section .intrinsic {
-    border-radius: 50% !important;
-    overflow: hidden;
-    width: 400px;
-    height: 400px;
-    margin: 0 auto;
+  border-radius: 50% !important;
+  overflow: hidden;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+
+  .image-inset{
+    overflow: visible !important;
 
     img{
       display: block;
       height: 400px !important;
       width: auto !important;
     }
+
+    .img-overlay{
+      background-color: rgba(0,0,0,.35);
+    }
+  }
 }
 
 
