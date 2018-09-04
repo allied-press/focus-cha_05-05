@@ -245,7 +245,7 @@
           <div class="with-sidebar-content">
          {squarespace.main-content}
          {@|apply sa-faq.block}
-         
+
          </div>
          <aside class="sidebar">
             <squarespace:block-field id="substance-sidebar" class="top-sidebar" columns="12" label="Program Sidebar" />
@@ -290,6 +290,7 @@
     </div>
 
     <squarespace:script src="site-bundle.js" combo="false" />
+    <squarespace:script src="clickdesk.js" combo="false" />
     {squarespace-footers}
 
     <script>
