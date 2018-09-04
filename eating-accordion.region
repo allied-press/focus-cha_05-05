@@ -252,6 +252,8 @@
             <squarespace:block-field id="eating-sidebar" class="top-sidebar" columns="12" label="Program Sidebar" />
             <h2 class="only-mobile"><a href="/our-eating-disorder-program/"> Eating Disorder Programs </a></h2>
             <squarespace:navigation navigationId="eatingDisorder" template="secondary-navigation"/>
+            <h2>Related Links </h2>
+            <squarespace:navigation navigationId="eatingDisorderRelated" template="secondary-navigation"/>
             <squarespace:block-field id="program-sidebar" columns="12" label="Global Sidebar Content" />
         </aside>
         </div>
