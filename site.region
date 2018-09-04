@@ -336,6 +336,9 @@
 
       $('.banner-thumbnail-wrapper #thumbnail').html($('#blogBanner').html());
 
+      $(".collection-type-staff #thumbnail img").replaceWith( $(".collection-type-staff .pre-footer-inner") );
+      $(".collection-type-staff #thumbnail").append( $("#breadcrumbs"))
+
     });
     </script>
 
