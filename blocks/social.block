@@ -1,6 +1,5 @@
 <div id="mobileSocial">
   <a href="https://www.facebook.com/FocusTreatment/" class="socialLink" target="_blank"><i class="fab fa-facebook-f"></i> </a>
-  <a href="https://twitter.com/FocusTreatment" class="socialLink" target="_blank"><i class="fab fa-twitter"></i></a>
   <a href="https://www.linkedin.com/company/focus-healthcare-of-tennessee" class="socialLink" target="_blank"> <i class="fab fa-linkedin-in"></i></a>
   <a href="mailto:admissions@FocusTN.com" class="socialLink"> <i class="fas fa-envelope fab"></i></a>
 </div>
