@@ -1,13 +1,10 @@
 <div class="staff-item">
 
-  {.section item}
-  <article class="entry h-entry {@|item-classes}{.main-image?} has-main-image{.end} clear" id="staff-{id}" data-item-id="{id}">
-
     <div class="entry-content e-content">
       {.section body}
         {@}
       {.end}
     </div>
 
-  </article>
+
 </div>
