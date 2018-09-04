@@ -18,7 +18,7 @@
       margin: 0 auto;
       padding: 50px 0px;
     }
-    #redcSection {
+    #jointCommissionSection {
       background-color: #eee;
     }
     .sqs-block-image .design-layout-poster .image-title p {
