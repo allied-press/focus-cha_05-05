@@ -56,18 +56,13 @@
     {.if postItemInjectCode}<div class="entry-injection">{postItemInjectCode}</div>{.end}
 
   </article>
-
-  <div id="comments-{id}" class="p-comment">
-    {.comments?}{@|comments}{.end}
-  </div>
-
   {.end}
 
-  {.if pagination}
-  <nav class="pagination clear">
-    <div class="newer">{.if pagination.prevItem}<span class="prev-label">Newer Post</span><a href="{pagination.prevItem.fullUrl}" rel="prev"><span>{pagination.prevItem.title}</span></a>{.end}</div><!-- comment the linebreak between these two elements because science
-  --><div class="older">{.if pagination.nextItem}<span class="next-label">Older Post</span><a href="{pagination.nextItem.fullUrl}" rel="next"><span>{pagination.nextItem.title}</span></a>{.end}</div>
-  </nav>
-  {.end}
 
 </div>
+
+<div id="preFooter">
+        <div class="pre-footer-inner">
+          <squarespace:block-field id="staffBanner" columns="12" label="Blog Banner" />
+        </div>
+      </div>
