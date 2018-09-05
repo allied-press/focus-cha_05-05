@@ -323,6 +323,12 @@
       $( ".index-section:first-child .promoted-gallery-wrapper" ).append( $( "#breadtrail" ) );
       $( ".banner-thumbnail-wrapper" ).append( $( "#breadtrail" ) );
 
+      if ($(".breadcrumbs-blog")[0]){
+        $("#breadcrumbs").replaceWith( $(".breadcrumbs-blog"))
+      } else {
+
+      }
+
 
       $("#mobileNavigation").append( $( "#mobileSocial" ) );
 
