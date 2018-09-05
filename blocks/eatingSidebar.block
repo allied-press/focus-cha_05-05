@@ -1,8 +1,8 @@
 <aside class="sidebar">
    <squarespace:block-field id="eating-sidebar" class="top-sidebar" columns="12" label="Program Sidebar" />
-   <squarespace:block-field id="ed-nav-header" columns="12" label="Navigation Title">
+   <squarespace:block-field id="ed-nav-header" class="sidebarheader" columns="12" label="Navigation Title">
    <squarespace:navigation navigationId="eatingDisorder" template="secondary-navigation"/>
-   <squarespace:block-field id="ed-links" columns="12" label="Related Links">
+   <squarespace:block-field id="ed-links" class="sidebarheader" columns="12" label="Related Links">
    <squarespace:navigation navigationId="eatingDisorderRelated" template="secondary-navigation"/>
    <squarespace:block-field id="program-sidebar" columns="12" label="Global Sidebar Content" />
 </aside>
