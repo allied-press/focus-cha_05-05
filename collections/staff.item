@@ -1,4 +1,4 @@
-{@|apply breadcrumbs-blog.block}
+{@|apply breadcrumbs-staff.block}
 
 <div class="blog-item">
 
