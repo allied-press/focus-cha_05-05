@@ -1492,8 +1492,20 @@ input.button:hover {
 //Testing New Staff Blog!!
 .collection-type-staff{
 
-  .banner-thumbnail-wrapper #thumbnail img {
-      width: 100% !important;
-      height: auto !important;
+  .banner-thumbnail-wrapper{
+    height: 600px !important;
+
+    #thumbnail {
+      height: 600px !important;
+
+      img {
+        width: auto !important;
+        height: 600px !important;
+      }
+    }
+
+    .blog-item-wrapper{
+      display: none;
+    }
   }
 }
