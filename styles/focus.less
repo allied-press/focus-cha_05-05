@@ -1193,6 +1193,7 @@ body#collection-5b858a0e03ce64e132c3a845 {
     p:last-child {
       font-weight: 700;
       font-size: 1.1em;
+      margin-top: 0;
     }
   }
 }
@@ -1204,6 +1205,33 @@ body#collection-5b858a0e03ce64e132c3a845 {
 
     .slideshow-container{
       height: 190px;
+    }
+  }
+}
+
+@media only screen and (max-width: 640px){
+  #testimonials {
+    height: 210px;
+
+    .mySlides {
+      .sqs-block.html-block.sqs-block-html {
+        padding-top: 0 !important;
+      }
+
+      p:first-child{
+        padding-top: 0;
+        width: 90%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 640px){
+  #testimonials{
+    height: 250px;
+
+    .slideshow-container{
+      height: 240px
     }
   }
 }
