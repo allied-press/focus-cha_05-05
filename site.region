@@ -329,6 +329,12 @@
 
       }
 
+      if ($(".breadcrumbs-staff")[0]){
+        $("#breadcrumbs").replaceWith( $(".breadcrumbs-blog"))
+      } else {
+
+      }
+
 
       $("#mobileNavigation").append( $( "#mobileSocial" ) );
 
@@ -342,8 +348,7 @@
 
       $('.banner-thumbnail-wrapper #thumbnail').html($('#blogBanner').html());
 
-      $(".collection-type-staff #thumbnail img").replaceWith( $(".collection-type-staff .pre-footer-inner img") );
-      $(".collection-type-staff #thumbnail").append( $("#breadcrumbs"))
+
 
     });
     </script>
