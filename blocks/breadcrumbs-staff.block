@@ -1,1 +1,1 @@
-<div id="breadcrumbs"><a href="/">Home</a> | <a href="/chattanooga">Chattanooga Treatment Center</a> | {collection.title}</div>
+<div id="breadcrumbs" class="breadcrumbs-staff"><a href="/">Home</a> | <a href="/chattanooga">Chattanooga Treatment Center</a> | {collection.title}</div>
