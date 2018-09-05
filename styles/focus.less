@@ -1104,7 +1104,22 @@ body#collection-5b858a0e03ce64e132c3a845 {
       padding-top: 96px;
 
       .content-inner .sqs-grid-12 .row .col .row:last-of-type {
-        background: url('../assets/venn.svg');
+        background: url('../assets/venn.svg') no-repeat;
+        background-size: contain;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 450px;
+
+        .col {
+          width: 20%;
+
+          .intrinsic {
+            width: auto !important;
+            height: auto !important;
+          }
+        }
       }
     }
   }
