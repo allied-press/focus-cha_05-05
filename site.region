@@ -325,13 +325,9 @@
 
       if ($(".breadcrumbs-blog")[0]){
         $("#breadcrumbs").replaceWith( $(".breadcrumbs-blog"))
-      } else if ($(".breadcrumbs-staff")[0]){
-        $("#breadcrumbs").replaceWith( $(".breadcrumbs-staff"))
       } else {
 
       }
-
-
 
 
       $("#mobileNavigation").append( $( "#mobileSocial" ) );
@@ -347,6 +343,12 @@
       $('.banner-thumbnail-wrapper #thumbnail').html($('#blogBanner').html());
 
       $(".collection-type-staff #thumbnail img").replaceWith( $(".collection-type-staff .pre-footer-inner img") );
+
+      if ($(".breadcrumbs-staff")[0]){
+        $("#breadcrumbs").replaceWith( $(".breadcrumbs-staff"))
+      } else {
+
+      }
 
 
     });
