@@ -559,6 +559,18 @@ div#mobileSocial {
 }
 
 .blog-item-wrapper {
+  z-index: 100;
+  position: relative;
+  width: 100%;
+  max-width: 1084px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   .title-desc-wrapper {
 
     time {
@@ -571,6 +583,24 @@ div#mobileSocial {
       text-transform: none;
       font-size: 4em;
       text-shadow: 3px 3px 2px rgba(40, 42, 43, .5);
+    }
+  }
+}
+
+@media only screen and (max-width: 640px){
+  .blog-item-wrapper {
+
+    .title-desc-wrapper {
+
+      time {
+        font-size: 1.4em;
+      }
+
+      .post-title {
+        text-transform: none;
+        font-size: 2.5em;
+        text-shadow: 3px 3px 2px rgba(40, 42, 43, .5);
+      }
     }
   }
 }
