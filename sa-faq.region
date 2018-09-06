@@ -310,15 +310,11 @@
       $( "#promotedGalleryWrapper" ).append( $( "#breadtrail" ) );
       $("#mobileNavigation").append( $( "#mobileSocial" ) );
 
-      $('.accordion-wrapper .sqs-block-content h3').addClass('ui-closed').css('cursor','pointer');
-      $(".accordion-wrapper .sqs-block-content h3").nextUntil("h3").addClass('accordion-content');
-      $(".accordion-wrapper .sqs-block-content h3").each(function (index) {
-        $(this).nextUntil(".accordion-wrapper .sqs-block-content h3").wrapAll("<div class='accordion-section'></div>");
-      });
-      $(".accordion-section").slideToggle();
-      $(".accordion-wrapper .sqs-block-content h3").click(function() {
-
-        $(this).nextUntil("h3").slideToggle();
+      $('#faq-section h3:first-of-type').closest('div.sqs-block-content').attr('class', 'accordion-wrapper');
+      $('.accordion-wrapper h3').addClass('ui-closed').css('cursor','pointer');
+      $('.accordion-wrapper h3').nextUntil('h3').slideToggle().addClass('accordion-content');
+      $('.accordion-wrapper h3').click(function() {
+        $(this).nextUntil('h3').slideToggle();
         $(this).toggleClass('ui-closed ui-open');
       });
     });
