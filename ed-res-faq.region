@@ -321,7 +321,6 @@
         $(this).nextUntil("h3").slideToggle();
         $(this).toggleClass('ui-closed ui-open');
       });
-      });
     });
     </script>
 
