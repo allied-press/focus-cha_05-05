@@ -238,12 +238,10 @@
         -->{.collectionTypeNameEquals? page}<!--
         --><squarespace:folder-navigation template="folder-navigation" />{.end}{.end}<!--
         --><div id="content" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "gallery"}{.or}{.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}{.end}>
+
+          <div class="main-content-sidebar">
+          <div class="with-sidebar-content">
          {squarespace.main-content}
-         <div class="main-content-sidebar">
-         <div class="with-sidebar-content">
-         <div class="accordion-wrapper">
-           <squarespace:block-field id="substance-faq" columns="12" label="Accordion" />
-         </div>
          </div>
          {@|apply substanceSidebar.block}
         </div>
@@ -267,6 +265,8 @@
       <footer id="footer" role="contentinfo">
         <div class="footer-inner">
           <div class="nav-wrapper back-to-top-nav"><nav><div class="back-to-top"><a href="#header">Back to Top</a></div></nav></div>
+          <squarespace:navigation navigationId="secondaryNav" template="secondary-navigation" />
+          {.if website.location.addressTitle || website.location.addressLine1 || website.location.addressLine2 || website.location.addressCountry}<div id="siteInfo">{.or}{.if websiteSettings.contactPhoneNumber || websiteSettings.contactEmail}<div id="siteInfo">{.end}{.end}{.section website}{.section location}{.if addressTitle || addressLine1 || addressLine2 || addressCountry}<span class="site-address">{.end}{.if addressTitle}{addressTitle}{.end}{.if addressLine1}{.if addressTitle}, {.end}{addressLine1}{.end}{.if addressLine2}{.if addressTitle || addressLine1}, {.or}{.end}{addressLine2}{.end}{.if addressCountry}{.if addressTitle || addressLine1 || addressLine2}, {.end}{addressCountry}{.end}{.if addressTitle || addressLine1 || addressLine2 || addressCountry}</span>{.end}{.end}{.end}{.section websiteSettings}{.if contactPhoneNumber}<span rel="tel" class="site-phone">{contactPhoneNumber}</span>{.end}{.if contactEmail}<a href="mailto:{contactEmail}" class="site-email"><span>{contactEmail}</span></a>{.end}{.end}{.if website.location.addressTitle || website.location.addressLine1 || website.location.addressLine2 || website.location.addressCountry}</div>{.or}{.if websiteSettings.contactPhoneNumber || websiteSettings.contactEmail}</div>{.end}{.end}
           <squarespace:block-field id="footerBlocks" columns="12" label="Footer Content" />
         </div>
       </footer>
@@ -306,23 +306,6 @@
 
       $( "#promotedGalleryWrapper" ).append( $( "#breadtrail" ) );
       $("#mobileNavigation").append( $( "#mobileSocial" ) );
-    });
-    </script>
-
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script>
-    $(document).ready(function() {
-      $('.accordion-wrapper .sqs-block-content h3').addClass('ui-closed').css('cursor','pointer');
-      $(".accordion-wrapper .sqs-block-content h3").nextUntil("h3").addClass('accordion-content');
-      $(".accordion-wrapper .sqs-block-content h3").each(function (index) {
-        $(this).nextUntil(".accordion-wrapper .sqs-block-content h3").wrapAll("<div class='accordion-section'></div>");
-      });
-      $(".accordion-section").slideToggle();
-      $(".accordion-wrapper .sqs-block-content h3").click(function() {
-
-        $(this).nextUntil("h3").slideToggle();
-        $(this).toggleClass('ui-closed ui-open');
-      });
     });
     </script>
 
