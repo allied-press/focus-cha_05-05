@@ -318,7 +318,7 @@
     <script>
     $(document).ready(function() {
       $('.accordion-wrapper .sqs-block-content h3').addClass('ui-closed').css('cursor','pointer');
-      $(".accordion-wrapper .sqs-block-content h3").nextUntil("h3").slideToggle().wrapAround('<div class="accordion-content" />');
+      $(".accordion-wrapper .sqs-block-content h3").nextUntil("h3").slideToggle().wrapAll('<div class="accordion-content" />');
       $(".accordion-wrapper .sqs-block-content h3").click(function() {
 
         $(this).children(".accordion-content").slideToggle();
