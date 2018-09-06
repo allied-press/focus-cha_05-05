@@ -319,6 +319,7 @@
     $(document).ready(function() {
       $('.accordion-wrapper .sqs-block-content h3').addClass('ui-closed').css('cursor','pointer');
       $(".accordion-wrapper .sqs-block-content h3").nextUntil("h3").addClass('accordion-content');
+      $(".accordion-content").slideToggle().wrapAll('<div class="accordion-section" />')
       $(".accordion-wrapper .sqs-block-content h3").click(function() {
 
         $(this).nextUntil("h3").slideToggle();
