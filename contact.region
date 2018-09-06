@@ -318,10 +318,10 @@
     <script>
     $(document).ready(function() {
       $('.accordion-wrapper .sqs-block-content h3').addClass('ui-closed').css('cursor','pointer');
-      $(".accordion-wrapper .sqs-block-content h3").nextUntil("h3").addClass('accordion-content');
+      $(".accordion-wrapper .sqs-block-content h3").nextUntil("h3").slideToggle().wrapAround('<div class="accordion-content" />');
       $(".accordion-wrapper .sqs-block-content h3").click(function() {
 
-        $(this).nextUntil("h3").slideToggle();
+        $(this).children(".accordion-content").slideToggle();
         $(this).toggleClass('ui-closed ui-open');
       });
     });
