@@ -25,10 +25,12 @@ h1.page-title {
     letter-spacing: 2px;
 }
 
-h1 {
+h1,
+h1:not(.site-title):not(.logo-image):not(.page-title) {
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 600;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
+  margin-bottom: 3px!important;
 }
 
 h2 {
@@ -206,7 +208,6 @@ span.event-time-12hr {
     margin: 17px 0px 34px 0px;
 }
 
-h1:not(.site-title):not(.logo-image):not(.page-title),
 .entry-title,
 article header h1 a,
 article header h1 a:visited {
