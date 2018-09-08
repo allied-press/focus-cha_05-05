@@ -47,7 +47,7 @@ h2 {
 h3 {
     font-family: 'Domine', serif;
     font-weight: 400;
-    color: #00a0df;
+    color: @brightblue;
     font-size: 15px;
     margin-bottom: 3px;
 }
@@ -87,13 +87,14 @@ h3 {
 }
 
 .sqs-block-summary-v2 .summary-title a:hover {
-    color: #68bce9;
+    color: @brightblue;
+    opacity: .8;
 }
 
 #staff-single h1 {
     font-family: 'Domine', serif!important;
     font-size: 21px;
-    color: #00a0df!important;
+    color: @brightblue;!important;
     margin-bottom: 10px;
     padding-bottom: 0px;
 }
@@ -129,7 +130,8 @@ a.summary-title-link {
 }
 
 a.summary-title-link:hover {
-    color: #68bce9;
+    color: @brightblue;
+    opacity: .8;
 }
 
 div.summary-excerpt p {
@@ -158,14 +160,14 @@ span.event-time-12hr {
     font-family: 'Nunito Sans', sans-serif!important;
     font-weight: 600;
     font-size: 12px;
-    color: #00a0df;
+    color: @brightblue;
 }
 
 .index-section.page:nth-child(odd) a:hover:not(a.summary-title) {
     font-family: 'Nunito Sans', sans-serif!important;
     font-weight: 600;
     font-size: 12px;
-    color: #68bce9;
+    color: @brightblue;
 }
 
 .index-section.page:nth-child(even) h2 {
@@ -190,13 +192,14 @@ span.event-time-12hr {
 .summary-title a:link {
     font-family: "Domine", serif!important;
     font-size: 16px!important;
-    color: @darkBlue
+    color: @darkBlue;
 }
 
 .summary-title a:hover {
     font-family: "Domine", serif!important;
     font-size: 16px!important;
-    color: @brightBlue
+    color: @brightBlue;
+    opacity: .8;
 }
 
 /* Blog */
@@ -225,12 +228,12 @@ article header h1 a:visited {
     font-size: 18px!important;
     font-family: 'Nunito Sans', sans-serif!important;
     font-weight: 400;
-    color: @darkBlue;
+    color: @brightblue;
 }
 
 a.entry-dateline-link,
 a.entry-morefrom-link {
-    color: @darkBlue;
+    color: @brightblue;
     font-size: 12px!important;
 }
 
@@ -245,6 +248,7 @@ a.entry-morefrom-link {
 a.entry-dateline-link:hover,
 a.entry-morefrom-link:hover {
     color: @brightBlue;
+    opacity: .8;
 }
 
 .meta-below-title {
@@ -254,15 +258,13 @@ a.entry-morefrom-link:hover {
 
 .sqs-tag-cloud li a,
 .entry-tags a {
-    color: #00a0df!important;
-    ;
+    color: @brightblue!important;
     font-size: 12px!important;
 }
 
 .sqs-tag-cloud li a:hover,
 .entry-tags a:hover {
     color: @brightBlue;
-    ;
     font-size: 12px !important;
 }
 
@@ -323,7 +325,7 @@ article div.entry-content.e-content div.sqs-block.horizontalrule-block.sqs-block
 /* Calendar */
 
 .yui3-squarespacecalendar {
-    border: 1.5px solid #68bce9;
+    border: 1.5px solid @brightblue;
     border-radius: 4px;
     background-color: #ffffff;
 }
@@ -348,7 +350,7 @@ article div.entry-content.e-content div.sqs-block.horizontalrule-block.sqs-block
 }
 
 .yui3-squarespacecalendar .yui3-calendar-header {
-    background-color: #68bce9;
+    background-color: @brightblue;
     color: #ffffff!important;
     padding: 20px 15px!important;
     margin-bottom: 10px !important;
@@ -365,12 +367,12 @@ article div.entry-content.e-content div.sqs-block.horizontalrule-block.sqs-block
 .yui3-squarespacecalendar .compact-layout .yui3-calendar-day.today,
 .yui3-squarespacecalendar .compact-layout .yui3-calendar-prevmonth-day.today,
 .yui3-squarespacecalendar .compact-layout .yui3-calendar-nextmonth-day.today {
-    border: 1.5px solid #68bce9!important;
+    border: 1.5px solid @brightblue!important;
     border-radius: 3px!important;
 }
 
 .yui3-squarespacecalendar .compact-layout .yui3-calendar-day.has-event {
-    background-color: #a2ceef!important;
+    background-color: @brightblue!important;
     color: #ffffff;
 }
 
@@ -386,12 +388,12 @@ yui3-squarespacecalendar .small-layout .yui3-calendar-header h1 {
 }
 
 .eventitem-backlink {
-    color: #00a0df;
+    color: @brightblue;
 }
 
 h1.eventitem-title {
     font-size: 21px !important;
-    color: #00a0df !important;
+    color: @brightblue;!important;
 }
 
 h1.eventlist-title,
@@ -399,7 +401,14 @@ h1:not(.site-title):not(.logo-image):not(.page-title),
 .entry-title,
 article header h1 a,
 article header h1 a:visited {
+    color: @brightblue;
     margin-bottom: 3px!important;
+}
+
+article header h1 a:focus,
+article header h1 a:hover {
+    color: @brightblue;
+    opacity: .9;
 }
 
 article.eventlist-event:first-of-type,
@@ -423,11 +432,11 @@ article.eventlist-event {
     float: right !important;
     padding: 0px 34px;
     margin-right: -34px;
-    border-left: 1px solid #00a0df;
+    border-left: 1px solid @brightblue;
 }
 
 .eventlist-event:not(.eventlist-event--hasimg) .eventlist-datetag {
-    background-color: #68bce9;
+    background-color: @brightblue;
     color: #fff;
 }
 
@@ -446,11 +455,12 @@ li.eventlist-meta-address {
     font-size: 18px !important;
     margin-top: 0px !important;
     padding-top: 0px !important;
-    color: #00a0df !important;
+    color: @brightblue!important;
 }
 
 .eventlist-title-link:hover {
-    color: #68bce9 !important;
+    color: @brightblue!important;
+    opacity: .8;
 }
 
 .event-meta-item {
@@ -463,22 +473,23 @@ li.eventlist-meta-address {
 .event-meta-item a:link {
     font-size: 12px;
     letter-spacing: .4px;
-    color: #00a0df;
+    color: @brightblue;
 }
 
 .event-meta-item a:hover {
-    color: #00a0df;
+    color: @brightblue;
     opacity: .8;
 }
 
 .eventitem-meta-address-maplink {
     font-size: 12px;
-    color: #00a0df;
+    color: @brightblue;
     letter-spacing: .4px;
 }
 
 .eventitem-meta-address-maplink:hover {
-    color: #68bce9;
+    color: @brightblue;
+    opacity: .8;
 }
 
 li.eventitem-meta-item.eventitem-meta-cats.event-meta-item {
@@ -503,12 +514,13 @@ li.eventitem-meta-item.eventitem-meta-tags.event-meta-item {
     font-size: 14px;
     font-weight: 600;
     line-height: 2;
-    color: #00a0df;
+    color: @brightblue;
     text-transform: uppercase;
 }
 
 .eventitem-pager-link:hover {
-    color: #68bce9!important;
+    color: @brightblue!important;
+    opacity: .8;
 }
 
 .sqs-modal-lightbox-content .lightbox-inner .lightbox-content {
@@ -517,7 +529,7 @@ li.eventitem-meta-item.eventitem-meta-tags.event-meta-item {
 
 .sqs-modal-lightbox-content .lightbox-inner .lightbox-content .form-wrapper .form-title {
     font-family: 'Nunito Sans', sans-serif!important;
-    color: #00a0df!important;
+    color: @brightblue!important;
     font-weight: 700!important;
     letter-spacing: 1.5px;
     text-transform: uppercase;
