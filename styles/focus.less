@@ -234,7 +234,7 @@ body#collection-5b60bdcc8a922d43bf030b96 .blog-list .entry .entry-header h1 a, b
 
 a.entry-dateline-link,
 a.entry-morefrom-link {
-    color: #53B6CB!important;
+    color: @darkBlue!important;
     margin-bottom: 3px;
     font-weight: 600!important;
     font-size: 12px!important;
@@ -251,13 +251,17 @@ a.entry-morefrom-link {
 
 a.entry-dateline-link:hover,
 a.entry-morefrom-link:hover {
-    color: #53B6CB;
+    color: @darkBlue!important;
     opacity: .8;
 }
 
 .meta-below-title {
     margin-left: .5em;
     margin-top: 1em;
+}
+
+#collection-5b60bdcc8a922d43bf030b96 .meta-below-title {
+  display: none!important;
 }
 
 .sqs-tag-cloud li a,
