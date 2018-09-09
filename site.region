@@ -350,7 +350,8 @@
 
       $(".collection-type-staff #thumbnail img").replaceWith( $(".collection-type-staff .pre-footer-inner img") );
 
-      $(".collection-5b6c64f20ebbe8501cc0c481.view-item #rightSidebar").replaceWith('<h2>Sidebar Here </h2><squarespace:block-field id="article-sidebar" class="top-sidebar" columns="12" label="Article Sidebar" /><squarespace:block-field id="program-sidebar" columns="12" label="Global Sidebar Content" />');
+
+
     });
     </script>
 
