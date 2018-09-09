@@ -356,11 +356,6 @@
       slides[slideIndex-1].style.display = "block";
       dots[slideIndex-1].className += " active";
       }
-
-      $("#home .content-inner .sqs-grid-12 .row .col .row:last-of-type h2 a").each(function (index) {
-        $(this).wrapAll("<span style='white-space:nowrap'></span>");
-      });
-
     </script>
 
   </body>
