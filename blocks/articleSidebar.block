@@ -1,4 +1,3 @@
 <aside class="sidebar">
    <squarespace:block-field id="article-sidebar" class="top-sidebar" columns="12" label="Article Sidebar" />
-   <squarespace:block-field id="article-sidebar-content" class="sidebarcontent" columns="12" label="Articles">
 </aside>
