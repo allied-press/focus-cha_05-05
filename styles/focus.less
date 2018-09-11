@@ -1505,7 +1505,7 @@ body#collection-5b6c64f20ebbe8501cc0c481{
   }
 }
 
-//REDC Articles
+//Articles
 body#collection-5b6c64f20ebbe8501cc0c481 .blog-list .entry {
   height: 475px !important;
 
@@ -1536,6 +1536,55 @@ body#collection-5b6c64f20ebbe8501cc0c481 .blog-list .entry {
     .blog-list article.entry {
       width: 100% !important;
       margin: 1.5em 0 !important;
+    }
+  }
+}
+
+.collection-layout-article{
+  .sidebar {
+    background: #12263c;
+    padding: 0;
+
+    h2{
+      color: white;
+    }
+
+    hr{
+      background-color: @brightBlue;
+      width: 90%;
+      margin: 0 auto !important;
+    }
+
+    .image-block{
+      padding: 0;
+
+      .intrinsic{
+        max-width: none !important;
+        margin: 0;
+      }
+    }
+
+    .summary-item{
+      border: none !important;
+      margin-bottom: 0 !important;
+
+      .summary-title{
+        margin: 0 !important;
+        padding: 0;
+
+        a {
+          color: white !important;
+          text-transform: none !important;
+          font-family: 'Nunito Sans', sans-serif!important;
+          font-weight: 400;
+          font-size: 15px !important;
+        }
+
+        a:hover{
+          color: @brightBlue !important;
+          opacity: 1;
+        }
+      }
     }
   }
 }
@@ -1592,7 +1641,7 @@ body#collection-5b6c64f20ebbe8501cc0c481 .blog-list .entry {
   .summary-content .summary-title a:hover{
     color: @brightGreen!important;
     transition: all .2s ease;
-    
+
   }
 
   .summary-metadata-item--tags a {
