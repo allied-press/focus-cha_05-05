@@ -265,7 +265,10 @@
          </div>
         </div><!--
         -->{.section collection}{.collectionTypeNameEquals? blog}<aside id="rightSidebar" role="complementary">
-          <squarespace:block-field class="open-block-field" id="blogBlocks-{id}" columns="12" label="Blog Sidebar Content" />
+              <squarespace:block-field id="resources-sidebar" class="top-sidebar" columns="12" label="Program Sidebar" />
+              <squarespace:block-field id="resources-nav-header" class="sidebarheader" columns="12" label="Navigation Title">
+              <squarespace:navigation navigationId="resources" template="secondary-navigation"/>
+              <squarespace:block-field id="program-sidebar" columns="12" label="Global Sidebar Content" />
         </aside>
         {.end}
         {.end}
