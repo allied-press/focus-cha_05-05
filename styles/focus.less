@@ -782,7 +782,7 @@ a.sqs-block-button-element--large.sqs-block-button-element,
 .large-button-style-solid .sqs-block-button .sqs-block-button-element--large,
 .sqs-block-image .image-block-outer-wrapper.design-layout-card .image-button a {
   border-radius: 5px !important;
-  transition: all .3s ease;
+  transition: all .3s ease-in-out;
   background: @brightBlue;
   width: 150px;
   padding: 15px 20px;
@@ -792,7 +792,7 @@ a.sqs-block-button-element--large.sqs-block-button-element,
 
 .sqs-block-image .image-block-outer-wrapper.design-layout-poster .image-button a {
   border-radius: 5px!important;
-  transition: all .3s ease;
+  transition: all .3s ease-in-out;
   background: @brightGreen;
   color: #fff!important;
 }
@@ -823,14 +823,14 @@ a.sqs-block-button-element--large.sqs-block-button-element:hover,
   background: @darkBlue!important;
   color: white !important;
   opacity: 1 !important;
-  transition: all .3s ease;
+  transition: all .3s ease-in-out;
 }
 
 .sqs-block-image .image-block-outer-wrapper.design-layout-poster .image-button a:hover {
   background: @brightBlue;
   color: #fff!important;
   opacity: 1!important;
-  transition: all .3s ease;
+  transition: all .3s ease-in-out;
 }
 
 .sqs-block-image .image-block-outer-wrapper.design-layout-card .image-button a {
@@ -937,6 +937,10 @@ div.summary-item.summary-item-record-type-image.sqs-gallery-design-autogrid-slid
 
     a{
       color: white;
+    }
+
+    a:hover {
+      color: @darkBlue !important;
     }
   }
 
@@ -1160,12 +1164,12 @@ div#mobileSocial {
     padding: 5px;
     width: 25px;
     text-align: center;
-    transition: all .3s ease;
+    transition: all .3s ease-in-out;
 }
 
 .fab:hover{
   color: @brightBlue !important;
-  transition: all .3s ease;
+  transition: all .3s ease-in-out;
 }
 
 .socialLink{
@@ -1205,17 +1209,18 @@ div#mobileSocial {
 }
 
 //Blog banner ==================================================================
-.collection-type-page.has-promoted-gallery #promotedGalleryWrapper .sqs-block, .collection-type-index.has-promoted-gallery #promotedGalleryWrapper .sqs-block, .collection-type-page.has-promoted-gallery .promoted-gallery-wrapper .sqs-block, .collection-type-index.has-promoted-gallery .promoted-gallery-wrapper .sqs-block, .collection-type-blog.has-promoted-gallery #promotedGalleryWrapper .sqs-block, .collection-type-blog.has-promoted-gallery .promoted-gallery-wrapper .sqs-block {
+.collection-type-page.has-promoted-gallery #promotedGalleryWrapper .sqs-block, .collection-type-index.has-promoted-gallery #promotedGalleryWrapper .sqs-block, .collection-type-page.has-promoted-gallery .promoted-gallery-wrapper .sqs-block, .collection-type-index.has-promoted-gallery .promoted-gallery-wrapper .sqs-block, .collection-type-blog.has-promoted-gallery #promotedGalleryWrapper .sqs-block, .collection-type-blog.has-promoted-gallery#promotedGalleryWrapper .sqs-block, .collection-type-blog.has-promoted-gallery .promoted-gallery-wrapper .sqs-gallery-block-slideshow .sqs-gallery .collection-type-blog.has-promoted-gallery .promoted-gallery-wrapper .sqs-block, .collection-type-blog.has-promoted-gallery#promotedGalleryWrapper .sqs-gallery-block-slideshow .sqs-gallery, .collection-type-staff.has-promoted-gallery .promoted-gallery-wrapper .sqs-gallery-block-slideshow .sqs-gallery {
         padding: 0!important;
         width: 100%;
         float: none;
         margin: 0;
     }
-    .collection-type-blog.has-promoted-gallery#promotedGalleryWrapper .sqs-gallery-block-slideshow .sqs-gallery, .collection-type-blog.has-promoted-gallery .promoted-gallery-wrapper .sqs-gallery-block-slideshow .sqs-gallery {
+    .collection-type-blog.has-promoted-gallery#promotedGalleryWrapper .sqs-gallery-block-slideshow .sqs-gallery, .collection-type-blog.has-promoted-gallery .promoted-gallery-wrapper .sqs-gallery-block-slideshow .sqs-gallery, .collection-type-blog.has-promoted-gallery#promotedGalleryWrapper .sqs-gallery-block-slideshow .sqs-gallery, .collection-type-staff.has-promoted-gallery .promoted-gallery-wrapper .sqs-gallery-block-slideshow .sqs-gallery {
       width: 100%;
       height: 600px!important;
       max-width: 100%;
     }
+
 .banner-thumbnail-wrapper {
   height: 15vw;
   box-shadow: inset 4px 5px 100px 15px rgba(40, 42, 43, .45) !important;
@@ -1372,7 +1377,7 @@ div#mobileSocial {
   a.summary-read-more-link:hover {
     background: @darkBlue;
     color: white !important;
-    transition: all .3s ease;
+    transition: all .3s ease-in-out;
   }
 }
 
@@ -1490,14 +1495,14 @@ body#collection-5b6c64f20ebbe8501cc0c481{
             text-align: center;
             padding: .75rem .75rem 1rem;
             border-radius: 5px;
-            transition: all .3s ease;
+            transition: all .3s ease-in-out;
             color: white;
           }
 
           a:hover{
             background: @darkBlue;
             color: white !important;
-            transition: all .3s ease;
+            transition: all .3s ease-in-out;
           }
         }
       }
@@ -1505,12 +1510,15 @@ body#collection-5b6c64f20ebbe8501cc0c481{
   }
 }
 
-//REDC Articles
+//Articles
 body#collection-5b6c64f20ebbe8501cc0c481 .blog-list .entry {
-  height: 475px !important;
+  height: 375px !important;
 
   .entry-content .excerpt-thumb {
     display: none !important
+  }
+  .entry-content .p-summary p {
+    font-size: .9rem;
   }
 }
 
@@ -1536,6 +1544,76 @@ body#collection-5b6c64f20ebbe8501cc0c481 .blog-list .entry {
     .blog-list article.entry {
       width: 100% !important;
       margin: 1.5em 0 !important;
+    }
+  }
+}
+
+.collection-layout-article{
+  .sidebar {
+    padding: 0;
+
+    #article-sidebar{
+      background: @darkBlue;
+
+      h2{
+        color: white;
+      }
+
+      hr{
+        background-color: @brightBlue;
+        width: 90%;
+        margin: 0 auto !important;
+      }
+      a.summary-read-more-link {
+        display: none;
+      }
+      a {
+        color: #fff !important;
+        text-transform: none !important;
+        font-family: 'Nunito Sans',sans-serif !important;
+        font-weight: 400;
+        font-size: 17px !important;
+        letter-spacing: 1px;
+        }
+
+      a:hover{
+        color: @brightBlue !important;
+        opacity: 1;
+      }
+
+      .image-block{
+        padding: 0;
+
+        .intrinsic{
+          max-width: none !important;
+          margin: 0;
+        }
+      }
+
+      .summary-item{
+        border: none !important;
+        margin-bottom: 0 !important;
+
+        .summary-title{
+          margin: 0 !important;
+          padding: 0;
+          text-align: center;
+
+          a {
+            color: #fff !important;
+            text-transform: none !important;
+            font-family: 'Nunito Sans',sans-serif !important;
+            font-weight: 400;
+            font-size: 17px !important;
+            letter-spacing: 1px;
+          }
+
+          a:hover{
+            color: @brightBlue !important;
+            opacity: 1;
+          }
+        }
+      }
     }
   }
 }
@@ -1585,14 +1663,14 @@ body#collection-5b6c64f20ebbe8501cc0c481 .blog-list .entry {
 }
 
 .sqs-block-summary-v2 .summary-metadata-item a:hover {
-  color: @brightGreen !important;
+  color: @brightGreen;
 }
 
 #collection-5b5b62330e2e72e1af696ccc {
   .summary-content .summary-title a:hover{
     color: @brightGreen!important;
-    transition: all .2s ease;
-    
+    transition: all .2s ease-in-out;
+
   }
 
   .summary-metadata-item--tags a {
@@ -1612,10 +1690,11 @@ body#collection-5b6c64f20ebbe8501cc0c481 .blog-list .entry {
     #thumbnail {
       height: 600px !important;
 
-      img {
-        width: 100% !important;
-        height: 700px !important;
+      img.thumb-image.loaded {
+        width: 100%!important;
+        height: auto!important;
       }
+
     }
 
     .blog-item-wrapper{
@@ -1899,7 +1978,7 @@ body#collection-5b858a0e03ce64e132c3a845 {
   #page {
     padding-bottom: 0 !important;
 
-    #home{
+    #welcome-to-focus{
       background-color: #eee;
       padding-top: 96px;
 
@@ -1926,7 +2005,7 @@ body#collection-5b858a0e03ce64e132c3a845 {
 
           h2 a {
             color: white !important;
-            transition: all .2s ease;
+            transition: all .2s ease-in-out;
           }
 
           h2 a:hover{
@@ -2167,7 +2246,7 @@ body#collection-5b858a0e03ce64e132c3a845 {
     background-color: @lightGray;
     border-radius: 50%;
     display: inline-block;
-    transition: background-color 0.6s ease;
+    transition: background-color 0.6s ease-in-out;
   }
 
   .dot:hover{
@@ -2217,6 +2296,12 @@ body#collection-5b858a0e03ce64e132c3a845 {
 }
 
 .collection-5b6c64f20ebbe8501cc0c481{
+  .blog-list .entry {
+    height: 300px!important;
+  }
+  .blog-list .entry .entry-content .entry-more-link a {
+    display: none;
+  }
   #rightSidebar {
     background: #12263c;
     padding: 0;
@@ -2229,6 +2314,19 @@ body#collection-5b858a0e03ce64e132c3a845 {
       background-color: @brightBlue;
       width: 90%;
       margin: 0 auto !important;
+    }
+
+    a {
+      color: white !important;
+      text-transform: none !important;
+      font-family: 'Nunito Sans', sans-serif!important;
+      font-weight: 400;
+      font-size: 15px !important;
+    }
+
+    a:hover{
+      color: @brightBlue !important;
+      opacity: 1;
     }
 
     .image-block{
@@ -2281,7 +2379,7 @@ input, textarea {
 input.button {
   background: @brightBlue !important;
   border-radius: 5px !important;
-  transition: all .3s ease !important;
+  transition: all .3s ease-in-out !important;
   border: none !important;
   width: 150px;
   padding: 15px 20px;
@@ -2291,7 +2389,7 @@ input.button:hover {
   background: @darkBlue !important;
   color: white !important;
   opacity: 1 !important;
-  transition: all .3s ease;
+  transition: all .3s ease-in-out;
 }
 
 .contactSocial .fab{
