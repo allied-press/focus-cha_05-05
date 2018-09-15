@@ -281,6 +281,11 @@
       <squarespace:block-field id="redc" columns="12" label="REDC"/>
       </div>
       </div>
+      <div id="articlesSection">
+      <div class="insetField">
+      <squarespace:block-field id="articles-home" columns="12" label="Articles"/>
+      </div>
+      </div>
 
 
       <footer id="footer" role="contentinfo">
