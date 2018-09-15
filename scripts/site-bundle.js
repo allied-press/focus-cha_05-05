@@ -66,7 +66,7 @@
         Y.use(["node", "squarespace-gallery-ng"], function(e) {
             window.Singleton.create({
                 ready: function() {
-                    this.resetGalleryPosition(), e.one(".collection-type-index") && this.resetIndexGalleryPosition(), e.one(".collection-type-blog") && this.resetBlogGalleryPosition(), e.one("body").addClass("has-banner-image"), this.init(), this.bindUI(), this.syncUI()
+                    this.resetGalleryPosition(), e.one(".collection-type-index") && this.resetIndexGalleryPosition(), e.one(".collection-type-blog") && this.resetBlogGalleryPosition(), e.one(".collection-type-staff") && this.resetStaffGalleryPosition(), e.one("body").addClass("has-banner-image"), this.init(), this.bindUI(), this.syncUI()
                 },
                 init: function() {
                     if (this.setupUserAccountLinks(), this.forceMobileNav(), this.promotedGalleryShrink(), e.one(".has-promoted-gallery") ? (this.textShrink(".meta-description p > strong", "p"), this.textShrink(".meta-description p > em > strong", "p")) : (this.textShrink(".desc-wrapper p > strong", "p"), this.textShrink(".desc-wrapper p > em > strong", "p")), this.textShrink(".post-title a", ".post-title"), this.textShrink(".blog-item-wrapper .post-title", ".title-desc-wrapper"), this._touch = e.one(".touch-styles"), e.one(".collection-type-blog.view-list .sqs-featured-posts-gallery") && this.makeFeaturedGallery(".posts", ".post"), this.hideArrowsWhenOneSlide(), this.repositionCartButton(), !this._touch) {
