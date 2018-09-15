@@ -3,7 +3,7 @@
 <div class="blog-item">
 
   {.section item}
-  <article class="entry h-entry {.main-image?} has-main-image{.end} clear" id="article-{id}" data-item-id="{id}">
+  <article class="entry h-entry {@|item-classes}{.main-image?} has-main-image{.end} clear" id="article-{id}" data-item-id="{id}">
 
     <div class="entry-content e-content">
       {.section body}
@@ -17,10 +17,4 @@
   {.end}
 
 
-</div>
-
-<div id="preFooter">
-  <div class="pre-footer-inner">
-    <squarespace:block-field id="staffBanner" columns="12" label="Staff Banner" />
-  </div>
 </div>
