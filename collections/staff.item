@@ -24,10 +24,3 @@
     <squarespace:block-field id="staffBanner" columns="12" label="Staff Banner" />
   </div>
 </div>
-
-<script>
-$(document).ready(function() {
-	$('.banner-thumbnail-wrapper #thumbnail').html($('#staffBanner').html());
-});
-
-</script>
