@@ -308,7 +308,6 @@
       $(".prev-label").prepend("<i class='fas fa-arrow-left'></i>");
       $(".next-label").append("<i class='fas fa-arrow-right'></i>");
 
-
     });
     </script>
 
