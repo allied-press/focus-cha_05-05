@@ -251,7 +251,7 @@
 
       <div id="preFooter">
         <div class="pre-footer-inner">
-          <squarespace:block-field id="preFooterBlocks" columns="12" label="Pre-Footer Content" />
+          <squarespace:block-field id="staffBanner" columns="12" label="Staff Banner" />
         </div>
       </div>
 
