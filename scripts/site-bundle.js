@@ -183,8 +183,8 @@
                     t && (e.one("#promotedGalleryWrapper .row .col").append(n), e.one("body").addClass("has-promoted-gallery").addClass("has-banner-image"))
                 },
                 resetStaffGalleryPosition: function() {
-                    var t = e.one(".collection-type-blog .pre-footer-inner .sqs-layout > .sqs-row:first-child > .sqs-col-12 > .gallery-block:first-child .sqs-gallery-block-slideshow"),
-                        n = e.one(".collection-type-blog .pre-footer-inner .sqs-layout > .sqs-row:first-child > .sqs-col-12 > .gallery-block:first-child");
+                    var t = e.one(".collection-type-staff .pre-footer-inner .sqs-layout > .sqs-row:first-child > .sqs-col-12 > .gallery-block:first-child .sqs-gallery-block-slideshow"),
+                        n = e.one(".collection-type-staff .pre-footer-inner .sqs-layout > .sqs-row:first-child > .sqs-col-12 > .gallery-block:first-child");
                     t && (e.one("#promotedGalleryWrapper .row .col").append(n), e.one("body").addClass("has-promoted-gallery").addClass("has-banner-image"))
                 },
                 resetGalleryPosition: function() {
