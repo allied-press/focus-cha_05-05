@@ -3,8 +3,9 @@
 <div class="blog-item">
 
   {.section item}
-  <article class="entry h-entry {.main-image?} has-main-image{.end} clear" id="article-{id}" data-item-id="{id}">
+  <article class="entry h-entry {@|item-classes}{.main-image?} has-main-image{.end} clear" id="article-{id}" data-item-id="{id}">
 
+    
 
     <div class="entry-content e-content">
       {.section body}
@@ -12,30 +13,15 @@
       {.end}
     </div>
 
-    <footer class="entry-footer clear">
-      {.section sourceUrl}
-      <p class="entry-source">
-        Source: <a href="{sourceUrl}" target="_blank">{sourceUrl}</a>
-      </p>
-      {.end}
-      {.section tags}
-      <p class="entry-tags">
-        Tagged: {.repeated section @}<a href="{collection.fullUrl}?tag={@|url-encode}" rel="tag">{@}</a>{.alternates with}, {.end}
-      </p>
-      {.end}
-      <div class="entry-actions">
-        {@|like-button}{@|social-button-inline}
-      </div>
-    </footer>
+    
 
     {.if postItemInjectCode}<div class="entry-injection">{postItemInjectCode}</div>{.end}
 
   </article>
 
-  <div id="comments-{id}" class="p-comment">
-    {.comments?}{@|comments}{.end}
-  </div>
+
 
   {.end}
+
 
 </div>
