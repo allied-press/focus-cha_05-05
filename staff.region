@@ -95,7 +95,7 @@
                   {.end}
                 {.end}
               {.or}
-                {.collectionTypeNameEquals? blog}
+                {.collectionTypeNameEquals? staff}
                   <squarespace:query collection="{collection.urlId}" featured="true" limit="5">
                   {.section items}
                     <div class="sqs-featured-posts-gallery">
