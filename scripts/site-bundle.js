@@ -66,10 +66,10 @@
         Y.use(["node", "squarespace-gallery-ng"], function(e) {
             window.Singleton.create({
                 ready: function() {
-                    this.resetGalleryPosition(), e.one(".collection-type-index") && this.resetIndexGalleryPosition(), e.one(".collection-type-blog") && this.resetBlogGalleryPosition(), e.one(".collection-type-staff") && this.resetStaffGalleryPosition(), e.one("body").addClass("has-banner-image"), this.init(), this.bindUI(), this.syncUI()
+                    this.resetGalleryPosition(), e.one(".collection-type-index") && this.resetIndexGalleryPosition(), e.one(".collection-type-blog") && this.resetBlogGalleryPosition(), e.one("body").addClass("has-banner-image"), this.init(), this.bindUI(), this.syncUI()
                 },
                 init: function() {
-                    if (this.setupUserAccountLinks(), this.forceMobileNav(), this.promotedGalleryShrink(), e.one(".has-promoted-gallery") ? (this.textShrink(".meta-description p > strong", "p"), this.textShrink(".meta-description p > em > strong", "p")) : (this.textShrink(".desc-wrapper p > strong", "p"), this.textShrink(".desc-wrapper p > em > strong", "p")), this.textShrink(".post-title a", ".post-title"), this.textShrink(".blog-item-wrapper .post-title", ".title-desc-wrapper"), this._touch = e.one(".touch-styles"), e.one(".collection-type-blog.view-list .sqs-featured-posts-gallery") && this.makeFeaturedGallery(".posts", ".post"), e.one(".collection-type-staff.view-list .sqs-featured-posts-gallery") && this.makeFeaturedGallery(".posts", ".post"), this.hideArrowsWhenOneSlide(), this.repositionCartButton(), !this._touch) {
+                    if (this.setupUserAccountLinks(), this.forceMobileNav(), this.promotedGalleryShrink(), e.one(".has-promoted-gallery") ? (this.textShrink(".meta-description p > strong", "p"), this.textShrink(".meta-description p > em > strong", "p")) : (this.textShrink(".desc-wrapper p > strong", "p"), this.textShrink(".desc-wrapper p > em > strong", "p")), this.textShrink(".post-title a", ".post-title"), this.textShrink(".blog-item-wrapper .post-title", ".title-desc-wrapper"), this._touch = e.one(".touch-styles"), e.one(".collection-type-blog.view-list .sqs-featured-posts-gallery") && this.makeFeaturedGallery(".posts", ".post"), this.hideArrowsWhenOneSlide(), this.repositionCartButton(), !this._touch) {
                         var t = e.one("#preFooter");
                         t.inViewportRegion() === !1 && t.addClass("unscrolled"), e.one(window).on("scroll", function() {
                             t.hasClass("unscrolled") && t.toggleClass("unscrolled", !t.inViewportRegion())
@@ -183,8 +183,8 @@
                     t && (e.one("#promotedGalleryWrapper .row .col").append(n), e.one("body").addClass("has-promoted-gallery").addClass("has-banner-image"))
                 },
                 resetStaffGalleryPosition: function() {
-                    var t = e.one(".collection-type-staff .pre-footer-inner .sqs-layout > .sqs-row:first-child > .sqs-col-12 > .gallery-block:first-child .sqs-gallery-block-slideshow"),
-                        n = e.one(".collection-type-staff .pre-footer-inner .sqs-layout > .sqs-row:first-child > .sqs-col-12 > .gallery-block:first-child");
+                    var t = e.one(".collection-type-blog .pre-footer-inner .sqs-layout > .sqs-row:first-child > .sqs-col-12 > .gallery-block:first-child .sqs-gallery-block-slideshow"),
+                        n = e.one(".collection-type-blog .pre-footer-inner .sqs-layout > .sqs-row:first-child > .sqs-col-12 > .gallery-block:first-child");
                     t && (e.one("#promotedGalleryWrapper .row .col").append(n), e.one("body").addClass("has-promoted-gallery").addClass("has-banner-image"))
                 },
                 resetGalleryPosition: function() {
