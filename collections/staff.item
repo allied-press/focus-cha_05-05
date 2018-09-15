@@ -25,4 +25,9 @@
   </div>
 </div>
 
+<script>
+$(document).ready(function() {
+	$('.banner-thumbnail-wrapper #thumbnail').html($('#staffBanner').html());
+});
 
+</script>
