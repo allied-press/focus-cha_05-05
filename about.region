@@ -305,6 +305,9 @@
 
       $( "#promotedGalleryWrapper" ).append( $( "#breadtrail" ) );
       $("#mobileNavigation").append( $( "#mobileSocial" ) );
+
+      var metaTitles = $('.sqs-block-summary-v2 .summary-block-setting-primary-metadata-tags .summary-item-has-tags .summary-metadata--primary .summary-metadata-item--tags a');
+      $(metaTitles).removeAttr('href').addClass('no-hov');
     });
     </script>
 
