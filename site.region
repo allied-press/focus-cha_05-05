@@ -320,8 +320,8 @@
       $("#mainNavigation .folder-toggle").append("<i class='fas fa-chevron-down'></i>");
 
       $( "#promotedGalleryWrapper" ).append( $( "#breadtrail" ) );
-      $( ".index-section:first-child .promoted-gallery-wrapper" ).append( $( "#breadtrail" ) );
-      $( ".banner-thumbnail-wrapper" ).append( $( "#breadtrail" ) );
+      {#  $( ".index-section:first-child .promoted-gallery-wrapper" ).append( $( "#breadtrail" ) );
+      $( ".banner-thumbnail-wrapper" ).append( $( "#breadtrail" ) );  }
 
       if ($(".breadcrumbs-staff")[0]){
         $("#breadcrumbs").replaceWith( $(".breadcrumbs-staff"))
