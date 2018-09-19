@@ -350,7 +350,7 @@
 
       $(".collection-type-staff #thumbnail img").replaceWith( $(".collection-type-staff .pre-footer-inner img") );
 
-      $("#collection-5ba2862370a6ad5f6a772c76 p>a").append("<i class='fas fa-arrow-right'></i>")
+      $("#collection-5ba2862370a6ad5f6a772c76 p>a").append("<i class='fas fa-arrow-right'></i>");
 
 
 
