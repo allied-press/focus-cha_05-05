@@ -306,6 +306,8 @@
       $( "#promotedGalleryWrapper" ).append( $( "#breadtrail" ) );
       $("#mobileNavigation").append( $( "#mobileSocial" ) );
       $('a.summary-title-link').removeAttr('href');
+
+      $("#collection-5ba2862370a6ad5f6a772c76 p>a").append("<i class='fas fa-arrow-right'></i>");
     });
     </script>
 
