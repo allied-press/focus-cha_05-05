@@ -1701,8 +1701,6 @@ body#collection-5b6c64f20ebbe8501cc0c481 .blog-list .entry {
       img.thumb-image.loaded {
         width: 100%!important;
         height: auto!important;
-        position: absolute;
-        top: -50% !important;
       }
 
     }
@@ -1719,6 +1717,21 @@ body#collection-5b6c64f20ebbe8501cc0c481 .blog-list .entry {
 
 .summary-item.summary-item-record-type-text.sqs-gallery-design-autogrid-slide.summary-item-has-thumbnail.summary-item-has-cats.summary-item-has-tags.summary-item-has-author.positioned {
   margin-bottom: 1.5rem!important;
+}
+
+@media only screen and (min-width: 1200px){
+  .collection-type-staff .banner-thumbnail-wrapper #thumbnail img.thumb-image.loaded{
+    position: absolute;
+    top: -50% !important;
+  }
+}
+
+@media only screen and (max-width: 760px){
+  .collection-type-staff .banner-thumbnail-wrapper #thumbnail img.thumb-image.loaded{
+    width: auto !important;
+    height: 100% !important;
+    left: -50% !important;
+  }
 }
 
 //Images with Captions =========================================================
