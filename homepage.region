@@ -330,7 +330,7 @@
 
       $("#mainNavigation > :last-child a").replaceWith("<a href='/search'><i class='fas fa-search'></i></a>");
       $("#mainNavigation .folder-toggle").append("<i class='fas fa-chevron-down'></i>");
-            $( "#promotedGalleryWrapper" ).append( $( "#breadtrail" ) );
+      $( "#promotedGalleryWrapper" ).append( $( "#breadtrail" ) );
       $("#mobileNavigation").append( $( "#mobileSocial" ) );
 
     });
