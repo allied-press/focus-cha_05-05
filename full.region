@@ -292,7 +292,7 @@
       </footer>
 
       <div id="legal">
-        <p>© 2018 Focus Treatment Centers. All Rights Reserved.</p>
+        <p>© <span class="current-year"></span> Focus Treatment Centers. All Rights Reserved.</p>
         <p><strong><a target="_blank" href='https://maycreate.com/'>Site by Maycreate</a></strong></p>
       </div>
 
@@ -304,6 +304,12 @@
     <squarespace:script src="jquery-3.3.1.min.js" combo="false" />
     <squarespace:script src="clickdesk.js" combo="false" />
     {squarespace-footers}
+
+    <script type="text/javascript">
+    $(function(){
+      $('.current-year').html((new Date).getFullYear());
+    });
+    </script>
 
     <script>
     jQuery(document).ready(function($) {
