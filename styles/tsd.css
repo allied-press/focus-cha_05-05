@@ -1,0 +1,810 @@
+html {
+    box-sizing: border-box!important;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit!important;
+}
+
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+#page {
+    padding: 20px;
+}
+
+
+/* Body Styles */
+
+#siteWrapper {
+    font-family: 'Lora', serif!important;
+    font-size: 1rem;
+    color: rgba(8, 17, 33, 1);
+    line-height: 1.4;
+}
+
+
+/* Header and Mobile Navigation */
+
+#sidecarNav {
+    border-top: 5px solid;
+}
+
+#sidecarNav .folder {
+    width: 100vw;
+}
+
+#sidecarNav .folder .folder-label {
+    float: left;
+    width: 90%;
+}
+
+#sidecarNav nav div .folder-toggle {
+    float: left;
+    width: 10%;
+    padding: 1rem;
+    background-color: rgba(27, 59, 111, 1);
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+}
+
+#sidecarNav .folder .folder-toggle:before,
+#sidecarNav .folder .folder-toggle:after {
+    display: none!important;
+}
+
+#sidecarNav nav {
+    padding: 0px;
+}
+
+ul.subnav {
+    clear: both;
+}
+
+.mobile-nav-toggle.fixed-nav-toggle {}
+
+.blue-header {
+    background-color: rgba(27, 59, 111, 1);
+    color: #ffffff;
+    height: 40px;
+}
+
+.white-header {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(27, 59, 111, 1);
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: flex-end;
+    height: 62px;
+}
+
+#header {
+    padding: 0px;
+}
+
+#mobileNavigation {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+#mobileNavigation div.folder,
+#mobileNavigation div.folder.active,
+#mobileNavigation div.collection {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+#headerNav nav a:focus,
+#sidecarNav nav a:focus,
+#headerNav nav a:hover,
+#sidecarNav nav a:hover,
+#headerNav nav .active>a,
+#sidecarNav nav .active>a,
+#headerNav nav .active>a:visited,
+#sidecarNav nav .active>a:visited {
+    color: rgba(27, 59, 111, 1)!important;
+}
+
+#sidecarNav,
+#sidecarNav nav .subnav {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(27, 59, 111, 1);
+}
+
+ul.subnav {
+    padding: 0px!important;
+}
+
+ul.subnav li {
+    background-color: #f7f7f7;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+ul.subnav li a {
+    font-size: 1rem!important;
+    line-height: 42px;
+    display: block;
+    padding-left: 1rem;
+    -webkit-text-size-adjust: 100%;
+}
+
+ul.subnav li a,
+ul.subnav li a:link,
+ul.subnav li a:visited {
+    color: rgba(27, 59, 111, 1);
+}
+
+ul.subnav li a:focus,
+ul.subnav li a:hover,
+ul.subnav li a:active {
+    color: rgba(27, 59, 111, 1);
+    background-color: rgba(255, 240, 0, 1);
+}
+
+#sidecarNav nav div a,
+#sidecarNav nav .active>.folder-toggle.active {
+    padding: 1rem;
+}
+
+#mobileNavigation ul.subnav li.collection:first-of-type {
+    display: none;
+}
+
+#header #mainNavWrapper {
+    position: relative;
+    top: -100px;
+    margin-bottom: 0px;
+    z-index: 1000;
+    margin-top: 0px!important;
+}
+
+#logoImage {
+    top: -35px!important;
+}
+
+#logoImage a {
+    height: 100px!important;
+}
+
+#sidecarNav .folder-label,
+#sidecarNav nav a {
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: none!important;
+    color: rgba(27, 59, 111, 1);
+    letter-spacing: normal;
+    font-weight: 400;
+}
+
+#headerNav nav a,
+#headerNav nav a:visited,
+#headerNav nav .folder-toggle,
+#headerNav nav .active .folder-toggle {
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    color: rgba(27, 59, 111, 1);
+}
+
+#headerNav nav a:focus,
+#headerNav nav a:hover,
+#headerNav nav .active a,
+#headerNav nav .folder-toggle:hover {
+    background-color: rgba(27, 59, 111, 1);
+    color: rgba(255, 255, 255, 1)!important;
+}
+
+#header nav .subnav {
+    padding: 0rem;
+}
+
+#headerNav nav .subnav .collection a {
+    font-size: 1.125rem!important;
+    padding: 1rem;
+}
+
+#headerNav nav .subnav,
+#headerNav nav .subnav .collection a,
+#headerNav nav .subnav .collection a:visited {
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    background-color: rgba(27, 59, 111, 1);
+    color: rgba(255, 255, 255, 1)!important;
+    transition: background-color .4s ease!important;
+}
+
+#headerNav nav .subnav .collection a:focus,
+#headerNav nav .subnav .collection a:hover,
+#headerNav nav .subnav .collection a:active {
+    background-color: rgba(255, 240, 0, 1);
+    color: rgba(27, 59, 111, 1)!important;
+}
+
+#headerNav nav .subnav .active a {
+    color: rgba(255, 255, 255, 1)!important;
+}
+
+
+/* Banner */
+
+#block-yui_3_17_2_1_1545232030111_3999,
+#home .row .col .gallery-block,
+#about-us .row .col .gallery-block,
+#equipment .row .col .gallery-block,
+#history .row .col .gallery-block,
+#experience .row .col .gallery-block,
+#safety .row .col .gallery-block,
+#career-opportunities .row .col .gallery-block,
+#services .row .col .gallery-block,
+#commercial-services .row .col .gallery-block,
+#industrial-services .row .col .gallery-block,
+#federal-services .row .col .gallery-block,
+#project-scheduling-cost-proposal .row .col .gallery-block,
+#contact-us .row .col .gallery-block {
+    padding: 0px !important;
+}
+
+#home .sqs-gallery-block-slideshow .meta {
+    background-color: rgba(0, 0, 0, 0)!important;
+    max-width: 100%!important;
+}
+
+#home .sqs-gallery-block-slideshow .meta .meta-title {
+    background-color: #fff000;
+    padding: .5rem;
+    margin-bottom: 0;
+    color: #1b3b6f;
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    font-size: 2.25rem;
+    border: 2px solid #1b3b6f;
+}
+
+.sqs-gallery-controls .previous,
+.sqs-gallery-controls .next {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+/* Breadcrumbs and Intro Text */
+
+#breadcrumbs,
+#home-intro {
+    background-color: rgba(27, 59, 111, 1);
+    color: rgba(255, 255, 255, 1);
+    clear: both;
+}
+
+#home-intro h1,
+#home-intro h2,
+#home-intro h3,
+#home-intro p,
+#home-intro blockquote,
+#home-intro a {
+    color: rgba(255, 255, 255, 1)!important;
+}
+
+#breadcrumbs,
+#breadcrumbs a,
+#breadcrumbs a:visited {
+    color: rgba(255, 255, 255, 1);
+    font-size: .875rem;
+    font-family: 'Fjalla One', sans-serif;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+    padding: .5rem 0rem;
+}
+
+#breadcrumbs a:focus,
+#breadcrumbs a:hover,
+#breadcrumbs a:active {
+    text-decoration: underline;
+}
+
+
+/* Alt Section */
+
+.bg-alt {
+    background-color: #f7f7f7;
+    padding: 2rem 0rem;
+}
+
+
+/* Links and Buttons */
+
+.html-block a:not(.sqs-block-button-element) {
+    font-weight: bold;
+    color: rgba(27, 59, 111, 1);
+    transition: color .4s ease!important;
+}
+
+.html-block a:not(.sqs-block-button-element):focus,
+.html-block a:not(.sqs-block-button-element):hover,
+.html-block a:not(.sqs-block-button-element):active {
+    color: rgba(16, 35, 66, 1);
+    text-decoration: underline;
+    opacity: 1!important;
+}
+
+body:not(.button-style-default) .sqs-editable-button {
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(27, 59, 111, 1);
+    border: 2px solid rgba(27, 59, 111, 1);
+    transition: background-color .4s ease!important;
+}
+
+body:not(.button-style-default) .sqs-editable-button:hover {
+    background-color: rgba(16, 35, 66, 1);
+    border: 2px solid rgba(16, 35, 66, 1);
+    opacity: 1!important;
+}
+
+
+/* Editing Buttons */
+
+.label {
+    overflow: visible!important;
+}
+
+
+/* Testimonials */
+
+#yui_3_17_2_1_1545234105229_546 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: center;
+}
+
+
+/* Form Fields */
+
+.form-wrapper .field-list .fields .title,
+.form-wrapper .field-list .title {
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    color: rgba(27, 59, 111, 1)!important;
+}
+
+.form-wrapper .field-list .field .caption,
+.form-wrapper .field-list .caption {
+    font-size: .875rem;
+}
+
+.form-wrapper .field-list .field {
+    margin: 0 0 .875rem;
+}
+
+.form-wrapper .field-list .fields.address .field.city {
+    width: 52%;
+}
+
+.form-wrapper .field-list .fields.address .field.state-province {
+    width: 15%;
+}
+
+.form-wrapper .field-list .fields.address .field.zip {
+    width: 25%;
+}
+
+.form-wrapper .field-list .fields.address .field.country {
+    display: none;
+}
+
+
+/* Typography */
+
+h1#pageTitleTab {
+    display: none;
+}
+
+.alignWith a {
+    padding: 0px 1.25rem;
+}
+
+p {
+    margin-top: 0px;
+    font-family: 'Lora', serif;
+    font-size: .875rem;
+}
+
+a,
+a:link,
+a:visited {
+    color: rgba(27, 59, 111, 1);
+}
+
+a:focus,
+a:hover,
+a:active {
+    color: rgba(16, 35, 66, 1);
+}
+
+
+/* Drilling Icon */
+
+.icon {
+    position: relative;
+    display: inline-block;
+}
+
+.icon img {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+
+.icon:before,
+.icon:after {
+    position: absolute;
+    top: 50%;
+    content: "\a0";
+    background: #7e8083;
+    height: 1px;
+    width: 200%;
+}
+
+.icon:before {
+    left: -200%;
+}
+
+.icon:after {
+    left: 100%;
+}
+
+
+/* Summary Blocks */
+
+.sqs-block-summary-v2 .summary-title {
+    font-size: 1.25rem!important;
+    color: rgba(27, 59, 111, 1);
+    font-family: 'Fjalla One', sans-serif!important;
+    border-bottom: 1px solid #cccccc!important;
+}
+
+.sqs-block-summary-v2 .summary-title a,
+.sqs-block-summary-v2 .summary-heading a,
+.sqs-block-summary-v2 .summary-title a:link,
+.sqs-block-summary-v2 .summary-heading a:link,
+.sqs-block-summary-v2 .summary-title a:visited,
+.sqs-block-summary-v2 .summary-heading a:visited {
+    color: rgba(27, 59, 111, 1);
+}
+
+.sqs-block-summary-v2 .summary-title a:focus,
+.sqs-block-summary-v2 .summary-heading a:focus,
+.sqs-block-summary-v2 .summary-title a:hover,
+.sqs-block-summary-v2 .summary-heading a:hover,
+.sqs-block-summary-v2 .summary-title a:active,
+.sqs-block-summary-v2 .summary-heading a:active {
+    color: rgba(16, 35, 66, 1);
+}
+
+.sqs-gallery-design-carousel .sqs-gallery {
+    margin: 0px!important;
+}
+
+.summary-item-list-container {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+.summary-item {
+    display: block !important;
+    width: 100% !important;
+    margin-top: 1.5rem;
+}
+
+.sqs-block-summary-v2 .img-wrapper img,
+.sqs-block-summary-v2 .sqs-video-wrapper img {
+    width: 100% !important;
+    height: auto !important;
+}
+
+
+/* Footer */
+
+div#preFooter {
+    background-color: #7e8083;
+    padding: 5px;
+    text-align: center;
+    margin: 0;
+}
+
+#preFooterBlocks .row .col .sqs-block {
+    padding-top: 0px!important;
+    padding-bottom: 0px!important;
+}
+
+#preFooterBlocks h3 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 1);
+    margin: 0;
+    text-transform: uppercase;
+}
+
+footer#footer {
+    background-color: rgba(27, 59, 111, 1);
+    color: #ffffff;
+}
+
+#tsd-footer {
+    padding: 2rem 0rem;
+}
+
+#tsd-logo-reversed {
+    max-width: 50%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#tsd-logo-reversed img {
+    max-width: 100%;
+    height: auto;
+}
+
+#footer-content {
+    max-width: 70%;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#footer-content h4 {
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+    margin-bottom: .5rem;
+}
+
+#footer-content h4 a.footer-link,
+#footer-content h4 a.footer-link:visited {
+    color: rgba(255, 240, 0, 1);
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1.375rem;
+    letter-spacing: .05rem;
+    padding-bottom: .5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+#footer-content h4 a.footer-link:focus,
+#footer-content h4 a.footer-link:hover,
+#footer-content h4 a.footer-link:active {
+    color: rgba(229, 215, 0, 1);
+}
+
+#footer-address,
+#footer-tel,
+#footer-icons {
+    margin-bottom: .5rem;
+}
+
+#footer-icons a {
+    font-size: 2rem!important;
+    color: rgba(255, 240, 0, 1);
+    transition: color .3s ease!important;
+}
+
+#footer-icons a:focus,
+#footer-icons a:hover,
+#footer-icons a:active {
+    color: rgba(229, 215, 0, 1);
+}
+
+#footer-icons a:first-child {
+    padding: 0rem 1rem 0rem 0rem;
+}
+
+#footer-icons a:last-child {
+    padding: 0rem;
+}
+
+#footer-contact-info,
+#footer-copyright p {
+    font-weight: bold;
+    margin-bottom: .5rem!important;
+}
+
+#footer-copyright p a.footer-link,
+#footer-copyright p a.footer-link:visited {
+    font-weight: bold;
+    color: rgba(255, 240, 0, 1);
+}
+
+#footer-copyright p a.footer-link:focus,
+#footer-copyright p a.footer-link:hover,
+#footer-copyright p a.footer-link:active {
+    color: rgba(229, 215, 0, 1);
+    text-decoration: underline;
+}
+
+@media only screen and (min-width: 900px) {
+    #page {
+        padding: 40px 20px;
+    }
+    /* Header and Navigation */
+    .blue-header {
+        height: 40px;
+    }
+    .white-header {
+        background-color: rgba(255, 255, 255, 1);
+        color: rgba(27, 59, 111, 1);
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        align-items: flex-end;
+        height: 62px;
+    }
+    #header #mainNavWrapper {
+        position: relative;
+        top: -92px;
+        margin-bottom: 0px;
+        z-index: 1000;
+        margin-top: 0px!important;
+    }
+    #header,
+    #headerNav {
+        background-color: rgba(255, 255, 255, 1);
+        padding: 0px;
+        width: auto;
+    }
+    h1#logoImage {
+        top: -35px!important;
+    }
+    body:not(.force-mobile-nav) .nav-wrapper nav>div>a,
+    body:not(.force-mobile-nav) .nav-wrapper nav>div .folder-toggle {
+        display: block;
+        padding: 1.4375rem 1rem;
+        font-size: 1.125rem!important;
+    }
+    body:not(.force-mobile-nav) .nav-wrapper nav>div:last-child>a {
+        padding-right: 1rem!important;
+    }
+    #headerNav nav a,
+    #headerNav nav a:visited,
+    #headerNav nav .folder-toggle,
+    #headerNav nav .active .folder-toggle {
+        font-family: 'Fjalla One', sans-serif;
+        text-transform: uppercase;
+        color: rgba(27, 59, 111, 1);
+    }
+    #headerNav nav a:focus,
+    #headerNav nav a:hover,
+    #headerNav nav .active a,
+    #headerNav nav .folder-toggle:hover {
+        background-color: rgba(27, 59, 111, 1);
+        color: rgba(255, 255, 255, 1)!important;
+    }
+    #header nav .subnav {
+        padding: 0rem;
+    }
+    #headerNav nav .subnav .collection a {
+        font-size: 1.125rem!important;
+        padding: 1rem;
+    }
+    #headerNav nav .subnav,
+    #headerNav nav .subnav .collection a,
+    #headerNav nav .subnav .collection a:visited {
+        font-family: 'Fjalla One', sans-serif;
+        text-transform: uppercase;
+        background-color: rgba(27, 59, 111, 1);
+        color: rgba(255, 255, 255, 1)!important;
+        transition: background-color .4s ease!important;
+    }
+    #headerNav nav .subnav .collection a:focus,
+    #headerNav nav .subnav .collection a:hover,
+    #headerNav nav .subnav .collection a:active {
+        background-color: rgba(255, 240, 0, 1);
+        color: rgba(27, 59, 111, 1)!important;
+    }
+    #headerNav nav .subnav .active a {
+        color: rgba(255, 255, 255, 1)!important;
+    }
+    /* Banner */
+    /* Breadcrumbs and Intro Text */
+    #breadcrumbs,
+    #home-intro {
+        background-color: rgba(27, 59, 111, 1);
+        color: rgba(255, 255, 255, 1);
+        clear: both;
+    }
+    #home-intro h1,
+    #home-intro h2,
+    #home-intro h3,
+    #home-intro p,
+    #home-intro blockquote,
+    #home-intro a {
+        color: rgba(255, 255, 255, 1)!important;
+    }
+    #breadcrumbs,
+    #breadcrumbs a,
+    #breadcrumbs a:visited {
+        color: rgba(255, 255, 255, 1);
+        font-size: 1.125rem;
+        font-family: 'Fjalla One', sans-serif;
+        line-height: 1.4;
+        text-transform: uppercase;
+        letter-spacing: .05rem;
+        padding: .5rem 0rem;
+    }
+    #breadcrumbs a:focus,
+    #breadcrumbs a:hover,
+    #breadcrumbs a:active {
+        text-decoration: underline;
+    }
+    /* Typography */
+    h1#pageTitleTab {
+        display: block;
+        background-color: rgba(27, 59, 111, 1);
+        color: rgba(255, 255, 255, 1);
+        font-size: 1.75rem;
+        font-family: 'Fjalla One', sans-serif;
+        position: relative;
+        top: -4rem;
+        margin-bottom: -4.375rem;
+        z-index: 900;
+        padding: 1rem 1.25rem;
+        width: auto;
+        border-radius: 5px 5px 0px 0px;
+        float: left;
+    }
+    p {
+        font-size: 1rem;
+    }
+    /* Summary Blocks */
+    .summary-item {
+        display: inline-block !important;
+        width: 50% !important;
+        margin-top: 0rem !important;
+    }
+    /* Footer */
+    #preFooterBlocks h3 {
+        font-size: 1.5rem;
+    }
+    #tsd-footer {
+        padding: 2rem 0rem;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        align-items: flex-end;
+    }
+    #tsd-logo-reversed {
+        max-width: 25%;
+    }
+    #footer-content {
+        max-width: 70%;
+        width: 100%;
+        text-align: left;
+        margin: 0rem 1.125rem;
+    }
+    #footer-contact-info {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        align-items: flex-start;
+        width: 100%;
+    }
+    #footer-contact-info,
+    #footer-copyright p {
+        font-weight: bold;
+        padding-right: 2rem;
+        margin-bottom: .5rem;
+    }
+    #footer-copyright {
+        display: flex;
+        justify-content: flex-start;
+        align-content: flex-start;
+        align-items: flex-start;
+    }
+}
