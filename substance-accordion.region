@@ -273,10 +273,7 @@
         </div>
       </footer>
 
-      <div id="legal">
-        <p>© <span class="current-year"></span> Focus Treatment Centers. All Rights Reserved.</p>
-        <p><strong><a target="_blank" href='https://maycreate.com/'>Site by Maycreate</a></strong></p>
-      </div>
+      {@|apply legal.block}
 
       {@|apply social.block}
 
