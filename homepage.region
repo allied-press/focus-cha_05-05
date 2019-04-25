@@ -313,14 +313,17 @@
     $(function() {
       $('.current-year').html((new Date).getFullYear());
     });
-    </script>
 
-    <script>
     jQuery(document).ready(function($) {
       $('.mobile-nav-toggle').click(function() {
         $('body').toggleClass('mobile-nav-open');
       });
-      
+    });
+    </script>
+
+    <script>
+    jQuery(document).ready(function($) {
+
       var alterClass = function() {
         var ww = document.body.clientWidth;
         if (ww < 1160) {
