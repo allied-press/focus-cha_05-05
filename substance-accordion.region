@@ -285,7 +285,7 @@
     {squarespace-footers}
 
     <script type="text/javascript">
-    $(function(){
+    $(function() {
       $('.current-year').html((new Date).getFullYear());
     });
     </script>
