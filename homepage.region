@@ -313,12 +313,6 @@
     $(function() {
       $('.current-year').html((new Date).getFullYear());
     });
-
-    $(document).ready(function($) {
-      $('.mobile-nav-toggle').click(function() {
-        $('body').toggleClass('mobile-nav-open');
-      });
-    });
     </script>
 
     <script>
@@ -347,6 +341,13 @@
     </script>
 
     <script>
+
+    $(document).ready(function($) {
+      $('.mobile-nav-toggle').click(function() {
+        $('body').toggleClass('mobile-nav-open');
+      });
+    });
+    
       var slideIndex = 1;
       showSlides(slideIndex);
 
