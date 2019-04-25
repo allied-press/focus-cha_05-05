@@ -314,7 +314,7 @@
       $('.current-year').html((new Date).getFullYear());
     });
 
-    jQuery(document).ready(function($) {
+    $(document).ready(function($) {
       $('.mobile-nav-toggle').click(function() {
         $('body').toggleClass('mobile-nav-open');
       });
