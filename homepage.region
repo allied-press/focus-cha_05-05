@@ -336,6 +336,10 @@
       $( ".promoted-gallery-wrapper" ).append( $( "#breadtrail" ) );
       $("#mobileNavigation").append( $( "#mobileSocial" ) );
 
+      $('.mobile-nav-toggle').click(function() {
+        $('body').toggleClass('mobile-nav-open');
+      });
+
     });
     </script>
 
