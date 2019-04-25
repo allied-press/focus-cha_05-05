@@ -317,6 +317,10 @@
 
     <script>
     jQuery(document).ready(function($) {
+      $('.mobile-nav-toggle').click(function() {
+        $('body').toggleClass('mobile-nav-open');
+      });
+      
       var alterClass = function() {
         var ww = document.body.clientWidth;
         if (ww < 1160) {
@@ -335,10 +339,6 @@
       $("#mainNavigation .folder-toggle").append("<i class='fas fa-chevron-down'></i>");
       $( ".promoted-gallery-wrapper" ).append( $( "#breadtrail" ) );
       $("#mobileNavigation").append( $( "#mobileSocial" ) );
-
-      $('.mobile-nav-toggle').click(function() {
-        $('body').toggleClass('mobile-nav-open');
-      });
 
     });
     </script>
