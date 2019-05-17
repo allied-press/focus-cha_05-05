@@ -70,13 +70,6 @@
                         .addClass("has-banner-image"), this.init(), this.bindUI(), this.syncUI()
                 },
                 init: function() {
-                    if (this.setupUserAccountLinks(), this.forceMobileNav(), this.promotedGalleryShrink(), e.one(".has-promoted-gallery") ? (this.textShrink(".meta-description p > strong", "p"), this.textShrink(".meta-description p > em > strong", "p")) : (this.textShrink(".desc-wrapper p > strong", "p"), this.textShrink(".desc-wrapper p > em > strong", "p")), this.textShrink(".post-title a", ".post-title"), this.textShrink(".blog-item-wrapper .post-title", ".title-desc-wrapper"), this._touch = e.one(".touch-styles"), e.one(".collection-type-blog.view-list .sqs-featured-posts-gallery") && this.makeFeaturedGallery(".posts", ".post"), this.hideArrowsWhenOneSlide(), this.repositionCartButton(), !this._touch) {
-                        var t = e.one("#preFooter");
-                        t.inViewportRegion() === !1 && t.addClass("unscrolled"), e.one(window)
-                            .on("scroll", function() {
-                                t.hasClass("unscrolled") && t.toggleClass("unscrolled", !t.inViewportRegion())
-                            })
-                    }
                     var n = Array.prototype.slice.call(document.body.querySelectorAll("div.sqs-video-background"));
                     n.map(function(e) {
                         var t = a(e);
