@@ -341,12 +341,6 @@
     </script>
 
     <script>
-
-    <!--$(document).ready(function($) {
-      $('.mobile-nav-toggle').click(function() {
-        $('body').toggleClass('mobile-nav-open');
-      });
-    });-->
     
       var slideIndex = 1;
       showSlides(slideIndex);
