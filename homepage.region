@@ -303,9 +303,8 @@
       {@|apply social.block}
 
     </div>
-
-    <squarespace:script src="site-bundle.js" combo="false" />
     <squarespace:script src="jquery-3.3.1.min.js" combo="false" />
+    <squarespace:script src="site-bundle.js" combo="false" />
     <squarespace:script src="clickdesk.js" combo="false" />
     {squarespace-footers}
 
@@ -334,7 +333,8 @@
 
       $("#mainNavigation > :last-child a").replaceWith("<a href='/search'><i class='fas fa-search'></i></a>");
       $("#mainNavigation .folder-toggle").append("<i class='fas fa-chevron-down'></i>");
-      $( ".promoted-gallery-wrapper" ).append( $( "#breadtrail" ) );
+
+      $( "#promotedGalleryWrapper" ).append( $( "#breadtrail" ) );
       $("#mobileNavigation").append( $( "#mobileSocial" ) );
 
     });
@@ -342,11 +342,11 @@
 
     <script>
 
-    $(document).ready(function($) {
+    <!--$(document).ready(function($) {
       $('.mobile-nav-toggle').click(function() {
         $('body').toggleClass('mobile-nav-open');
       });
-    });
+    });-->
     
       var slideIndex = 1;
       showSlides(slideIndex);
