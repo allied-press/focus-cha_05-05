@@ -1,7 +1,7 @@
 <aside class="sidebar">
    <squarespace:block-field id="substance-sidebar" class="top-sidebar" columns="12" label="Program Sidebar" />
-   <squarespace:block-field id="sa-nav-header" class="sidebarheader" columns="12" label="Navigation Title">
-   <squarespace:navigation navigationId="substanceAbuse" template="secondary-navigation"/>
+   <!-- <squarespace:block-field id="sa-nav-header" class="sidebarheader" columns="12" label="Navigation Title">
+   <squarespace:navigation navigationId="substanceAbuse" template="secondary-navigation"/> -->
    <squarespace:block-field id="sa-links" class="sidebarheader" columns="12" label="Related Links">
    <squarespace:navigation navigationId="substanceAbuseRelated" template="secondary-navigation"/>
    <squarespace:block-field id="program-sidebar" columns="12" label="Global Sidebar Content" />
