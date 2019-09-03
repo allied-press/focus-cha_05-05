@@ -282,6 +282,8 @@
     <squarespace:script src="clickdesk.js" combo="false" />
     {squarespace-footers}
 
+    <script async src='https://storage.googleapis.com/widget.kenect.com/widget.min.js' id='kenect-token' type='text/javascript' token='ulqqJNrEfDfP2JY2vq9J'></script>
+
     <script type="text/javascript">
     $(function() {
       $('.current-year').html((new Date).getFullYear());
