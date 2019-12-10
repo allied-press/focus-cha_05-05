@@ -250,9 +250,6 @@
          </div>
          {@|apply substanceSidebar.block}
         </div>
-        <div id="breadtrail">
-          {@|apply breadcrumbs.block}
-        </div>
         </div><!--
         -->{.section collection}{.collectionTypeNameEquals? blog}<aside id="rightSidebar" role="complementary">
           <squarespace:block-field class="open-block-field" id="blogBlocks-{id}" columns="12" label="Blog Sidebar Content" />
