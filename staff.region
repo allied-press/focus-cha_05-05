@@ -47,6 +47,9 @@
                   <div class="color-overlay"></div>
                   <figure id="thumbnail" class="loading content-fill"><img {@|image-meta} /></figure>
                 </div>
+                <div id="breadtrail">
+                  {@|apply breadcrumbs-staff.block}
+                </div>
               {.end}
             {.or}
               {.main-image?}
@@ -61,6 +64,9 @@
                       {.section title}<div class="post-title">{@}</div>{.end}
                     </div>
                   </div>
+                </div>
+                <div id="breadtrail">
+                  {@|apply breadcrumbs-staff.block}
                 </div>
               {.end}
             {.end}
@@ -159,6 +165,9 @@
                           </figure>
                           {.if description}<div class="desc-wrapper" data-content-field="description">{description}</div>{.end}
                         </div>
+                        <div id="breadtrail">
+                          {@|apply breadcrumbs-staff.block}
+                        </div>
                       {.or}
                         {.section mainImage}
                           <div class="banner-thumbnail-wrapper{.if description} has-description{.end}" data-content-field="main-image">
@@ -167,6 +176,9 @@
                               <img {@|image-meta} />
                             </figure>
                             {.if description}<div class="desc-wrapper" data-content-field="description">{description}</div>{.end}
+                          </div>
+                          <div id="breadtrail">
+                            {@|apply breadcrumbs-staff.block}
                           </div>
                         {.end}
                       {.end}
@@ -184,6 +196,9 @@
                       </figure>
                       {.if description}<div class="desc-wrapper" data-content-field="description">{description}</div>{.end}
                     </div>
+                    <div id="breadtrail">
+                      {@|apply breadcrumbs-staff.block}
+                    </div>
                   {.or}
                     {.section mainImage}
                       <div class="banner-thumbnail-wrapper{.if description} has-description{.end}" data-content-field="main-image">
@@ -192,6 +207,9 @@
                           <img {@|image-meta} />
                         </figure>
                         {.if description}<div class="desc-wrapper" data-content-field="description">{description}</div>{.end}
+                      </div>
+                      <div id="breadtrail">
+                        {@|apply breadcrumbs-staff.block}
                       </div>
                     {.end}
                   {.end}
@@ -239,9 +257,6 @@
         --><squarespace:folder-navigation template="folder-navigation" />{.end}{.end}<!--
         --><div id="content" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "gallery"}{.or}{.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}{.end}>
          {squarespace.main-content}
-         <div id="breadtrail">
-           {@|apply breadcrumbs-staff.block}
-         </div>
         </div><!--
         -->{.section collection}{.collectionTypeNameEquals? blog}<aside id="rightSidebar" role="complementary">
           <squarespace:block-field class="open-block-field" id="blogBlocks-{id}" columns="12" label="Blog Sidebar Content" />
