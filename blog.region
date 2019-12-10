@@ -8,7 +8,7 @@
     {squarespace-headers}
     <script>/* Must be below squarespace-headers */(function() {var e='ontouchstart'in window||navigator.msMaxTouchPoints;var t=document.documentElement;if(!e&&t){t.className=t.className.replace(/touch-styles/,'')}})()
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <style>
     .collection-type-blog.has-promoted-gallery #promotedGalleryWrapper .sqs-block, .collection-type-blog.has-promoted-gallery .promoted-gallery-wrapper .sqs-block {
         padding: 0!important;
@@ -304,7 +304,6 @@
     </div>
 
     <squarespace:script src="site-bundle.js" combo="false" />
-    <squarespace:script src="jquery-3.3.1.min.js" combo="false" />
     <squarespace:script src="clickdesk.js" combo="false" />
     {squarespace-footers}
 
