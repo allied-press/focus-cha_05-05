@@ -53,7 +53,7 @@
           <a href="{fullUrl}" class="excerpt-image content-fill"><img {@|image-meta} /></a>
         </div>
         {.end}
-        <div class="p-summary">{excerpt|truncate 250}</div>
+        <div class="p-summary">{excerpt|truncate 200}</div>
         <p class="entry-more-link"><a href="{fullUrl}"></a></p>
       {.or}
         {.section body}
