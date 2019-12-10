@@ -285,57 +285,11 @@
     </div>
 
     <squarespace:script src="site-bundle.js" combo="false" />
+    <squarespace:script src="ftc.js" combo="false" />
     <squarespace:script src="clickdesk.js" combo="false" />
     {squarespace-footers}
 
     <script async src='https://storage.googleapis.com/widget.kenect.com/widget.min.js' id='kenect-token' type='text/javascript' token='ulqqJNrEfDfP2JY2vq9J'></script>
-
-    <script type="text/javascript">
-    $(function() {
-      $('.current-year').html((new Date).getFullYear());
-    });
-    </script>
-
-    <script>
-    jQuery(document).ready(function($) {
-      var alterClass = function() {
-        var ww = document.body.clientWidth;
-        if (ww < 1160) {
-          $('body').addClass('force-mobile-nav');
-        } else if (ww >= 1161) {
-          $('body').removeClass('force-mobile-nav');
-        };
-      };
-      $(window).resize(function(){
-        alterClass();
-      });
-
-      alterClass();
-
-      $("#mainNavigation > :last-child a").replaceWith("<a href='/search'><i class='fas fa-search'></i></a>");
-      $("#mainNavigation .folder-toggle").append("<i class='fas fa-chevron-down'></i>");
-
-      $( "#promotedGalleryWrapper" ).append( $( "#breadtrail" ) );
-      $("#mobileNavigation").append( $( "#mobileSocial" ) );
-    });
-    </script>
-
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script>
-    $(document).ready(function() {
-      $('.accordion-wrapper .sqs-block-content h3').addClass('ui-closed').css('cursor','pointer');
-      $(".accordion-wrapper .sqs-block-content h3").nextUntil("h3").addClass('accordion-content');
-      $(".accordion-wrapper .sqs-block-content h3").each(function (index) {
-        $(this).nextUntil(".accordion-wrapper .sqs-block-content h3").wrapAll("<div class='accordion-section'></div>");
-      });
-      $(".accordion-section").slideToggle();
-      $(".accordion-wrapper .sqs-block-content h3").click(function() {
-
-        $(this).nextUntil("h3").slideToggle();
-        $(this).toggleClass('ui-closed ui-open');
-      });
-    });
-    </script>
 
   </body>
 </html>
