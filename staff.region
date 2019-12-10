@@ -98,7 +98,7 @@
               {.or}
                 {.collectionTypeNameEquals? blog}
                   <div id="breadtrail">
-                    {@|apply breadcrumbs.block}
+                    {@|apply staff-breadcrumbs.block}
                   </div>
                 {.or}
 
