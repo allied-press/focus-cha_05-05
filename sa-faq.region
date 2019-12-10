@@ -9,8 +9,6 @@
     <script>/* Must be below squarespace-headers */(function() {var e='ontouchstart'in window||navigator.msMaxTouchPoints;var t=document.documentElement;if(!e&&t){t.className=t.className.replace(/touch-styles/,'')}})()
     </script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body id="{squarespace.page-id}" class="{squarespace.page-classes}{.if item}{.section item}{.if productType}{.or}{.background-source-video?} has-banner-image item-main-image{.or}{.main-image?} has-banner-image item-main-image{.end}{.end}{.end}{.end}{.or}{.section collection}{.collectionTypeNameEquals? index}{.section collections}{.section 0}{.background-source-video?} has-banner-image index-page{.or}{.main-image?} has-banner-image index-page{.end}{.end}{.end}{.end}{.or}{.background-source-video?} has-banner-image general-page{.or}{.main-image?} has-banner-image general-page{.end}{.end}{.end}{.end}{.end}">
@@ -282,53 +280,11 @@
     </div>
 
     <squarespace:script src="site-bundle.js" combo="false" />
-    <squarespace:script src="jquery-3.3.1.min.js" combo="false" />
+    <squarespace:script src="ftc.js" combo="false" />
     <squarespace:script src="clickdesk.js" combo="false" />
     {squarespace-footers}
 
     <script async src='https://storage.googleapis.com/widget.kenect.com/widget.min.js' id='kenect-token' type='text/javascript' token='ulqqJNrEfDfP2JY2vq9J'></script>
-
-    <script type="text/javascript">
-    $(function() {
-      $('.current-year').html((new Date).getFullYear());
-    });
-    </script>
-
-    <script>
-    $(document).ready(function($) {
-      var alterClass = function() {
-        var ww = document.body.clientWidth;
-        if (ww < 1160) {
-          $('body').addClass('force-mobile-nav');
-        } else if (ww >= 1161) {
-          $('body').removeClass('force-mobile-nav');
-        };
-      };
-      $(window).resize(function(){
-        alterClass();
-      });
-
-      alterClass();
-
-      $("#mainNavigation > :last-child a").replaceWith("<a href='/search'><i class='fas fa-search'></i></a>");
-      $("#mainNavigation .folder-toggle").append("<i class='fas fa-chevron-down'></i>");
-
-      $( "#promotedGalleryWrapper" ).append( $( "#breadtrail" ) );
-      $("#mobileNavigation").append( $( "#mobileSocial" ) );
-
-      $('.accordion-wrapper .sqs-block-content h3').addClass('ui-closed').css('cursor','pointer');
-      $(".accordion-wrapper .sqs-block-content h3").nextUntil("h3").addClass('accordion-content');
-      $(".accordion-wrapper .sqs-block-content h3").each(function (index) {
-        $(this).nextUntil(".accordion-wrapper .sqs-block-content h3").wrapAll("<div class='accordion-section'></div>");
-      });
-      $(".accordion-section").slideToggle();
-      $(".accordion-wrapper .sqs-block-content h3").click(function() {
-
-        $(this).nextUntil("h3").slideToggle();
-        $(this).toggleClass('ui-closed ui-open');
-      });
-    });
-    </script>
 
   </body>
 </html>
