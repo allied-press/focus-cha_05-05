@@ -37,6 +37,15 @@ $(document).ready(function() {
 
     $('.banner-thumbnail-wrapper #thumbnail').html($('#blogBanner').html());
 
+    if ($(".breadcrumbs-staff")[0]) {
+        $("#breadcrumbs").replaceWith($(".breadcrumbs-staff"))
+    } else {}
+
+    if ($(".breadcrumbs-blog")[0]) {
+        $("#breadcrumbs").replaceWith($(".breadcrumbs-blog"))
+    } else {}
+
+    $(".collection-type-staff #thumbnail img").replaceWith($(".collection-type-staff .pre-footer-inner img"));
 
     /* Accordion */
     $('.accordion-wrapper .sqs-block-content h3').addClass('ui-closed').css('cursor', 'pointer');
