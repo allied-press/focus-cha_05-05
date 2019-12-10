@@ -97,83 +97,9 @@
                 {.end}
               {.or}
                 {.collectionTypeNameEquals? blog}
-                  <squarespace:query collection="{collection.urlId}" featured="false" limit="6">
-                  {.section items}
-                    <div class="sqs-featured-posts-gallery">
-
-                      <div class="gallery-wrapper">
-
-                        <!--FULL SIZE IMAGES-->
-
-                        <div class="slides-controls">
-                          <div class="posts">
-                            {.repeated section @}
-
-                              <!--SLIDE-->
-
-                              <div class="post{.main-image?}{.or} no-main-image{.end} content-fill" data-slide-id="{id}">
-
-                                <div class="title-desc-wrapper">
-                                  <time class="dt-published published post-date" datetime="{addedOn|date %F}" pubdate>{addedOn|date %B %e, %Y}</time>
-                                  <div class="post-category">{.section categories}{.repeated section @}{@}{.alternates with}, {.end}{.end}</div>
-                                  <div class="post-author">{.section author}{displayName}{.end}</div>
-                                  {.section title}<div class="post-title"><a href="{fullUrl}">{@|truncate 48}</a></div>{.end}
-                                  {.excerpt?}<div class="post-excerpt">{excerpt}</div>{.end}
-                                  <a href="{fullUrl}" class="view-post"></a>
-                                </div>
-
-                                <div class="color-overlay"></div>
-
-                                {.main-image?}
-                                  <img data-load="viewport" {@|image-meta}>
-                                {.end}
-                              </div>
-
-                            {.end}
-                          </div>
-
-                          {.section 1}
-                            <!--PREVIOUS/NEXT CONTROLS-->
-                            <span class="arrow previous-slide"></span>
-                            <span class="arrow next-slide"></span>
-                          {.end}
-
-                          <!--CIRCLES-->
-                          <div class="circles gallery-nav">
-                            {.repeated section @}
-                              <span class="circle"></span>
-                            {.end}
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-                  {.or}
-                    {.section collection}
-
-                      {.background-source-video?}
-                        <div class="banner-thumbnail-wrapper{.if description} has-description{.end}" data-content-field="main-image">
-                          <div class="color-overlay"></div>
-                          <figure id="thumbnail" class="loading content-fill">
-                            {@|apply sqs-video-background.block}
-                          </figure>
-                          {.if description}<div class="desc-wrapper" data-content-field="description">{description}</div>{.end}
-                        </div>
-                      {.or}
-                        {.section mainImage}
-                          <div class="banner-thumbnail-wrapper{.if description} has-description{.end}" data-content-field="main-image">
-                            <div class="color-overlay"></div>
-                            <figure id="thumbnail" class="loading content-fill">
-                              <img {@|image-meta} />
-                            </figure>
-                            {.if description}<div class="desc-wrapper" data-content-field="description">{description}</div>{.end}
-                          </div>
-                        {.end}
-                      {.end}
-
-                    {.end}
-                  {.end}
-                  </squarespace:query>
+                  <div id="breadtrail">
+                    {@|apply breadcrumbs.block}
+                  </div>
                 {.or}
 
                   {.background-source-video?}
@@ -239,9 +165,6 @@
         --><squarespace:folder-navigation template="folder-navigation" />{.end}{.end}<!--
         --><div id="content" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "gallery"}{.or}{.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}{.end}>
          {squarespace.main-content}
-         <div id="breadtrail">
-           {@|apply breadcrumbs.block}
-         </div>
         </div><!--
         -->{.section collection}{.collectionTypeNameEquals? blog}<aside id="rightSidebar" role="complementary">
           <squarespace:block-field class="open-block-field" id="blogBlocks-{id}" columns="12" label="Blog Sidebar Content" />
