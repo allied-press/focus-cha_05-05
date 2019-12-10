@@ -294,73 +294,11 @@
     </div>
 
     <squarespace:script src="site-bundle.js" combo="false" />
+    <squarespace:script src="ftc.js" combo="false" />
     <squarespace:script src="clickdesk.js" combo="false" />
     {squarespace-footers}
 
     <script async src='https://storage.googleapis.com/widget.kenect.com/widget.min.js' id='kenect-token' type='text/javascript' token='ulqqJNrEfDfP2JY2vq9J'></script>
-
-    <script type="text/javascript">
-    $(function() {
-      $('.current-year').html((new Date).getFullYear());
-    });
-    </script>
-
-    <script>
-    jQuery(document).ready(function($) {
-      var alterClass = function() {
-        var ww = document.body.clientWidth;
-        if (ww < 1160) {
-          $('body').addClass('force-mobile-nav');
-        } else if (ww >= 1161) {
-          $('body').removeClass('force-mobile-nav');
-        };
-      };
-      $(window).resize(function(){
-        alterClass();
-      });
-
-      alterClass();
-
-      $("#mainNavigation > :last-child a").replaceWith("<a href='/search'><i class='fas fa-search'></i></a>");
-      $("#mainNavigation .folder-toggle").append("<i class='fas fa-chevron-down'></i>");
-
-      $( "#promotedGalleryWrapper" ).append( $( "#breadtrail" ) );
-      $( ".index-section:first-child .promoted-gallery-wrapper" ).append( $( "#breadtrail" ) );
-      $( ".banner-thumbnail-wrapper" ).append( $( "#breadtrail" ) );
-
-      if ($(".breadcrumbs-staff")[0]){
-        $("#breadcrumbs").replaceWith( $(".breadcrumbs-staff"))
-      } else {
-
-      }
-
-      if ($(".breadcrumbs-blog")[0]){
-        $("#breadcrumbs").replaceWith( $(".breadcrumbs-blog"))
-      } else {
-
-      }
-
-
-      $("#mobileNavigation").append( $( "#mobileSocial" ) );
-
-      $(".entry").each(function(){
-        $(".p-summary", this).prepend( $( ".entry-header", this ) );
-      });
-      $(".prev-label").text(" Newer Posts")
-      $(".next-label").text("Previous Posts ");
-      $(".prev-label").prepend("<i class='fas fa-arrow-left'></i>");
-      $(".next-label").append("<i class='fas fa-arrow-right'></i>");
-
-      $('.banner-thumbnail-wrapper #thumbnail').html($('#blogBanner').html());
-
-      $(".collection-type-staff #thumbnail img").replaceWith( $(".collection-type-staff .pre-footer-inner img") );
-
-
-
-
-
-    });
-    </script>
 
   </body>
 </html>
