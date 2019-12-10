@@ -26,6 +26,7 @@ $(document).ready(function() {
     $(".banner-thumbnail-wrapper").append($("#breadtrail"));
     $("#mobileNavigation").append($("#mobileSocial"));
 
+    /* Blog Page Banner */
     $(".entry").each(function() {
         $(".p-summary", this).prepend($(".entry-header", this));
     });
@@ -35,6 +36,7 @@ $(document).ready(function() {
     $(".next-label").append("<i class='fas fa-arrow-right'></i>");
 
     $('.banner-thumbnail-wrapper #thumbnail').html($('#blogBanner').html());
+
 
     /* Accordion */
     $('.accordion-wrapper .sqs-block-content h3').addClass('ui-closed').css('cursor', 'pointer');
