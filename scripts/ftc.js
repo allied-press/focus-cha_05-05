@@ -22,7 +22,19 @@ $(document).ready(function() {
     $("#mainNavigation .folder-toggle").append("<i class='fas fa-chevron-down'></i>");
 
     $("#promotedGalleryWrapper").append($("#breadtrail"));
+    $(".index-section:first-child .promoted-gallery-wrapper").append($("#breadtrail"));
+    $(".banner-thumbnail-wrapper").append($("#breadtrail"));
     $("#mobileNavigation").append($("#mobileSocial"));
+
+    $(".entry").each(function() {
+        $(".p-summary", this).prepend($(".entry-header", this));
+    });
+    $(".prev-label").text(" Newer Posts")
+    $(".next-label").text("Previous Posts ");
+    $(".prev-label").prepend("<i class='fas fa-arrow-left'></i>");
+    $(".next-label").append("<i class='fas fa-arrow-right'></i>");
+
+    $('.banner-thumbnail-wrapper #thumbnail').html($('#blogBanner').html());
 
     /* Accordion */
     $('.accordion-wrapper .sqs-block-content h3').addClass('ui-closed').css('cursor', 'pointer');
