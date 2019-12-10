@@ -1,5 +1,6 @@
 
 
+{@|apply staff-breadcrumbs.block}
 <div class="blog-item">
 
   {.section item}
