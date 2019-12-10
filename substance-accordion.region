@@ -74,6 +74,9 @@
             {.or}
               {.collectionTypeNameEquals? page}
                 <div id="promotedGalleryWrapper" class="sqs-layout promoted-gallery-wrapper"><div class="row"><div class="col"></div></div></div>
+                <div id="breadtrail">
+                  {@|apply breadcrumbs.block}
+                </div>
                 {.background-source-video?}
                     <div class="banner-thumbnail-wrapper{.if description} has-description{.end}" data-content-field="main-image" data-collection-id="{collection.id}" data-edit-main-image="Banner" data-annotation-alignment="bottom left">
                       <div class="color-overlay"></div>
@@ -246,9 +249,6 @@
          </div>
          </div>
          {@|apply substanceSidebar.block}
-        </div>
-        <div id="breadtrail">
-          {@|apply breadcrumbs.block}
         </div>
         </div><!--
         -->{.section collection}{.collectionTypeNameEquals? blog}<aside id="rightSidebar" role="complementary">
