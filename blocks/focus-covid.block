@@ -1,0 +1,3 @@
+<div id="covid">
+  <squarespace:block-field id="covid-response" columns="12" label="Covid-19 Response" />
+</div>

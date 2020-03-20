@@ -220,7 +220,7 @@
         <a href="{collection.fullUrl}"><span>{author.displayName}</span></a>
       </p>
       {.end}
-
+      {@|apply focus-covid.block}
       <main id="page" role="main" data-content-field="main-content">
         {.section collection}
         {.collectionTypeNameEquals? products}{.section categories}<div id="categoryNav">
@@ -241,8 +241,8 @@
         --><div id="content" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "gallery"}{.or}{.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}{.end}>
         <div class="main-content-sidebar">
           <div class="with-sidebar-content">
-         {squarespace.main-content}
-         </div>
+            {squarespace.main-content}
+          </div>
          {@|apply aboutSidebar.block}
         </div>
         <div id="breadtrail">
