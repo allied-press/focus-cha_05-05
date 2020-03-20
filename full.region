@@ -246,7 +246,7 @@
         <a href="{collection.fullUrl}"><span>{author.displayName}</span></a>
       </p>
       {.end}
-
+      {@|apply focus-covid.block}
       <main id="page" role="main">
         {.section collection}
         {.collectionTypeNameEquals? products}{.section categories}<div id="categoryNav">

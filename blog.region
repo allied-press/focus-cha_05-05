@@ -104,7 +104,7 @@
                 {.end}
               {.or}
                 {.collectionTypeNameEquals? blog}
-                
+
                   <squarespace:query collection="{collection.urlId}" featured="true" limit="5">
                   {.section items}
                     <div class="sqs-featured-posts-gallery">
@@ -227,7 +227,7 @@
         <a href="{collection.fullUrl}"><span>{author.displayName}</span></a>
       </p>
       {.end}
-
+      {@|apply focus-covid.block}
       <main id="page" role="main" data-content-field="main-content">
         {.section collection}
         {.collectionTypeNameEquals? products}{.section categories}<div id="categoryNav">
