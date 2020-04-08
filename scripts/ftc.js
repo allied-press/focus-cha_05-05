@@ -60,6 +60,11 @@ $(document).ready(function() {
         $(this).toggleClass('ui-closed ui-open');
     });
 
+    /* Contact Accordion */
+    $('#contact-form-title').click(function() {
+      $(this).siblings($('.contact-section')).slideToggle();
+    });
+
     /* Home Page Slides */
     var slideIndex = 1;
     showSlides(slideIndex);
