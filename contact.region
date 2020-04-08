@@ -79,13 +79,13 @@
             <div class="main-content-sidebar">
               <div class="with-sidebar-content">
                 {squarespace.main-content}
-                <!-- <div class="contact-form-accordion">
+                <div class="contact-form-accordion">
                   <squarespace:block-field id="contact-form-title" columns="12" label="Contact Form Accordion Title" />
                   <div class="contact-section">
                     <squarespace:block-field id="contact-form-accordion" columns="12" label="Contact Form" />
                   </div>
                 </div>
-                <squarespace:block-field id="contact-content" columns="12" label="Page Content" /> -->
+                <squarespace:block-field id="contact-content" columns="12" label="Page Content" />
                 <div class="accordion-wrapper">
                   <squarespace:block-field id="contact-accordion" columns="12" label="Accordion" />
                 </div>
